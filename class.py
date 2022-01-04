@@ -1,3 +1,6 @@
+import random
+from listas import lista_raças, nomes, lista_alinhamento_BM,lista_alinhamento_CO,classes_jog,classes_npc,riquezas,ocupaçoes
+
 class NPC():
     def __init__(self):
         self._nome = None
@@ -8,6 +11,7 @@ class NPC():
         self._classe = None
         self._riqueza = None
         self._genero = None
+        self._classe_jog = True
 
     def set_nome(self,nome):
         pass
@@ -37,11 +41,14 @@ class NPC():
         pass
     
     def gera_raça(self):
-        pass
+        numero = random.randrange(0,len(lista_raças))
+        self._raça = lista_raças[numero]
 
     def gera_alinhamento(self):
-        pass
-
+        numero1 = random.randrange(0,len(lista_alinhamento_CO))
+        numero2 = random.randrange(0,len(lista_alinhamento_BM))
+        self._alinhamento = lista_alinhamento_CO[numero1] + " " + lista_alinhamento_BM[numero2]
+        
     def gera_caracteristicas_fisicas(self):
         pass
 
@@ -49,13 +56,22 @@ class NPC():
         pass
 
     def gera_classe(self):
-        pass
+        if self._classe_jog:
+            lista = classes_npc + classes_jog
+            numero = random.randrange(0,len(lista))
+            self._classe = lista[numero]
+        else:
+            numero = random.randrange(0,len(classes_npc))
+            self._classe = classes_npc[numero]
 
     def gera_riqueza(self):
-        pass
+        numero = random.randrange(0,len(riquezas))
+        self._riqueza = riquezas[numero]
 
     def gera_genero(self):
-        pass
+        numero = random.randrange(0,2)
+        if numero == 0: self._genero = 'Masculino' 
+        else: self._genero = 'Feminino'
 
 class Pacifico(NPC):
     def __init__(self):
@@ -66,7 +82,8 @@ class Pacifico(NPC):
         pass
 
     def gera_ocupacao(self):
-        pass
+        numero = random.randrange(0,len(ocupaçoes))
+        self._ocupaçao = ocupaçoes[numero]
 
 class Vilao(NPC):
     def __init__(self):
@@ -92,3 +109,12 @@ class Vilao(NPC):
 
     def gera_poderes(self):
         pass
+
+teste = Pacifico()
+teste.gera_raça()
+teste.gera_alinhamento()
+teste.gera_classe()
+teste.gera_riqueza()
+teste.gera_ocupacao()
+teste.gera_genero()
+print(vars(teste))
