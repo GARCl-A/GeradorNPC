@@ -150,7 +150,8 @@ class Vilao(NPC):
         self._influencia = tamanho_influencia[numero2] + ": " + tipo_influencia[numero1]
 
     def gera_poderes(self):
-        pass
+        numero = random.randrange(0,len(poderes))
+        self._poderes = poderes[numero]
 
 teste = Vilao()
 teste.gera_raça()
@@ -161,4 +162,5 @@ teste.gera_motivacao()
 teste.gera_genero()
 teste.gera_influencia()
 teste.gera_nome()
+teste.gera_poderes()
 print(vars(teste))
