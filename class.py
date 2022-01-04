@@ -7,6 +7,7 @@ class NPC():
         self._caracteristicas_pessoais = None
         self._classe = None
         self._riqueza = None
+        self._genero = None
 
     def set_nome(self,nome):
         pass
@@ -29,6 +30,9 @@ class NPC():
     def set_riqueza(self,riqueza):
         pass
 
+    def set_genero(self,genero):
+        pass
+
     def gera_nome(self):
         pass
     
@@ -48,6 +52,9 @@ class NPC():
         pass
 
     def gera_riqueza(self):
+        pass
+
+    def gera_genero(self):
         pass
 
 class Pacifico(NPC):
