@@ -135,12 +135,12 @@ class Aplicacao:
     def AtualizaClasse(self):
         if(self.valorCheckClasse.get() == False):
             self.listaClasse.destroy()
-            self.listaClasse = ttk.Combobox(self.container2,textvariable = self.varGenero,values=['Aleatório'] + classes_npc, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
+            self.listaClasse = ttk.Combobox(self.container2,textvariable = self.varClasse,values=['Aleatório'] + classes_npc, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
             self.listaClasse.grid(column=1, row =3)
 
         elif(self.valorCheckClasse.get() == True):
             self.listaClasse.destroy()
-            self.listaClasse = ttk.Combobox(self.container2,textvariable = self.varGenero,values=['Aleatório'] + classes_npc + classes_jog, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
+            self.listaClasse = ttk.Combobox(self.container2,textvariable = self.varClasse,values=['Aleatório'] + classes_npc + classes_jog, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
             self.listaClasse.grid(column=1, row =3)
             
 
