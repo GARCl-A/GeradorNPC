@@ -6,6 +6,8 @@ class NPC():
         self._nome = None
         self._raça = None
         self._alinhamento = None
+        self._alinhamento_CO = None
+        self._alinhamento_BM = None
         self._caracteristicas_fisicas = None
         self._caracteristicas_pessoais = None
         self._classe = None
@@ -83,10 +85,21 @@ class NPC():
         numero = random.randrange(0,len(lista_raças))
         self._raça = lista_raças[numero]
 
+    def gera_alinhamento_CO(self):
+        numero = random.randrange(0,len(lista_alinhamento_CO))
+        self._alinhamento_CO = lista_alinhamento_CO[numero]
+    
+    def gera_alinhamento_BM(self):
+        numero = random.randrange(0,len(lista_alinhamento_BM))
+        self._alinhamento_BM = lista_alinhamento_BM[numero]
+
     def gera_alinhamento(self):
-        numero1 = random.randrange(0,len(lista_alinhamento_CO))
-        numero2 = random.randrange(0,len(lista_alinhamento_BM))
-        self._alinhamento = lista_alinhamento_CO[numero1] + " | " + lista_alinhamento_BM[numero2]
+        if self._alinhamento_CO == None:
+            self.gera_alinhamento_CO()
+        if self._alinhamento_BM == None:
+            self.gera_alinhamento_BM ()
+
+        self._alinhamento = self._alinhamento_CO + ' | ' + self._alinhamento_BM
         
     def gera_caracteristicas_fisicas(self):
         pass
