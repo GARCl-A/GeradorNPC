@@ -62,3 +62,5 @@ ocupaçoes = ["Camponês", "Lenhador", "Ferreiro", "Pastor", "Carniceiro", "Ciri
 
 motivacoes = ['Vingança', 'Ambição', 'Revolução', 'Amor', 'Loucura', 'Mal puro', 'Servidão', 'Manipulação', 'Natureza Maligna']
 
+tipo_influencia = ['Politicamente', 'Militarmente', 'Violentamente', 'Magicamente', 'Economicamente']
+tamanho_influencia = ['Local', 'Regional', 'Global']
