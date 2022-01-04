@@ -37,6 +37,21 @@ class NPC():
     def set_genero(self,genero):
         pass
 
+    def gera_nome_aleatorio(self):
+        letras = random.randrange(1,4) + random.randrange(1,4) + random.randrange(1,4)
+        nome = ""
+        index = 0
+        for i in range(letras):
+            if index % 2 == 0:
+                numero = random.randrange(len(consoantes))
+                nome += consoantes[numero]
+                index += 1
+            else:
+                numero = random.randrange(len(vogais))
+                nome += vogais[numero]
+                index += 1
+        return nome.title()
+
     def gera_nome(self):
         if self._raça == None:
             self.gera_raça()
@@ -47,7 +62,7 @@ class NPC():
                 if self._raça.find('Orc') != -1:
                     raça = 'Meio-Orc'
                 else: 
-                    raça = self.raça
+                    raça = self._raça
 
                 nomeG = nomes[raça][self._genero][random.randrange(0,len(nomes[raça][self._genero]))].strip()
 
@@ -55,12 +70,12 @@ class NPC():
             if self._raça.find('Elfo') != -1:
                 raça = 'Elfo'
             else: 
-                raça = self.raça
+                raça = self._raça
 
-            nomeG = nomes[raça][self._genero][random.randrange(0,len(nomes[self._raça][self._genero]))].strip() + ' ' + nomes[raça]['Sobrenomes'][random.randrange(0,len(nomes[self._raça]['Sobrenomes']))].strip()
+            nomeG = nomes[raça][self._genero][random.randrange(0,len(nomes[raça][self._genero]))].strip() + ' ' + nomes[raça]['Sobrenomes'][random.randrange(0,len(nomes[raça]['Sobrenomes']))].strip()
 
         else: 
-            nomeG = 'Rogério'
+            nomeG = self.gera_nome_aleatorio()
 
         self._nome = nomeG
     
@@ -71,7 +86,7 @@ class NPC():
     def gera_alinhamento(self):
         numero1 = random.randrange(0,len(lista_alinhamento_CO))
         numero2 = random.randrange(0,len(lista_alinhamento_BM))
-        self._alinhamento = lista_alinhamento_CO[numero1] + " " + lista_alinhamento_BM[numero2]
+        self._alinhamento = lista_alinhamento_CO[numero1] + " | " + lista_alinhamento_BM[numero2]
         
     def gera_caracteristicas_fisicas(self):
         pass

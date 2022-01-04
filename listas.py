@@ -43,8 +43,8 @@ nomes = {
 }
 
 lista_raças = ["Kobold", "Orc", "Leshy", "Lizardfolk", "Sprite", "Humano", "Anão", "Elfo", "Gnomo", "Goblin", "Halfling", 
-"Gnoll", "Gigante", "Ikidaris", "Tiefling", "Aasimar", "Kenku", "Aarakocra", "Draconato", "Meio-Elfo", "Meio-Orc"
-"Golias", "Centauros", "Forjados", "Golias", "Genasi"]
+"Gnoll", "Gigante", "Ikidaris", "Tiefling", "Aasimar", "Kenku", "Aarakocra", "Draconato", "Meio-Elfo", "Meio-Orc",
+"Golias", "Centauros", "Forjados", "Genasi"]
 
 lista_alinhamento_CO = ["Caótico", "Neutro", "Leal"]
 lista_alinhamento_BM = ["Bom", "Neutro", "Mal"]
@@ -63,3 +63,6 @@ motivacoes = ['Vingança', 'Ambição', 'Revolução', 'Amor', 'Loucura', 'Mal p
 
 tipo_influencia = ['Politicamente', 'Militarmente', 'Violentamente', 'Magicamente', 'Economicamente']
 tamanho_influencia = ['Local', 'Regional', 'Global']
+
+consoantes = 'b,c,d,f,g,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z'.split(",")
+vogais = 'a,e,i,o,u,ü'.split(",")
