@@ -1,5 +1,5 @@
 import random
-from listas import lista_raças, nomes, lista_alinhamento_BM,lista_alinhamento_CO,classes_jog,classes_npc,riquezas,ocupaçoes
+from listas import *
 
 class NPC():
     def __init__(self):
