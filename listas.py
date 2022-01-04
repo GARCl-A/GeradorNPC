@@ -66,3 +66,7 @@ tamanho_influencia = ['Local', 'Regional', 'Global']
 
 consoantes = 'b,c,d,f,g,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z'.split(",")
 vogais = 'a,e,i,o,u,ü'.split(",")
+
+poderes = ['Escolhido por alguma entidade', 'Médium', 'Líder sobrenatural', 'Virtualmente Imortal', 'Arma mágica',
+'Controla criatura super poderosa', 'Viaja entre planos', 'Covil indestrutivo', 'Exercito leal', 'Manipulador de nobres',
+'Influencia forças da natureza', 'Prevê o futuro']
