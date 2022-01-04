@@ -5,11 +5,10 @@ nomes = {
         },
 
     'Elfo' : {
-        'Infantis': ['Ara', 'Bryn', 'Del', 'Eryn', 'Faen', 'Innil', 'Lael','Mella', 'Naill', 'Naeris', 'Phann', 'Rael', 'Rinn', 'Sai', 'Syllin','Thia', 'Vall'],
         'Masculino' : ['Adran', 'Aelar', 'Aramil','Arannis', 'Aust', 'Beiro', 'Berrian', 'Carric', 'Enialis', 'Erdan','Erevan', 'Galinndan', 'Hadarai', 'Heian', 'Himo', 'Immeral','Ivellios', 'Laucian', 'Mindartis', 'Paelias', 'Peren', 'Quarion','Riardon', 'Rolen', 'Soveliss', 'Thamior', 'Tharivol', 'Theren', 'Varis'],
         'Feminino' : ['Adrie', ' Althaea', 'Anastrianna', 'Andraste', 'Antinua', 'Bethrynna', 'Birel', 'Caelynn', ' Drusilia', 'Enna', 'Felosial', 'Ielenia', 'Jelenneth', 'Keyleth', ' Leshanna', ' Lia', ' Meriele', ' Mialee', ' Naivara', 'Quelenna', ' Quillathe', ' Sariel', ' Shanairra', ' Shava', 'Silaqui', ' Theirastra', ' Thia', ' Vadania', ' Valanthe', ' Xanaphia'],
         'Sobrenomes' : ['Amakiir', ' Amastacia', ' Galanodel', ' Holimion ', 'Ilphelkiir', ' Liadon', 'Meliamne ', ' Nailo ', ' Siannodel ', ' Xiloscient']
-        },
+    },
 
     'Halfling' : {
         'Masculino' : ['Alton', ' Ander', ' Cade', ' Corrin', ' Eldon', 'Errich', ' Finnan', ' Garret', ' Lindal', ' Lyle', ' Merric', ' Milo', 'Osborn', ' Perrin', ' Reed', ' Roscoe', ' Wellby'],

@@ -38,7 +38,31 @@ class NPC():
         pass
 
     def gera_nome(self):
-        pass
+        if self._raça == None:
+            self.gera_raça()
+        if self._genero == None:
+            self.gera_genero
+        
+        if self._raça == 'Anão' or self._raça == 'Draconato' or self._raça == 'Halfling' or self._raça == 'Gnomo' or self._raça =='Meio-Orc' or self._raça == 'Tiefling' or self._raça.find('Orc') != -1:
+                if self._raça.find('Orc') != -1:
+                    raça = 'Meio-Orc'
+                else: 
+                    raça = self.raça
+
+                nomeG = nomes[raça][self._genero][random.randrange(0,len(nomes[raça][self._genero]))].strip()
+
+        elif self._raça.find('Elfo') != -1 or self._raça == 'Humano':
+            if self._raça.find('Elfo') != -1:
+                raça = 'Elfo'
+            else: 
+                raça = self.raça
+
+            nomeG = nomes[raça][self._genero][random.randrange(0,len(nomes[self._raça][self._genero]))].strip() + ' ' + nomes[raça]['Sobrenomes'][random.randrange(0,len(nomes[self._raça]['Sobrenomes']))].strip()
+
+        else: 
+            nomeG = 'Rogério'
+
+        self._nome = nomeG
     
     def gera_raça(self):
         numero = random.randrange(0,len(lista_raças))
@@ -121,4 +145,5 @@ teste.gera_riqueza()
 teste.gera_motivacao()
 teste.gera_genero()
 teste.gera_influencia()
+teste.gera_nome()
 print(vars(teste))
