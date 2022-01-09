@@ -70,3 +70,25 @@ vogais = 'a,e,i,o,u,ü'.split(",")
 poderes = ['Escolhido por alguma entidade', 'Médium', 'Líder sobrenatural', 'Virtualmente Imortal', 'Arma mágica',
 'Controla criatura super poderosa', 'Viaja entre planos', 'Covil indestrutivo', 'Exercito leal', 'Manipulador de nobres',
 'Influencia forças da natureza', 'Prevê o futuro']
+
+listaqualidade =['corajoso(a)','inteligente','perseverante','confiável','criativo(a)','tolerânte','sincero(a)','romantico(a)','focado(a)', 'extrovertido(a)','disciplinado(a)',
+                  'honesto(a)', 'honrado(a)','humilde','agradecido(a)','otimista','determinado(a)','prudente','resiliente','calmo(a)', 'maduro(a)','observador(a)',
+                  'respeitoso(a)','altruista','zeloso(a)','organizado(a)','responsavel','eloquente','leal','ambicioso(a)','meigo(a)','prático(a)','carismático(a)',
+                  'sábio(a)','engraçado(a)','empatico(a)','generoso(a)','proativo','paciente','orgulhoso','compreensivel']
+
+
+listadefeitos = ['teimoso(a)', 'agressivo(a)','violento(a)','procrastinador(a)','desequilibrado(a)','interesseiro(a)','arrogante','preconceituoso(a)','bisbilhoteiro(a)',
+                 'cruel', 'exigente','egoísta','mentiroso(a)','autoritario(a)','malvado(a)','chato(a)','avarento(a)','negrigente','irresponsável','atrevido(a)','irritadiço(a)',
+                 'inflexivel','apático(a)','Antipático(a)','possessivo(a)','intolerante','desorganizado(a)','dissimulado(a)','distraído(a)','falso(a)','desmotivado(a)',
+                 'rancoroso(a)','vingativo(a)','grosso(a)','hipócrita','desleal','desonesto(a)','preguisoço(a)','ganancioso(a)','superficial','sem graça','manipulador(a)',
+                 'imaturo(a)','indeciso(a)','ciumento(a)','oportunista','covarde','burro(a)','tímido(a)','pesimista','desrespeitoso(a)','tolo','impaciente']
+
+
+listaantonimos=[('covarde','corajoso(a)'),('altruista','covarde'),('inteligente','burro(a)'),('perseverante','preguçoso(a)'),('confiável','irresponsavel'),
+                ('responsavel','irresponsavel'),('negligente','responsavel'),('honesto(a)','desonesto(a)'),('tolerânte','intolerante'),('exigente','tolerânte'),('inflexivel','tolerânte'),
+                ('sincero(a)','mentiroso(a)'),('falso(a)','sincero(a)'),('focado(a)','distraído(a)'),('tímido(a)','extrovertido(a)'),('disciplinado(a)','procrastinador(a)'),
+                ('honrado(a)','covarde'),('hipócrita', 'honrado(a)'),('humilde','arrogante'),('pesimista','otimista'),('desmotivado(a)','determinado(a)'),('procrastinador(a)','determinado(a)'),
+                ('prudente','irresponsável'),('calmo(a)', 'agressivo(a)'),('calmo(a)','violento(a)'),('irritadiço(a)','calmo(a)'),('imaturo(a)', 'maduro(a)'),('meigo(a)','grosso(a)'),
+                ('leal','desleal'),('organizado(a)','desorganizado(a)'),('zeloso(a)','negrigente'),('altruista','oportunista'),('respeitoso(a)','desrespeitoso(a)'),('tolo',
+                  'sábio(a)'),('engraçado(a)','sem graça'),('empatico(a)','Antipático(a)'),('generoso(a)','egoísta'),('proativo','procrastinador(a)'),('paciente','impaciente'),
+                  ('compreensivel','inflexivel')]
