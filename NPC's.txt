@@ -1,11 +1,24 @@
-Nome: Waywocket
-Gênero: Feminino
-Raça: Gnomo
-Classe: Feiticeiro
+Nome: Kacec
+Gênero: Masculino
+Raça: Leshy
+Classe: Bardo
 Alinhamento: None
+Características Físicas: Tem um galhão
+Características Pessoais: focado(a), maduro(a), altruísta, malvado(a), avarento(a), vingativo(a)
+Riqueza: Média baixa
+Motivação: Revolução
+Influência: Regional | Militarmente
+Poderes: Médium
+
+Nome: Mimüq
+Gênero: Feminino
+Raça: Forjados
+Classe: Patrulheiro
+Alinhamento: Caótico | Mal
 Características Físicas: None
-Características Pessoais: honrado(a), perseverante, extrovertido(a), desonesto(a), dissimulado(a), mentiroso(a)
-Riqueza: Média alta
-Motivação: Manipulação
-Influência: Regional: Violentamente
-Poderes: Viaja entre planos
+Características Pessoais: otimista, sábio(a), disciplinado(a), indeciso(a), atrevido(a), chato(a)
+Riqueza: Pobre
+Motivação: Loucura
+Influência: Regional | Politicamente
+Poderes: Escolhido por alguma entidade
+
