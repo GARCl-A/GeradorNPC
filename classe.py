@@ -23,8 +23,11 @@ class NPC():
     def set_raça(self,raça):
         self._raça = raça
 
-    def set_alinhamento(self,alinhamento):
-        self._alinhamento = alinhamento
+    def set_alinhamento_CO(self,alinhamento_CO):
+        pass
+
+    def set_alinhamento_BM(self,alinhamento_BM):
+        pass
 
     def set_caracteristicas_fisicas(self,caracteristicas_fisicas):
         self._caracteristicas_fisicas = caracteristicas_fisicas
@@ -96,11 +99,6 @@ class NPC():
         self._alinhamento_BM = lista_alinhamento_BM[numero]
 
     def gera_alinhamento(self):
-        if self._alinhamento_CO == None:
-            self.gera_alinhamento_CO()
-        if self._alinhamento_BM == None:
-            self.gera_alinhamento_BM ()
-
         self._alinhamento = self._alinhamento_CO + ' | ' + self._alinhamento_BM
         
     def gera_caracteristicas_fisicas(self):
