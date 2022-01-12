@@ -314,6 +314,16 @@ class Aplicacao:
             npc.gera_classe()
         else: npc.set_classe(self.varClasse.get())
 
+        if self.varAlinhamento1.get() == 'Aleatório':
+            npc.gera_alinhamento_CO()
+        else: npc.set_alinhamento_CO(self.varAlinhamento1.get())
+
+        if self.varAlinhamento2.get() == 'Aleatório':
+            npc.gera_alinhamento_BM()
+        else: npc.set_alinhamento_BM(self.varAlinhamento2.get())
+
+        npc.gera_alinhamento()
+
         if self.varRiqueza.get() == 'Aleatório':
             npc.gera_riqueza()
         else: npc.set_riqueza(self.varRiqueza.get())

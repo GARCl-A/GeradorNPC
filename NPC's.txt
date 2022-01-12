@@ -8,4 +8,28 @@ Características Pessoais: honrado(a), perseverante, extrovertido(a), desonesto(
 Riqueza: Média alta
 Motivação: Manipulação
 Influência: Regional: Violentamente
-Poderes: Viaja entre planos
+
+Poderes: Viaja entre planosNome: Cuz
+Gênero: Masculino
+Raça: Golias
+Classe: Monge
+Alinhamento: Leal | Bom
+Características Físicas: None
+Características Pessoais: compreensivo, agradecido(a), otimista, autoritário(a), cruel, desequilibrado(a)
+Riqueza: Média alta
+Motivação: Manipulação
+Influência: Local | Magicamente
+Poderes: Prevê o futuro
+
+Nome: Füsefibif
+Gênero: Masculino
+Raça: Goblin
+Classe: Mago
+Alinhamento: Leal | Neutro
+Características Físicas: None
+Características Pessoais: extrovertido(a), honrado(a), determinado(a), rancoroso(a), preconceituoso(a), possessivo(a)
+Riqueza: Média
+Motivação: Mal puro
+Influência: Global | Militarmente
+Poderes: Exercito leal
+
