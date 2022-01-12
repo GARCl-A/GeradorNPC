@@ -1,3 +1,4 @@
+import os
 from tkinter import ttk
 from tkinter import *
 from listas import *
@@ -264,12 +265,30 @@ class Aplicacao:
             self.LOcupação.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
     
     def Gerar(self):
+        global npc
+
         if self.conjunto.get() == 1: 
-            tipo = 'vilao'
             npc = Vilao()
+
+            if self.checkMotivação.get() == False:
+                npc.gera_motivacao()
+            else: npc.set_motivacao(self.valorNome.get())
+
+            if self.checkInfluencia.get() == False:
+                npc.gera_influencia()
+            else: npc.set_influencia(self.valorNome.get())
+
+            if self.checkPoder.get() == False:
+                npc.gera_poderes()
+            else: npc.set_poderes(self.valorNome.get())
+
         else: 
-            tipo = 'neutro'
             npc = Neutro()
+
+            if self.checkOcupação.get() == False:
+                npc.gera_ocupacao()
+            else: npc.set_ocupacao(self.valorNome.get())
+
 
         if self.varGenero.get() == 'Aleatório':
             npc.gera_genero()
@@ -283,21 +302,30 @@ class Aplicacao:
             npc.gera_nome()
         else: npc.set_nome(self.valorNome.get())
 
-        # self._raça = 
-        # self._alinhamento = 
-        # self._alinhamento_CO = 
-        # self._caracteristicas_fisicas = 
-        # self._caracteristicas_pessoais = 
-        # self._classe = 
-        # self._riqueza = 
-        # self._genero = 
-        # self._classe_jog = 
+        if self.checkCaracteristicasF.get() == False:
+            npc.gera_caracteristicas_fisicas()
+        else: npc.set_caracteristicas_fisicas(self.valorCaracteristicasF.get())
+
+        if self.checkCaracteristicasP.get() == False:
+            npc.gera_caracteristicas_pessoais()
+        else: npc.set_caracteristicas_pessoais(self.valorCaracteristicasP.get())
+
+        if self.varClasse.get() == 'Aleatório':
+            npc.gera_classe()
+        else: npc.set_classe(self.varClasse.get())
+
+        if self.varRiqueza.get() == 'Aleatório':
+            npc.gera_riqueza()
+        else: npc.set_riqueza(self.varRiqueza.get())
 
         print(npc)
         pass
 
     def Salvar(self):
-        pass
+        global npc
+        path = os.sys.path[0] + '\\'
+        arquivo = open(path + "NPC's.txt","a", encoding="utf-8")
+        arquivo.writelines(str(npc))
     
             
 
