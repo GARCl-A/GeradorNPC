@@ -310,6 +310,7 @@ class Aplicacao:
             npc.gera_caracteristicas_pessoais()
         else: npc.set_caracteristicas_pessoais(self.valorCaracteristicasP.get())
 
+        npc._classe_jog = self.valorCheckClasse.get()
         if self.varClasse.get() == 'Aleatório':
             npc.gera_classe()
         else: npc.set_classe(self.varClasse.get())
