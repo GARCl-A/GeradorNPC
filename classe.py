@@ -102,6 +102,7 @@ class NPC():
         self._alinhamento = self._alinhamento_CO + ' | ' + self._alinhamento_BM
         
     def gera_caracteristicas_fisicas(self):
+        #a ultima linha é self._caracteristicas_fisicas = 'STRING COM TODAS AS CARACTERISTICAS'
         pass
 
     def gera_caracteristicas_pessoais(self):
@@ -213,6 +214,8 @@ Poderes: {self._poderes}
 
 teste = Vilao()
 teste.gera_raça()
+teste.gera_alinhamento_BM()
+teste.gera_alinhamento_CO()
 teste.gera_alinhamento()
 teste.gera_classe()
 teste.gera_riqueza()
