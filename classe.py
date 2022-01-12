@@ -24,10 +24,10 @@ class NPC():
         self._raça = raça
 
     def set_alinhamento_CO(self,alinhamento_CO):
-        pass
+        self._alinhamento_CO = alinhamento_CO
 
     def set_alinhamento_BM(self,alinhamento_BM):
-        pass
+        self._alinhamento_BM = alinhamento_BM
 
     def set_caracteristicas_fisicas(self,caracteristicas_fisicas):
         self._caracteristicas_fisicas = caracteristicas_fisicas
