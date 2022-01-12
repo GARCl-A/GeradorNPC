@@ -10,6 +10,8 @@ class NPC():
         self._alinhamento_BM = None
         self._caracteristicas_fisicas = None
         self._caracteristicas_pessoais = None
+        self.qualidades = []
+        self.defeitos = []
         self._classe = None
         self._riqueza = None
         self._genero = None
@@ -125,7 +127,7 @@ class NPC():
         if numero == 0: self._genero = 'Masculino' 
         else: self._genero = 'Feminino'
 
-class Pacifico(NPC):
+class Neutro(NPC):
     def __init__(self):
         super().__init__()
         self._ocupaçao = None
