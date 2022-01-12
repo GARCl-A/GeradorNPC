@@ -18,28 +18,28 @@ class NPC():
         self._classe_jog = True
 
     def set_nome(self,nome):
-        pass
+        self._nome = nome
     
     def set_raça(self,raça):
-        pass
+        self._raça = raça
 
     def set_alinhamento(self,alinhamento):
-        pass
+        self._alinhamento = alinhamento
 
     def set_caracteristicas_fisicas(self,caracteristicas_fisicas):
-        pass
+        self._caracteristicas_fisicas = caracteristicas_fisicas
 
     def set_caracteristicas_pessoais(self,caracteristicas_pessoais):
-        pass
+        self._caracteristicas_pessoais = caracteristicas_pessoais
 
     def set_classe(self,classe):
-        pass
+        self._classe = classe
 
     def set_riqueza(self,riqueza):
-        pass
+        self._riqueza = riqueza
 
     def set_genero(self,genero):
-        pass
+        self._genero = genero
 
     def gera_nome_aleatorio(self):
         letras = random.randrange(1,4) + random.randrange(1,4) + random.randrange(1,4)
@@ -150,7 +150,7 @@ class Neutro(NPC):
         self._ocupaçao = None
 
     def set_ocupacao(self,ocupacao):
-        pass
+        self._ocupaçao = ocupacao
 
     def gera_ocupacao(self):
         numero = random.randrange(0,len(ocupaçoes))
@@ -175,13 +175,13 @@ class Vilao(NPC):
         self._poderes = None
     
     def set_motivacao(self,motivacao):
-        pass
+        self._motivacao = motivacao
 
     def set_influencia(self,influencia):
-        pass
+        self._influencia = influencia
 
     def set_poderes(self,poderes):
-        pass
+        self._poderes = poderes
 
     def gera_motivacao(self):
         numero = random.randrange(0,len(motivacoes))
