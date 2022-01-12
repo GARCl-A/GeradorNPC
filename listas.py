@@ -71,24 +71,24 @@ poderes = ['Escolhido por alguma entidade', 'Médium', 'Líder sobrenatural', 'V
 'Controla criatura super poderosa', 'Viaja entre planos', 'Covil indestrutivo', 'Exercito leal', 'Manipulador de nobres',
 'Influencia forças da natureza', 'Prevê o futuro']
 
-listaqualidade =['corajoso(a)','inteligente','perseverante','confiável','criativo(a)','tolerânte','sincero(a)','romantico(a)','focado(a)', 'extrovertido(a)','disciplinado(a)',
+listaqualidade =['corajoso(a)','inteligente','perseverante','confiável','criativo(a)','tolerante','sincero(a)','romântico(a)','focado(a)', 'extrovertido(a)','disciplinado(a)',
                   'honesto(a)', 'honrado(a)','humilde','agradecido(a)','otimista','determinado(a)','prudente','resiliente','calmo(a)', 'maduro(a)','observador(a)',
-                  'respeitoso(a)','altruista','zeloso(a)','organizado(a)','responsavel','eloquente','leal','ambicioso(a)','meigo(a)','prático(a)','carismático(a)',
-                  'sábio(a)','engraçado(a)','empatico(a)','generoso(a)','proativo','paciente','orgulhoso','compreensivel']
+                  'respeitoso(a)','altruísta','zeloso(a)','organizado(a)','responsável','eloquente','leal','ambicioso(a)','meigo(a)','prático(a)','carismático(a)',
+                  'sábio(a)','engraçado(a)','empático(a)','generoso(a)','proativo','paciente','orgulhoso','compreensivo']
 
 
 listadefeitos = ['teimoso(a)', 'agressivo(a)','violento(a)','procrastinador(a)','desequilibrado(a)','interesseiro(a)','arrogante','preconceituoso(a)','bisbilhoteiro(a)',
-                 'cruel', 'exigente','egoísta','mentiroso(a)','autoritario(a)','malvado(a)','chato(a)','avarento(a)','negrigente','irresponsável','atrevido(a)','irritadiço(a)',
-                 'inflexivel','apático(a)','Antipático(a)','possessivo(a)','intolerante','desorganizado(a)','dissimulado(a)','distraído(a)','falso(a)','desmotivado(a)',
-                 'rancoroso(a)','vingativo(a)','grosso(a)','hipócrita','desleal','desonesto(a)','preguisoço(a)','ganancioso(a)','superficial','sem graça','manipulador(a)',
-                 'imaturo(a)','indeciso(a)','ciumento(a)','oportunista','covarde','burro(a)','tímido(a)','pesimista','desrespeitoso(a)','tolo','impaciente']
+                 'cruel', 'exigente','egoísta','mentiroso(a)','autoritário(a)','malvado(a)','chato(a)','avarento(a)','negligente','irresponsável','atrevido(a)','irritadiço(a)',
+                 'inflexível','apático(a)','antipático(a)','possessivo(a)','intolerante','desorganizado(a)','dissimulado(a)','distraído(a)','falso(a)','desmotivado(a)',
+                 'rancoroso(a)','vingativo(a)','grosso(a)','hipócrita','desleal','desonesto(a)','preguiçoso(a)','ganancioso(a)','superficial','sem graça','manipulador(a)',
+                 'imaturo(a)','indeciso(a)','ciumento(a)','oportunista','covarde','burro(a)','tímido(a)','pessimista','desrespeitoso(a)','tolo','impaciente']
 
 
-listaantonimos=[('covarde','corajoso(a)'),('altruista','covarde'),('inteligente','burro(a)'),('perseverante','preguiçoso(a)'),('confiável','irresponsável'),
-                ('responsavel','irresponsavel'),('negligente','responsavel'),('honesto(a)','desonesto(a)'),('tolerânte','intolerante'),('exigente','tolerante'),('inflexivel','tolerânte'),
+listaantonimos=[('covarde','corajoso(a)'),('altruísta','covarde'),('inteligente','burro(a)'),('perseverante','preguiçoso(a)'),('confiável','irresponsável'),
+                ('responsável','irresponssável'),('negligente','responsável'),('honesto(a)','desonesto(a)'),('tolerante','intolerante'),('exigente','tolerante'),('inflexível','tolerante'),
                 ('sincero(a)','mentiroso(a)'),('falso(a)','sincero(a)'),('focado(a)','distraído(a)'),('tímido(a)','extrovertido(a)'),('disciplinado(a)','procrastinador(a)'),
-                ('honrado(a)','covarde'),('hipócrita', 'honrado(a)'),('humilde','arrogante'),('pesimista','otimista'),('desmotivado(a)','determinado(a)'),('procrastinador(a)','determinado(a)'),
+                ('honrado(a)','covarde'),('hipócrita', 'honrado(a)'),('humilde','arrogante'),('pessimista','otimista'),('desmotivado(a)','determinado(a)'),('procrastinador(a)','determinado(a)'),
                 ('prudente','irresponsável'),('calmo(a)', 'agressivo(a)'),('calmo(a)','violento(a)'),('irritadiço(a)','calmo(a)'),('imaturo(a)', 'maduro(a)'),('meigo(a)','grosso(a)'),
-                ('leal','desleal'),('organizado(a)','desorganizado(a)'),('zeloso(a)','negrigente'),('altruista','oportunista'),('respeitoso(a)','desrespeitoso(a)'),('tolo',
-                  'sábio(a)'),('engraçado(a)','sem graça'),('empatico(a)','Antipático(a)'),('generoso(a)','egoísta'),('proativo','procrastinador(a)'),('paciente','impaciente'),
-                  ('compreensivel','inflexivel')]
+                ('leal','desleal'),('organizado(a)','desorganizado(a)'),('zeloso(a)','negligente'),('altruísta','oportunista'),('respeitoso(a)','desrespeitoso(a)'),('tolo',
+                  'sábio(a)'),('engraçado(a)','sem graça'),('empático(a)','antipático(a)'),('generoso(a)','egoísta'),('proativo','procrastinador(a)'),('paciente','impaciente'),
+                  ('compreensivo','inflexível')]
