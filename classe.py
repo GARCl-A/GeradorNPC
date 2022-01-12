@@ -10,8 +10,8 @@ class NPC():
         self._alinhamento_BM = None
         self._caracteristicas_fisicas = None
         self._caracteristicas_pessoais = None
-        self.qualidades = []
-        self.defeitos = []
+        self._qualidades = []
+        self._defeitos = []
         self._classe = None
         self._riqueza = None
         self._genero = None
@@ -107,18 +107,19 @@ class NPC():
         pass
 
     def gera_caracteristicas_pessoais(self):
-        while len(self.qualidades) <3:
+        while len(self._qualidades) <3:
             numero = random.randrange(0,len(listaqualidade))
-            if listaqualidade[numero] not in self.qualidades:
-                self.qualidades.append(listaqualidade[numero])
-        while len(self.defeitos) < 3:
+            if listaqualidade[numero] not in self._qualidades:
+                self._qualidades.append(listaqualidade[numero])
+        while len(self._defeitos) < 3:
             numero = random.randrange(0,len(listadefeitos))
             antonimo = False
-            for qualidade in self.qualidades:
+            for qualidade in self._qualidades:
                 if ((listadefeitos[numero], qualidade) or (qualidade, listadefeitos[numero])) in listaantonimos:
                     antonimo = True
-            if antonimo == False: self.defeitos.append(listadefeitos[numero])
-        self._caracteristicas_pessoais = self.qualidades + self.defeitos
+            if antonimo == False: self._defeitos.append(listadefeitos[numero])
+        self._caracteristicas_pessoais = self._qualidades + self._defeitos
+        self._caracteristicas_pessoais = self.trata_listas(self._caracteristicas_pessoais)
 
 
     def gera_classe(self):
@@ -139,6 +140,10 @@ class NPC():
         if numero == 0: self._genero = 'Masculino' 
         else: self._genero = 'Feminino'
 
+    def trata_listas(self,lista):
+        base = ", ".join(lista)
+        return base
+
 class Neutro(NPC):
     def __init__(self):
         super().__init__()
@@ -150,6 +155,22 @@ class Neutro(NPC):
     def gera_ocupacao(self):
         numero = random.randrange(0,len(ocupaçoes))
         self._ocupaçao = ocupaçoes[numero]
+
+    def __str__(self):
+        return f'''Nome: {self._nome}
+Gênero: {self._genero}
+Raça: {self._raça}
+Classe: {self._classe}
+Alinhamento: {self._alinhamento}
+Características Físicas: {self._caracteristicas_fisicas}
+Características Pessoais: {self._caracteristicas_pessoais}
+Riqueza: {self._riqueza}
+Ocupação: {self._ocupaçao}'''
+
+
+
+
+
 
 class Vilao(NPC):
     def __init__(self):
@@ -180,6 +201,19 @@ class Vilao(NPC):
         numero = random.randrange(0,len(poderes))
         self._poderes = poderes[numero]
 
+    def __str__(self):
+        return f'''Nome: {self._nome}
+Gênero: {self._genero}
+Raça: {self._raça}
+Classe: {self._classe}
+Alinhamento: {self._alinhamento}
+Características Físicas: {self._caracteristicas_fisicas}
+Características Pessoais: {self._caracteristicas_pessoais}
+Riqueza: {self._riqueza}
+Motivação: {self._motivacao}
+Influência: {self._influencia}
+Poderes: {self._poderes}'''
+
 teste = Vilao()
 teste.gera_raça()
 teste.gera_alinhamento()
@@ -191,4 +225,4 @@ teste.gera_influencia()
 teste.gera_nome()
 teste.gera_poderes()
 teste.gera_caracteristicas_pessoais()
-print(vars(teste))
+print(teste)
