@@ -10,7 +10,7 @@ class NPC():
         self._alinhamento_BM = None
         self._caracteristicas_fisicas = None
         self._caracteristicas_pessoais = None
-        self._qualidades = []
+        self._qualidades = ['honesto(a)']
         self._defeitos = []
         self._classe = None
         self._riqueza = None
@@ -114,10 +114,12 @@ class NPC():
         while len(self._defeitos) < 3:
             numero = random.randrange(0,len(listadefeitos))
             antonimo = False
-            for qualidade in self._qualidades:
-                if ((listadefeitos[numero], qualidade) or (qualidade, listadefeitos[numero])) in listaantonimos:
-                    antonimo = True
-            if antonimo == False: self._defeitos.append(listadefeitos[numero])
+            if listadefeitos[numero] not in self._defeitos:
+                for qualidade in listaqualidade:
+                    if (listadefeitos[numero],qualidade) in listaantonimos or (qualidade,listadefeitos[numero]) in listaantonimos :
+                        antonimo = True
+                if not antonimo:
+                    self._defeitos.append(listadefeitos[numero])
         self._caracteristicas_pessoais = self._qualidades + self._defeitos
         self._caracteristicas_pessoais = self.trata_listas(self._caracteristicas_pessoais)
 
@@ -190,7 +192,7 @@ class Vilao(NPC):
     def gera_influencia(self):
         numero1 = random.randrange(0,len(tipo_influencia))
         numero2 = random.randrange(0,len(tamanho_influencia))
-        self._influencia = tamanho_influencia[numero2] + ": " + tipo_influencia[numero1]
+        self._influencia = tamanho_influencia[numero2] + " | " + tipo_influencia[numero1]
 
     def gera_poderes(self):
         numero = random.randrange(0,len(poderes))
@@ -207,7 +209,9 @@ Características Pessoais: {self._caracteristicas_pessoais}
 Riqueza: {self._riqueza}
 Motivação: {self._motivacao}
 Influência: {self._influencia}
-Poderes: {self._poderes}'''
+Poderes: {self._poderes}
+
+'''
 
 teste = Vilao()
 teste.gera_raça()

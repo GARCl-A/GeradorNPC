@@ -1,3 +1,5 @@
+import random
+
 nomes = {
     'Anão' : {
         'Masculino': ['Adrik', 'Alberich', 'Baern', 'Barendd','Brottor', 'Bruenor', 'Dain', 'Darrak', 'Delg', 'Eberk', 'Einkil','Fargrim', 'Flint', 'Gardain', 'Harbek', 'Kildrak', 'Morgran','Orsik', 'Oskar', 'Rangrim', 'Rurik', 'Taklinn', 'Thoradin','Thorin', 'Tordek', 'Traubon', 'Travok', 'Ulfgar', 'Veit','Vondal'],
@@ -84,7 +86,7 @@ listadefeitos = ['teimoso(a)', 'agressivo(a)','violento(a)','procrastinador(a)',
                  'imaturo(a)','indeciso(a)','ciumento(a)','oportunista','covarde','burro(a)','tímido(a)','pessimista','desrespeitoso(a)','tolo','impaciente']
 
 
-listaantonimos=[('covarde','corajoso(a)'),('altruísta','covarde'),('inteligente','burro(a)'),('perseverante','preguiçoso(a)'),('confiável','irresponsável'),
+listaantonimos = [('covarde','corajoso(a)'),('altruísta','covarde'),('inteligente','burro(a)'),('perseverante','preguiçoso(a)'),('confiável','irresponsável'),
                 ('responsável','irresponssável'),('negligente','responsável'),('honesto(a)','desonesto(a)'),('tolerante','intolerante'),('exigente','tolerante'),('inflexível','tolerante'),
                 ('sincero(a)','mentiroso(a)'),('falso(a)','sincero(a)'),('focado(a)','distraído(a)'),('tímido(a)','extrovertido(a)'),('disciplinado(a)','procrastinador(a)'),
                 ('honrado(a)','covarde'),('hipócrita', 'honrado(a)'),('humilde','arrogante'),('pessimista','otimista'),('desmotivado(a)','determinado(a)'),('procrastinador(a)','determinado(a)'),
@@ -92,3 +94,4 @@ listaantonimos=[('covarde','corajoso(a)'),('altruísta','covarde'),('inteligente
                 ('leal','desleal'),('organizado(a)','desorganizado(a)'),('zeloso(a)','negligente'),('altruísta','oportunista'),('respeitoso(a)','desrespeitoso(a)'),('tolo',
                   'sábio(a)'),('engraçado(a)','sem graça'),('empático(a)','antipático(a)'),('generoso(a)','egoísta'),('proativo','procrastinador(a)'),('paciente','impaciente'),
                   ('compreensivo','inflexível')]
+
