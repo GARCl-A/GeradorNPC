@@ -1,7 +1,7 @@
 from tkinter import ttk
 from tkinter import *
 from listas import *
-from classe import Pacifico,Vilao
+from classe import Neutro,Vilao
 
 
 class Aplicacao:
@@ -19,6 +19,18 @@ class Aplicacao:
         self.container2["padx"] = 20
         self.container2.grid(column=0, row=1, sticky="w", pady = (40,0))
 
+        self.container3 = Frame(master)
+        self.container3["padx"] = 20
+        self.container3.grid(column=0, row=2, pady = (10,10))
+
+        self.container4 = Frame(master)
+        self.container4["padx"] = 20
+        self.container4.grid(column=0, row=3, pady = (20,10))
+
+        self.container5 = Frame(master)
+        self.container5["padx"] = 20
+        self.container5.grid(column=0, row=4, pady = (40,10))
+
         self.titulo = Label(self.container1, text="Gerador de NPCs")
         self.titulo["font"] = ("Times New Roman", "22", "bold")
         self.titulo.grid()
@@ -28,8 +40,8 @@ class Aplicacao:
         self.Nome.grid(column=2, row=0, padx=10, sticky = 'w')
         self.valorNome = Label(self.container2, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
         self.valorNome.grid(column=1, row=0)
-        self.Nome = Label(self.container2, text = 'Nome:', font=("Times New Roman", "12", "bold"))
-        self.Nome.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
+        self.LNome = Label(self.container2, text = 'Nome:', font=("Times New Roman", "12", "bold"))
+        self.LNome.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
 
 
         self.Genero = Label(self.container2, text = 'Gênero:', font=("Times New Roman", "12", "bold"))
@@ -76,8 +88,8 @@ class Aplicacao:
         self.CaracteristicasF.grid(column=2, row=5, padx=10, sticky = 'w')
         self.valorCaracteristicasF = Label(self.container2, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
         self.valorCaracteristicasF.grid(column=1, row=5)
-        self.CaracteristicasF = Label(self.container2, text = 'Características Físicas:', font=("Times New Roman", "12", "bold"))
-        self.CaracteristicasF.grid(column=0, row=5, padx=(15, 10), sticky = 'e')
+        self.LCaracteristicasF = Label(self.container2, text = 'Características Físicas:', font=("Times New Roman", "12", "bold"))
+        self.LCaracteristicasF.grid(column=0, row=5, padx=(15, 10), sticky = 'e')
 
 
         self.checkCaracteristicasP = IntVar()
@@ -85,8 +97,8 @@ class Aplicacao:
         self.CaracteristicasP.grid(column=2, row=6, padx=10, sticky = 'w')
         self.valorCaracteristicasP = Label(self.container2, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
         self.valorCaracteristicasP.grid(column=1, row=6)
-        self.CaracteristicasP = Label(self.container2, text = 'Características Pessoais:', font=("Times New Roman", "12", "bold"))
-        self.CaracteristicasP.grid(column=0, row=6, padx=(15, 10), sticky = 'e')
+        self.LCaracteristicasP = Label(self.container2, text = 'Características Pessoais:', font=("Times New Roman", "12", "bold"))
+        self.LCaracteristicasP.grid(column=0, row=6, padx=(15, 10), sticky = 'e')
 
 
         self.Riqueza = Label(self.container2, text = 'Riqueza:', font=("Times New Roman", "12", "bold"))
@@ -95,6 +107,20 @@ class Aplicacao:
         self.varRiqueza.set('Aleatório')
         self.listaRiqueza = ttk.Combobox(self.container2,textvariable = self.varRiqueza,values=['Aleatório'] + riquezas, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
         self.listaRiqueza.grid(column=1, row =7)
+
+
+        self.conjunto = IntVar()
+        self.conjunto.set(1)
+        Radiobutton(self.container3,text="Vilão",font = ("Times New Roman", "13"), padx = 5, variable=self.conjunto, value=1, command = self.AtualizaConjunto).grid(column= 1, row= 1,padx = 40)
+        Radiobutton(self.container3,text="Neutro",font = ("Times New Roman", "13"), padx = 5, variable=self.conjunto, value=2, command = self.AtualizaConjunto).grid(column= 3, row= 1,padx = 40)
+        self.AtualizaConjunto()
+
+
+        self.Gerar = Button(self.container5, text = "Gerar", font=("Times New Roman", "13", "bold"), width=50, command = self.Gerar)
+        self.Gerar.grid(column = 0, row = 0)
+
+        self.Salvar = Button(self.container5, text = "Salvar", font=("Times New Roman", "13", "bold"), width=10, command = self.Salvar)
+        self.Salvar.grid(column = 1, row = 0, padx = 10)
 
     def AtualizaNome(self):
         if(self.checkNome.get() == False):
@@ -142,6 +168,106 @@ class Aplicacao:
             self.listaClasse.destroy()
             self.listaClasse = ttk.Combobox(self.container2,textvariable = self.varClasse,values=['Aleatório'] + classes_npc + classes_jog, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
             self.listaClasse.grid(column=1, row =3)
+
+    def AtualizaM(self):
+        if(self.checkMotivação.get() == False):
+            self.valorMotivação.destroy()
+            self.valorMotivação = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorMotivação.grid(column=1, row=0)
+
+        elif(self.checkMotivação.get() == True):
+            self.valorMotivação.destroy()
+            self.valorMotivação = Entry(self.container4, width = 23, font = self.fonte, justify = 'center')
+            self.valorMotivação.grid(column=1, row=0)
+            self.valorMotivação.delete(0,END)
+
+    def AtualizaIn(self):
+        if(self.checkInfluencia.get() == False):
+            self.valorInfluencia.destroy()
+            self.valorInfluencia = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorInfluencia.grid(column=1, row=1)
+
+        elif(self.checkInfluencia.get() == True):
+            self.valorInfluencia.destroy()
+            self.valorInfluencia = Entry(self.container4, width = 23, font = self.fonte, justify = 'center')
+            self.valorInfluencia.grid(column=1, row=1)
+            self.valorInfluencia.delete(0,END)
+
+    def AtualizaPoder(self):
+        if(self.checkPoder.get() == False):
+            self.valorPoder.destroy()
+            self.valorPoder = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorPoder.grid(column=1, row=2)
+
+        elif(self.checkPoder.get() == True):
+            self.valorPoder.destroy()
+            self.valorPoder = Entry(self.container4, width = 23, font = self.fonte, justify = 'center')
+            self.valorPoder.grid(column=1, row=2)
+            self.valorPoder.delete(0,END)
+
+    def AtualizaOc(self):
+        if(self.checkOcupação.get() == False):
+            self.valorOcupação.destroy()
+            self.valorOcupação = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorOcupação.grid(column=1, row=0)
+
+        elif(self.checkOcupação.get() == True):
+            self.valorOcupação.destroy()
+            self.valorOcupação = Entry(self.container4, width = 23, font = self.fonte, justify = 'center')
+            self.valorOcupação.grid(column=1, row=0)
+            self.valorOcupação.delete(0,END)
+
+    def AtualizaConjunto(self):
+        if self.conjunto.get() == 1:
+
+            self.checkMotivação = IntVar()
+            self.Motivação = Checkbutton(self.container4,font = self.fonte,variable=self.checkMotivação, onvalue=True, offvalue=False, command = self.AtualizaM)
+            self.Motivação.grid(column=2, row=0, padx=10, sticky = 'w')
+            self.valorMotivação = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorMotivação.grid(column=1, row=0)
+            self.LMotivação = Label(self.container4, text = 'Motivação:', font=("Times New Roman", "12", "bold"))
+            self.LMotivação.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
+
+            self.checkInfluencia = IntVar()
+            self.Influencia = Checkbutton(self.container4,font = self.fonte,variable=self.checkInfluencia, onvalue=True, offvalue=False, command = self.AtualizaIn)
+            self.Influencia.grid(column=2, row=1, padx=10, sticky = 'w')
+            self.valorInfluencia = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorInfluencia.grid(column=1, row=1)
+            self.LInfluencia = Label(self.container4, text = 'Influência:', font=("Times New Roman", "12", "bold"))
+            self.LInfluencia.grid(column=0, row=1, padx=(15, 10), sticky = 'e')
+
+            self.checkPoder = IntVar()
+            self.Poder = Checkbutton(self.container4,font = self.fonte,variable=self.checkPoder, onvalue=True, offvalue=False, command = self.AtualizaPoder)
+            self.Poder.grid(column=2, row=2, padx=10, sticky = 'w')
+            self.valorPoder = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorPoder.grid(column=1, row=2)
+            self.LPoder = Label(self.container4, text = 'Poder:', font=("Times New Roman", "12", "bold"))
+            self.LPoder.grid(column=0, row=2, padx=(15, 10), sticky = 'e')
+
+        if self.conjunto.get() == 2:
+            self.Motivação.destroy()
+            self.LMotivação.destroy()
+            self.valorMotivação.destroy()
+            self.Influencia.destroy()
+            self.LInfluencia.destroy()
+            self.valorInfluencia.destroy()
+            self.Poder.destroy()
+            self.LPoder.destroy()
+            self.valorPoder.destroy()
+
+            self.checkOcupação = IntVar()
+            self.Ocupação = Checkbutton(self.container4,font = self.fonte,variable=self.checkOcupação, onvalue=True, offvalue=False, command = self.AtualizaOc)
+            self.Ocupação.grid(column=2, row=0, padx=10, sticky = 'w')
+            self.valorOcupação = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorOcupação.grid(column=1, row=0)
+            self.LOcupação = Label(self.container4, text = 'Ocupação:', font=("Times New Roman", "12", "bold"))
+            self.LOcupação.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
+    
+    def Gerar(self):
+        pass
+
+    def Salvar(self):
+        pass
             
 
 root = Tk()
