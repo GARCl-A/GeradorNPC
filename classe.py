@@ -10,7 +10,7 @@ class NPC():
         self._alinhamento_BM = None
         self._caracteristicas_fisicas = None
         self._caracteristicas_pessoais = None
-        self._qualidades = ['honesto(a)']
+        self._qualidades = []
         self._defeitos = []
         self._classe = None
         self._riqueza = None
