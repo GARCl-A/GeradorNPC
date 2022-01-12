@@ -84,8 +84,8 @@ listadefeitos = ['teimoso(a)', 'agressivo(a)','violento(a)','procrastinador(a)',
                  'imaturo(a)','indeciso(a)','ciumento(a)','oportunista','covarde','burro(a)','tímido(a)','pesimista','desrespeitoso(a)','tolo','impaciente']
 
 
-listaantonimos=[('covarde','corajoso(a)'),('altruista','covarde'),('inteligente','burro(a)'),('perseverante','preguçoso(a)'),('confiável','irresponsavel'),
-                ('responsavel','irresponsavel'),('negligente','responsavel'),('honesto(a)','desonesto(a)'),('tolerânte','intolerante'),('exigente','tolerânte'),('inflexivel','tolerânte'),
+listaantonimos=[('covarde','corajoso(a)'),('altruista','covarde'),('inteligente','burro(a)'),('perseverante','preguiçoso(a)'),('confiável','irresponsável'),
+                ('responsavel','irresponsavel'),('negligente','responsavel'),('honesto(a)','desonesto(a)'),('tolerânte','intolerante'),('exigente','tolerante'),('inflexivel','tolerânte'),
                 ('sincero(a)','mentiroso(a)'),('falso(a)','sincero(a)'),('focado(a)','distraído(a)'),('tímido(a)','extrovertido(a)'),('disciplinado(a)','procrastinador(a)'),
                 ('honrado(a)','covarde'),('hipócrita', 'honrado(a)'),('humilde','arrogante'),('pesimista','otimista'),('desmotivado(a)','determinado(a)'),('procrastinador(a)','determinado(a)'),
                 ('prudente','irresponsável'),('calmo(a)', 'agressivo(a)'),('calmo(a)','violento(a)'),('irritadiço(a)','calmo(a)'),('imaturo(a)', 'maduro(a)'),('meigo(a)','grosso(a)'),

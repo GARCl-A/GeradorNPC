@@ -107,7 +107,19 @@ class NPC():
         pass
 
     def gera_caracteristicas_pessoais(self):
-        pass
+        while len(self.qualidades) <3:
+            numero = random.randrange(0,len(listaqualidade))
+            if listaqualidade[numero] not in self.qualidades:
+                self.qualidades.append(listaqualidade[numero])
+        while len(self.defeitos) < 3:
+            numero = random.randrange(0,len(listadefeitos))
+            antonimo = False
+            for qualidade in self.qualidades:
+                if ((listadefeitos[numero], qualidade) or (qualidade, listadefeitos[numero])) in listaantonimos:
+                    antonimo = True
+            if antonimo == False: self.defeitos.append(listadefeitos[numero])
+        self._caracteristicas_pessoais = self.qualidades + self.defeitos
+
 
     def gera_classe(self):
         if self._classe_jog:
@@ -178,4 +190,5 @@ teste.gera_genero()
 teste.gera_influencia()
 teste.gera_nome()
 teste.gera_poderes()
+teste.gera_caracteristicas_pessoais()
 print(vars(teste))
