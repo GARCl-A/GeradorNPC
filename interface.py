@@ -264,10 +264,41 @@ class Aplicacao:
             self.LOcupação.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
     
     def Gerar(self):
+        if self.conjunto.get() == 1: 
+            tipo = 'vilao'
+            npc = Vilao()
+        else: 
+            tipo = 'neutro'
+            npc = Neutro()
+
+        if self.varGenero.get() == 'Aleatório':
+            npc.gera_genero()
+        else: npc.set_genero(self.varGenero.get())
+
+        if self.varRaça.get() == 'Aleatório':
+            npc.gera_raça()
+        else: npc.set_raça(self.varRaça.get())
+
+        if self.checkNome.get() == False:
+            npc.gera_nome()
+        else: npc.set_nome(self.valorNome.get())
+
+        # self._raça = 
+        # self._alinhamento = 
+        # self._alinhamento_CO = 
+        # self._caracteristicas_fisicas = 
+        # self._caracteristicas_pessoais = 
+        # self._classe = 
+        # self._riqueza = 
+        # self._genero = 
+        # self._classe_jog = 
+
+        print(npc)
         pass
 
     def Salvar(self):
         pass
+    
             
 
 root = Tk()

@@ -167,11 +167,6 @@ Características Pessoais: {self._caracteristicas_pessoais}
 Riqueza: {self._riqueza}
 Ocupação: {self._ocupaçao}'''
 
-
-
-
-
-
 class Vilao(NPC):
     def __init__(self):
         super().__init__()
