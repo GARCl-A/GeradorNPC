@@ -95,14 +95,14 @@ listaantonimos = [('covarde','corajoso(a)'),('altruísta','covarde'),('inteligen
                   'sábio(a)'),('engraçado(a)','sem graça'),('empático(a)','antipático(a)'),('generoso(a)','egoísta'),('proativo','procrastinador(a)'),('paciente','impaciente'),
                   ('compreensivo','inflexível')]
                   
-listaOlhos ={'olhos castanhos','olhos azuis','olhos vermelhos','olhos de vidro','olhos cor purpura','olhos castanhos'}                               
-listacabelo = {'cabelo longo liso','cabelo curto liso ','cabelo longo encaracolado','cabelo curto encaracolado','cabelo longo ondulado','careca','cabelo curto ondulado'}                                                 
-listabarba={'sem barba',' com cavanhaque','longa barba','com barba'}
-listacorpelos=('castanho','branco','loiro(a)','ruivo(a)')
-listaaltura={'alto','baixo','media estatura','alto','muito baixo'}
-listaporte={'bodybuilder','sarado','magrelo','esqueletico','gordo','gordinho'}
-listarabo={' rabo longo e fino','rabo curto e fino', 'rabo de tamanho medio e fino','rabo longo e grosso','rabo longo','rabo curto','rabo de tamanho normal'}
-listaasas={'asas peuqenas','asas normais','asas gigantes','asas grandes'}
-listacornormais={'negro(a)','branco(a)','pardo(a)','albino(a)'}
-listachifres={'chifres grandes','chifres curtos','crifres finos e longos','chifres finos e curtos','chifres curtos e longos'}
-listacordemoniolagarto={'verde','roxo(a)','marrom','vermelho(a)','azul','cinza','albino(a)'}
+listaOlhos =['olhos castanhos','olhos azuis','olhos vermelhos','olhos de vidro','olhos cor purpura','olhos castanhos']                               
+listacabelo = ['cabelo longo liso','cabelo curto liso ','cabelo longo encaracolado','cabelo curto encaracolado','cabelo longo ondulado','careca','cabelo curto ondulado']                                                
+listabarba=['sem barba',' com cavanhaque','longa barba','com barba']
+listacorpelos=['castanho','branco','loiro(a)','ruivo(a)']
+listaaltura=['alto','baixo','media estatura','alto','muito baixo']
+listaporte=['bodybuilder','sarado','magrelo','esqueletico','gordo','gordinho']
+listarabo=[' rabo longo e fino','rabo curto e fino', 'rabo de tamanho medio e fino','rabo longo e grosso','rabo longo','rabo curto','rabo de tamanho normal']
+listaasas=['asas peuqenas','asas normais','asas gigantes','asas grandes']
+listacornormais=['negro(a)','branco(a)','pardo(a)','albino(a)']
+listachifres=['chifres grandes','chifres curtos','crifres finos e longos','chifres finos e curtos','chifres curtos e longos']
+listacordemoniolagarto=['verde','roxo(a)','marrom','vermelho(a)','azul','cinza','albino(a)']

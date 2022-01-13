@@ -102,8 +102,79 @@ class NPC():
         self._alinhamento = self._alinhamento_CO + ' | ' + self._alinhamento_BM
         
     def gera_caracteristicas_fisicas(self):
-        #a ultima linha é self._caracteristicas_fisicas = 'STRING COM TODAS AS CARACTERISTICAS'
-        pass
+        caracteristicas = ''
+        if self._raça == None:
+            self.gera_raça()
+        else:
+            raça = self._raça
+        if self._raça == "Humano" or self._raça == "Anão" or self._raça == "Elfo" or self._raça =="Gnomo"or self._raça =="Halfling" or self._raça == "Gigante" or self._raça =="Meio-Elfo" or self._raça == "Golias":
+            olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
+            cabelo = listacabelo[random.randrange(0,len(listacabelo))]
+            barba = listabarba[random.randrange(0,len(listabarba))]
+            corpelos = listacorpelos[random.randrange(0,len(listacorpelos))]
+            altura = listaaltura[random.randrange(0,len(listaaltura))]
+            corpo = listaporte[random.randrange(0,len(listaporte))]
+            cor = listacornormais[random.randrange(0,len(listacornormais))]
+
+            caracteristicas = olhos+", " +cabelo+", " +barba+", " +corpelos+", " +altura+", " +corpo+", " +cor
+        if self._raça == "Kobold" or self._raça == "Lizardfolk" or self._raça == "Draconato" or self._raça == "Tiefling" :
+            olhos= listaOlhos[random.randrange(0,len(listaOlhos))]           
+            altura= listaaltura[random.randrange(0,len(listaaltura))]
+            corpo = listaporte[random.randrange(0,len(listaporte))]
+            cor= listacordemoniolagarto[random.randrange(0,len(listacordemoniolagarto))]
+            chifre= listachifres[random.randrange(0,len(listachifres))]
+            rabo= listarabo[random.randrange(0,len(listarabo))]
+
+            caracteristicas = olhos+", " +chifre+", " +rabo+", " +altura+", " +corpo+", " +cor
+        
+        if self._raça == "Orc" or self._raça == "Goblin" or self._raça == "Gnoll" or self._raça =="Ikidaris"or self._raça =="Meio-Orc" or self._raça == "Forjados" or self._raça =="Genasi" :
+            olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
+            cabelo = listacabelo[random.randrange(0,len(listacabelo))]
+            barba = listabarba[random.randrange(0,len(listabarba))]
+            corpelos = listacorpelos[random.randrange(0,len(listacorpelos))]
+            altura = listaaltura[random.randrange(0,len(listaaltura))]
+            corpo = listaporte[random.randrange(0,len(listaporte))]
+            cor = listacordemoniolagarto[random.randrange(0,len(listacordemoniolagarto))]
+
+            caracteristicas= olhos+", " +cabelo+", " +barba+", " +corpelos+", " +altura+", " +corpo+", " +cor
+        if self._raça == "Sprite" or self._raça == "Aasimar"  : 
+            olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
+            cabelo= listacabelo[random.randrange(0,len(listacabelo))]
+            barba= listabarba[random.randrange(0,len(listabarba))]
+            corpelos= listacorpelos[random.randrange(0,len(listacorpelos))]
+            altura= listaaltura[random.randrange(0,len(listaaltura))]
+            corpo= listaporte[random.randrange(0,len(listaporte))]
+            cor= listacornormais[random.randrange(0,len(listacornormais))]
+            asa= listaasas[random.randrange(0,len(listaasas))]
+
+            caracteristicas= olhos+", " +cabelo+", " +barba+", " +corpelos+", " +altura+", " +corpo+", " +cor+", " +asa
+        if   self._raça == "Leshy" :
+            olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
+            altura= listaaltura[random.randrange(0,len(listaaltura))]
+            corpo= listaporte[random.randrange(0,len(listaporte))]
+            cor= listacornormais[random.randrange(0,len(listacornormais))]
+            chifre= listachifres[random.randrange(0,len(listachifres))]
+
+            caracteristicas= olhos+ ", " +altura + ", " +cor +", " +chifre+", " +corpo
+        if   self._raça == "Centauros": 
+            olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
+            corpelos= listacorpelos[random.randrange(0,len(listacorpelos))]
+            altura= listaaltura[random.randrange(0,len(listaaltura))]
+            corpo= listaporte[random.randrange(0,len(listaporte))]
+            cor= listacornormais[random.randrange(0,len(listacornormais))]
+            chifre= listachifres[random.randrange(0,len(listachifres))]
+
+            caracteristicas=olhos+", " +corpelos+", " +altura+", " +corpo+", " +cor+", " +chifre
+        if self._raça == "Kenku" or self._raça == "Aarakocra"  :    
+            olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
+            altura= listaaltura[random.randrange(0,len(listaaltura))]
+            corpo= listaporte[random.randrange(0,len(listaporte))]
+            cor= listacornormais[random.randrange(0,len(listacornormais))]
+            asa= listaasas[random.randrange(0,len(listaasas))]
+
+            caracteristicas= olhos + ", " + altura  + ", " + corpo+", " +cor
+
+        self._caracteristicas_fisicas = caracteristicas
 
     def gera_caracteristicas_pessoais(self):
         while len(self._qualidades) <3:
@@ -225,4 +296,5 @@ teste.gera_influencia()
 teste.gera_nome()
 teste.gera_poderes()
 teste.gera_caracteristicas_pessoais()
+teste.gera_caracteristicas_fisicas()
 print(teste)

@@ -1,60 +1,12 @@
-Nome: Gurdis
-Gênero: Feminino
-Raça: Anão
-Classe: Plebeu
-Alinhamento: Leal | Mal
-Características Físicas: None
-Características Pessoais: respeitoso(a), honrado(a), inteligente, chato(a), preconceituoso(a), ganancioso(a)
-Riqueza: Média baixa
-Motivação: Manipulação
-Influência: Global | Militarmente
-Poderes: Líder sobrenatural
-
-Nome: Jelutoq
-Gênero: Feminino
-Raça: Golias
-Classe: Acólito
-Alinhamento: Neutro | Neutro
-Características Físicas: None
-Características Pessoais: compreensivo, romântico(a), paciente, cruel, manipulador(a), autoritário(a)
-Riqueza: Abaixo da pobreza
-Motivação: Natureza Maligna
-Influência: Local | Politicamente
-Poderes: Arma mágica
-
-Nome: Zatuwi
+Nome: Cumus
 Gênero: Masculino
-Raça: Kobold
-Classe: Acólito
-Alinhamento: Caótico | Neutro
-Características Físicas: None
-Características Pessoais: honrado(a), respeitoso(a), meigo(a), preconceituoso(a), indeciso(a), vingativo(a)
-Riqueza: Pobre
+Raça: Aasimar
+Classe: Nobre
+Alinhamento: Caótico | Mal
+Características Físicas: olhos vermelhos, cabelo curto ondulado,  com cavanhaque, castanho, alto, magrelo, pardo(a), asas normais
+Características Pessoais: orgulhoso, corajoso(a), determinado(a), cruel, rancoroso(a), apático(a)
+Riqueza: Muito Rico
 Motivação: Mal puro
 Influência: Global | Violentamente
-Poderes: Controla criatura super poderosa
-
-Nome: Mixav
-Gênero: Masculino
-Raça: Leshy
-Classe: Plebeu
-Alinhamento: Leal | Neutro
-Características Físicas: None
-Características Pessoais: confiável, meigo(a), maduro(a), superficial, chato(a), atrevido(a)
-Riqueza: Muito Rico
-Motivação: Vingança
-Influência: Regional | Violentamente
-Poderes: Arma mágica
-
-Nome: Ront
-Gênero: Masculino
-Raça: Meio-Orc
-Classe: Especialista
-Alinhamento: Caótico | Bom
-Características Físicas: None
-Características Pessoais: inteligente, altruísta, organizado(a), manipulador(a), indeciso(a), autoritário(a)
-Riqueza: Média
-Motivação: Ambição
-Influência: Local | Militarmente
-Poderes: Manipulador de nobres
+Poderes: Prevê o futuro
 
