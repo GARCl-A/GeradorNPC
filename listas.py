@@ -1,5 +1,3 @@
-import random
-
 nomes = {
     'Anão' : {
         'Masculino': ['Adrik', 'Alberich', 'Baern', 'Barendd','Brottor', 'Bruenor', 'Dain', 'Darrak', 'Delg', 'Eberk', 'Einkil','Fargrim', 'Flint', 'Gardain', 'Harbek', 'Kildrak', 'Morgran','Orsik', 'Oskar', 'Rangrim', 'Rurik', 'Taklinn', 'Thoradin','Thorin', 'Tordek', 'Traubon', 'Travok', 'Ulfgar', 'Veit','Vondal'],
@@ -78,13 +76,11 @@ listaqualidade =['corajoso(a)','inteligente','perseverante','confiável','criati
                   'respeitoso(a)','altruísta','zeloso(a)','organizado(a)','responsável','eloquente','leal','ambicioso(a)','meigo(a)','prático(a)','carismático(a)',
                   'sábio(a)','engraçado(a)','empático(a)','generoso(a)','proativo','paciente','orgulhoso','compreensivo']
 
-
 listadefeitos = ['teimoso(a)', 'agressivo(a)','violento(a)','procrastinador(a)','desequilibrado(a)','interesseiro(a)','arrogante','preconceituoso(a)','bisbilhoteiro(a)',
                  'cruel', 'exigente','egoísta','mentiroso(a)','autoritário(a)','malvado(a)','chato(a)','avarento(a)','negligente','irresponsável','atrevido(a)','irritadiço(a)',
                  'inflexível','apático(a)','antipático(a)','possessivo(a)','intolerante','desorganizado(a)','dissimulado(a)','distraído(a)','falso(a)','desmotivado(a)',
                  'rancoroso(a)','vingativo(a)','grosso(a)','hipócrita','desleal','desonesto(a)','preguiçoso(a)','ganancioso(a)','superficial','sem graça','manipulador(a)',
                  'imaturo(a)','indeciso(a)','ciumento(a)','oportunista','covarde','burro(a)','tímido(a)','pessimista','desrespeitoso(a)','tolo','impaciente']
-
 
 listaantonimos = [('covarde','corajoso(a)'),('altruísta','covarde'),('inteligente','burro(a)'),('perseverante','preguiçoso(a)'),('confiável','irresponsável'),
                 ('responsável','irresponssável'),('negligente','responsável'),('honesto(a)','desonesto(a)'),('tolerante','intolerante'),('exigente','tolerante'),('inflexível','tolerante'),

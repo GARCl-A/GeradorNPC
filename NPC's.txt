@@ -1,12 +1,154 @@
-Nome: Cumus
+Nome: Lolüqü
 Gênero: Masculino
-Raça: Aasimar
+Raça: Genasi
+Classe: Nobre
+Alinhamento: Neutro | Bom
+Características Físicas: olhos castanhos, careca, com barba
+         loiro(a), muito baixo, gordo, vermelho(a)
+Características Pessoais: otimista, prudente, focado(a)
+          possessivo(a), ganancioso(a), cruel
+Riqueza: Média baixa
+Motivação: Amor
+Influência: Regional | Economicamente
+Poderes: Arma mágica
+-
+Nome: Paelias Holimion
+Gênero: Masculino
+Raça: Meio-Elfo
+Classe: Nobre
+Alinhamento: Leal | Mal
+Características Físicas: olhos de vidro, cabelo longo encaracolado, sem barba
+        branco, media estatura, bodybuilder, branco(a)
+Características Pessoais: inteligente, honesto(a), romântico(a)
+          teimoso(a), ciumento(a), desequilibrado(a)
+Riqueza: Média
+Motivação: Revolução
+Influência: Global | Politicamente
+Poderes: Prevê o futuro
+-
+Nome: Foqilecu
+Gênero: Feminino
+Raça: Genasi
 Classe: Nobre
 Alinhamento: Caótico | Mal
-Características Físicas: olhos vermelhos, cabelo curto ondulado,  com cavanhaque, castanho, alto, magrelo, pardo(a), asas normais
-Características Pessoais: orgulhoso, corajoso(a), determinado(a), cruel, rancoroso(a), apático(a)
-Riqueza: Muito Rico
-Motivação: Mal puro
-Influência: Global | Violentamente
-Poderes: Prevê o futuro
-
+Características Físicas: olhos castanhos, cabelo curto encaracolado, longa barba
+         castanho, baixo, sarado, azul
+Características Pessoais: leal, responsável, altruísta
+          cruel, possessivo(a), atrevido(a)
+Riqueza: Média
+Motivação: Servidão
+Influência: Global | Economicamente
+Poderes: Escolhido por alguma entidade
+-
+Nome: Sariel Liadon
+Gênero: Feminino
+Raça: Elfo
+Classe: Especialista
+Alinhamento: Neutro | Mal
+Características Físicas: olhos de vidro, cabelo longo encaracolado,  com cavanhaque
+        loiro(a), media estatura, esqueletico, branco(a)
+Características Pessoais: extrovertido(a), resiliente, leal
+          chato(a), manipulador(a), superficial
+Riqueza: Média alta
+Motivação: Loucura
+Influência: Local | Militarmente
+Poderes: Controla criatura super poderosa
+-
+Nome: Jizaric
+Gênero: Masculino
+Raça: Ikidaris
+Classe: Especialista
+Alinhamento: Caótico | Neutro
+Características Físicas: olhos castanhos, cabelo curto encaracolado, longa barba
+         castanho, muito baixo, gordo, marrom
+Características Pessoais: meigo(a), observador(a), confiável
+          desequilibrado(a), ciumento(a), rancoroso(a)
+Riqueza: Rico
+Motivação: Loucura
+Influência: Local | Politicamente
+Poderes: Influencia forças da natureza
+-
+Nome: Mialee Nailo
+Gênero: Feminino
+Raça: Meio-Elfo
+Classe: Especialista
+Alinhamento: Leal | Mal
+Características Físicas: olhos vermelhos, cabelo longo encaracolado,  com cavanhaque
+        branco, baixo, sarado, negro(a)
+Características Pessoais: confiável, inteligente, organizado(a)
+          teimoso(a), avarento(a), ganancioso(a)
+Riqueza: Abaixo da pobreza
+Motivação: Manipulação
+Influência: Local | Magicamente
+Poderes: Médium
+-
+Nome: Jebuqe
+Gênero: Masculino
+Raça: Kenku
+Classe: Acólito
+Alinhamento: Caótico | Neutro
+Características Físicas: olhos de vidro, alto, gordo
+          pardo(a)
+Características Pessoais: otimista, confiável, resiliente
+          ganancioso(a), teimoso(a), cruel
+Riqueza: Pobre
+Motivação: Vingança
+Influência: Regional | Politicamente
+Poderes: Manipulador de nobres
+-
+Nome: Sülat
+Gênero: Masculino
+Raça: Genasi
+Classe: Nobre
+Alinhamento: Neutro | Bom
+Características Físicas: olhos vermelhos, careca,  com cavanhaque
+         branco, alto, gordinho, marrom
+Características Pessoais: eloquente, altruísta, ambicioso(a)
+          cruel, chato(a), apático(a)
+Riqueza: Média alta
+Motivação: Ambição
+Influência: Local | Economicamente
+Poderes: Líder sobrenatural
+-
+Nome: Ront
+Gênero: Masculino
+Raça: Orc
+Classe: Plebeu
+Alinhamento: Neutro | Bom
+Características Físicas: olhos vermelhos, careca, com barba
+         branco, alto, gordo, azul
+Características Pessoais: sábio(a), romântico(a), focado(a)
+          rancoroso(a), avarento(a), ganancioso(a)
+Riqueza: Média alta
+Motivação: Amor
+Influência: Local | Magicamente
+Poderes: Exercito leal
+-
+Nome: Wajüda
+Gênero: Feminino
+Raça: Golias
+Classe: Especialista
+Alinhamento: Leal | Bom
+Características Físicas: olhos castanhos, cabelo longo encaracolado, longa barba
+        branco, muito baixo, magrelo, negro(a)
+Características Pessoais: tolerante, generoso(a), altruísta
+          indeciso(a), vingativo(a), avarento(a)
+Riqueza: Rico
+Motivação: Loucura
+Influência: Local | Economicamente
+Poderes: Covil indestrutivo
+-
+Nome: Wübü
+Gênero: Masculino
+Raça: Centauros
+Classe: Especialista
+Alinhamento: Neutro | Neutro
+Características Físicas: olhos cor purpura, loiro(a), muito baixo
+           bodybuilder, negro(a), chifres finos e curtos
+Características Pessoais: confiável, determinado(a), responsável
+          cruel, ganancioso(a), atrevido(a)
+Riqueza: Rico
+Motivação: Natureza Maligna
+Influência: Global | Politicamente
+Poderes: Controla criatura super poderosa
+-

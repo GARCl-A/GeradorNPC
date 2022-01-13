@@ -113,7 +113,7 @@ class NPC():
             corpo = listaporte[random.randrange(0,len(listaporte))]
             cor = listacornormais[random.randrange(0,len(listacornormais))]
 
-            caracteristicas = olhos+", " +cabelo+", " +barba+", " +corpelos+", " +altura+", " +corpo+", " +cor
+            caracteristicas = olhos+", " +cabelo+", " +barba+"\n        " +corpelos+", " +altura+", " +corpo+", " +cor
         if self._raça == "Kobold" or self._raça == "Lizardfolk" or self._raça == "Draconato" or self._raça == "Tiefling" :
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]           
             altura= listaaltura[random.randrange(0,len(listaaltura))]
@@ -122,7 +122,7 @@ class NPC():
             chifre= listachifres[random.randrange(0,len(listachifres))]
             rabo= listarabo[random.randrange(0,len(listarabo))]
 
-            caracteristicas = olhos+", " +chifre+", " +rabo+", " +altura+", " +corpo+", " +cor
+            caracteristicas = olhos+", " +chifre+", " +rabo+"\n         " +altura+", " +corpo+", " +cor
         
         if self._raça == "Orc" or self._raça == "Goblin" or self._raça == "Gnoll" or self._raça =="Ikidaris"or self._raça =="Meio-Orc" or self._raça == "Forjados" or self._raça =="Genasi" :
             olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
@@ -133,7 +133,7 @@ class NPC():
             corpo = listaporte[random.randrange(0,len(listaporte))]
             cor = listacordemoniolagarto[random.randrange(0,len(listacordemoniolagarto))]
 
-            caracteristicas= olhos+", " +cabelo+", " +barba+", " +corpelos+", " +altura+", " +corpo+", " +cor
+            caracteristicas= olhos+", " +cabelo+", " +barba+"\n         " +corpelos+", " +altura+", " +corpo+", " +cor
         if self._raça == "Sprite" or self._raça == "Aasimar"  : 
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
             cabelo= listacabelo[random.randrange(0,len(listacabelo))]
@@ -144,7 +144,7 @@ class NPC():
             cor= listacornormais[random.randrange(0,len(listacornormais))]
             asa= listaasas[random.randrange(0,len(listaasas))]
 
-            caracteristicas= olhos+", " +cabelo+", " +barba+", " +corpelos+", " +altura+", " +corpo+", " +cor+", " +asa
+            caracteristicas= olhos+", " +cabelo+", " +barba+"\n         " +corpelos+", " +altura+", " +corpo+", " +cor+", " +asa
         if   self._raça == "Leshy" :
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
             altura= listaaltura[random.randrange(0,len(listaaltura))]
@@ -152,7 +152,7 @@ class NPC():
             cor= listacornormais[random.randrange(0,len(listacornormais))]
             chifre= listachifres[random.randrange(0,len(listachifres))]
 
-            caracteristicas= olhos+ ", " +altura + ", " +cor +", " +chifre+", " +corpo
+            caracteristicas= olhos+ ", " +altura + ", " +cor +"\n           " +chifre+", " +corpo
         if   self._raça == "Centauros": 
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
             corpelos= listacorpelos[random.randrange(0,len(listacorpelos))]
@@ -161,7 +161,7 @@ class NPC():
             cor= listacornormais[random.randrange(0,len(listacornormais))]
             chifre= listachifres[random.randrange(0,len(listachifres))]
 
-            caracteristicas=olhos+", " +corpelos+", " +altura+", " +corpo+", " +cor+", " +chifre
+            caracteristicas=olhos+", " +corpelos+", " +altura+"\n           " +corpo+", " +cor+", " +chifre
         if self._raça == "Kenku" or self._raça == "Aarakocra"  :    
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
             altura= listaaltura[random.randrange(0,len(listaaltura))]
@@ -169,7 +169,7 @@ class NPC():
             cor= listacornormais[random.randrange(0,len(listacornormais))]
             asa= listaasas[random.randrange(0,len(listaasas))]
 
-            caracteristicas= olhos + ", " + altura  + ", " + corpo+", " +cor
+            caracteristicas= olhos + ", " + altura  + ", " + corpo+"\n          " +cor
 
         self._caracteristicas_fisicas = caracteristicas
 
@@ -187,9 +187,7 @@ class NPC():
                         antonimo = True
                 if not antonimo:
                     self._defeitos.append(listadefeitos[numero])
-        self._caracteristicas_pessoais = self._qualidades + self._defeitos
-        self._caracteristicas_pessoais = self.trata_listas(self._caracteristicas_pessoais)
-
+        self._caracteristicas_pessoais = self.trata_listas(self._qualidades) + '\n          ' +self.trata_listas(self._defeitos)
 
     def gera_classe(self):
         if self._classe_jog:
@@ -234,7 +232,9 @@ Alinhamento: {self._alinhamento}
 Características Físicas: {self._caracteristicas_fisicas}
 Características Pessoais: {self._caracteristicas_pessoais}
 Riqueza: {self._riqueza}
-Ocupação: {self._ocupaçao}'''
+Ocupação: {self._ocupaçao}
+-
+'''
 
 class Vilao(NPC):
     def __init__(self):
@@ -277,21 +277,10 @@ Riqueza: {self._riqueza}
 Motivação: {self._motivacao}
 Influência: {self._influencia}
 Poderes: {self._poderes}
-
+-
 '''
 
 teste = Vilao()
 teste.gera_raça()
-teste.gera_alinhamento_BM()
-teste.gera_alinhamento_CO()
-teste.gera_alinhamento()
-teste.gera_classe()
-teste.gera_riqueza()
-teste.gera_motivacao()
-teste.gera_genero()
-teste.gera_influencia()
-teste.gera_nome()
-teste.gera_poderes()
-teste.gera_caracteristicas_pessoais()
 teste.gera_caracteristicas_fisicas()
-print(teste)
+print(teste,'\n',teste._caracteristicas_fisicas)

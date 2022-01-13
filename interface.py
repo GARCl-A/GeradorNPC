@@ -2,8 +2,7 @@ import os
 from tkinter import ttk
 from tkinter import *
 from listas import *
-from classe import Neutro,Vilao
-
+from modelos import Neutro,Vilao
 
 class Aplicacao:
     def __init__(self,master=None):
