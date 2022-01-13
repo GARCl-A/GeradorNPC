@@ -113,7 +113,7 @@ class NPC():
             corpo = listaporte[random.randrange(0,len(listaporte))]
             cor = listacornormais[random.randrange(0,len(listacornormais))]
 
-            caracteristicas = olhos+", " +cabelo+", " +barba+"\n        " +corpelos+", " +altura+", " +corpo+", " +cor
+            caracteristicas = olhos+", " +cabelo+", " +barba+"\n     "+cor dos pelos+",   " +corpelos+", " +altura+", " +corpo+", " +cor
         if self._raça == "Kobold" or self._raça == "Lizardfolk" or self._raça == "Draconato" or self._raça == "Tiefling" :
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]           
             altura= listaaltura[random.randrange(0,len(listaaltura))]
@@ -133,7 +133,7 @@ class NPC():
             corpo = listaporte[random.randrange(0,len(listaporte))]
             cor = listacordemoniolagarto[random.randrange(0,len(listacordemoniolagarto))]
 
-            caracteristicas= olhos+", " +cabelo+", " +barba+"\n         " +corpelos+", " +altura+", " +corpo+", " +cor
+            caracteristicas= olhos+", " +cabelo+", " +barba+"\n        "+cor dos pelos+", " +corpelos+", " +altura+", " +corpo+", " +cor
         if self._raça == "Sprite" or self._raça == "Aasimar"  : 
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
             cabelo= listacabelo[random.randrange(0,len(listacabelo))]
@@ -144,7 +144,7 @@ class NPC():
             cor= listacornormais[random.randrange(0,len(listacornormais))]
             asa= listaasas[random.randrange(0,len(listaasas))]
 
-            caracteristicas= olhos+", " +cabelo+", " +barba+"\n         " +corpelos+", " +altura+", " +corpo+", " +cor+", " +asa
+            caracteristicas= olhos+", " +cabelo+", " +barba+"\n        "+cor dos pelos+", " +corpelos+", " +altura+", " +corpo+", " +cor+", " +asa
         if   self._raça == "Leshy" :
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
             altura= listaaltura[random.randrange(0,len(listaaltura))]
@@ -161,7 +161,7 @@ class NPC():
             cor= listacornormais[random.randrange(0,len(listacornormais))]
             chifre= listachifres[random.randrange(0,len(listachifres))]
 
-            caracteristicas=olhos+", " +corpelos+", " +altura+"\n           " +corpo+", " +cor+", " +chifre
+            caracteristicas=olhos+", "+cor dos pelos+"," +corpelos+", " +altura+"\n           " +corpo+", " +cor+", " +chifre
         if self._raça == "Kenku" or self._raça == "Aarakocra"  :    
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
             altura= listaaltura[random.randrange(0,len(listaaltura))]
