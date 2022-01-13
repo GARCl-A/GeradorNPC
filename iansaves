@@ -96,24 +96,74 @@ class NPC():
         else:
             raça = self._raça
         if self._raça == "humano" or self._raça == "anão" or self._raça == "Elfo" or self._raça =="Gnomo"or self._raça =="Halfling" or self._raça == "Gigante" or self._raça =="Meio-Elfo" or self._raça == "Golias":
-            corpo= 1
-        if self._raça == "kobold" or self._raça == "Lizardfolk" or self._raça == "Draconato" :
-            corpo=1
-        if self._raça == "Tiefling" :
-            corpo=1
+            olhos= random.randrange(0,len(listaOlhos))
+            cabelo=random.randrange(0,len(listacabelo))
+            barba=random.randrange(0,len(listabarba))
+            corpelos=random.randrange(0,len(listacorpelos))
+            altura=random.randrange(0,len(listaaltura))
+            corpo=random.randrange(0,len(listaporte))
+            cor=random.randrange(0,len(listacornormais))
+
+            caracteristicas= olhos+cabelo+barba+corpelos+altura+corpo+cor
+        if self._raça == "kobold" or self._raça == "Lizardfolk" or self._raça == "Draconato" or self._raça == "Tiefling" :
+            olhos= random.randrange(0,len(listaOlhos))           
+            altura=random.randrange(0,len(listaaltura))
+            corpo=random.randrange(0,len(listaporte))
+            cor=random.randrange(0,len(listademoniolagarto))
+            chifre=random.randrange(0,len(listachifres))
+            rabo=random.randrange(0,len(listarabo))
+
+            caracteristicas=olhos+chifre+rabo+altura+corpo+cor
+        
         if self._raça == "orc" or self._raça == "Goblin" or self._raça == "Gnoll" or self._raça =="Ikidaris"or self._raça =="Meio-Orc" or self._raça == "Forjados" or self._raça =="Genasi" :
-            corpo=1
+            olhos= random.randrange(0,len(listaOlhos))
+            cabelo=random.randrange(0,len(listacabelo))
+            barba=random.randrange(0,len(listabarba))
+            corpelos=random.randrange(0,len(listacorpelos))
+            altura=random.randrange(0,len(listaaltura))
+            corpo=random.randrange(0,len(listaporte))
+            cor=random.randrange(0,len(listademoniolagarto))
+
+            caracteristicas= olhos+cabelo+barba+corpelos+altura+corpo+cor
         if self._raça == "Sprite" or self._raça == "Aasimar"  : 
-            corpo=1
+            olhos= random.randrange(0,len(listaOlhos))
+            cabelo=random.randrange(0,len(listacabelo))
+            barba=random.randrange(0,len(listabarba))
+            corpelos=random.randrange(0,len(listacorpelos))
+            altura=random.randrange(0,len(listaaltura))
+            corpo=random.randrange(0,len(listaporte))
+            cor=random.randrange(0,len(listacornormais))
+            asa=random.randrange(0,len(listaasas))
+
+            caracteristiscas= olhos+cabelo+barba+corpelos+altura+corpo+cor+asa
         if   self._raça == "Leshy" :
-            corpo=1
+            olhos= random.randrange(0,len(listaOlhos))
+            altura=random.randrange(0,len(listaaltura))
+            corpo=random.randrange(0,len(listaporte))
+            cor=random.randrange(0,len(listacornormais))
+            chifre=random.randrange(0,len(listachifres))
+
+            caracteristicas= olhos+ altura + cor +chifre+corpo
         if   self._raça == "Centauros": 
-            corpo=1
+            olhos= random.randrange(0,len(listaOlhos))
+            corpelos=random.randrange(0,len(listacorpelos))
+            altura=random.randrange(0,len(listaaltura))
+            corpo=random.randrange(0,len(listaporte))
+            cor=random.randrange(0,len(listanormais))
+            chifre=random.randrange(0,len(listachifres))
+
+            caracteristicas=olhos+corpelos+altura+corpo+cor+chifre
         if self._raça == "Kenku" or self._raça == "Aarakocra"  :    
-            corpo=1
+            olhos= random.randrange(0,len(listaOlhos))
+            altura=random.randrange(0,len(listaaltura))
+            corpo=random.randrange(0,len(listaporte))
+            cor=random.randrange(0,len(listademoniolagarto))
+            asa=random.randrange(0,len(listaasas))
+
+            caracteristicas=olhos+altura+corpo+cor
 
 
-        self._caracteristicas_pessoais=0
+        self._caracteristicas_pessoais=caracteristicas
     def gera_alinhamento_CO(self):
         numero = random.randrange(0,len(lista_alinhamento_CO))
         self._alinhamento_CO = lista_alinhamento_CO[numero]
@@ -249,3 +299,4 @@ teste.gera_nome()
 teste.gera_poderes()
 teste.gera_caracteristicas_pessoais()
 print(teste)
+
