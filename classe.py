@@ -103,10 +103,7 @@ class NPC():
         
     def gera_caracteristicas_fisicas(self):
         caracteristicas = ''
-        if self._raça == None:
-            self.gera_raça()
-        else:
-            raça = self._raça
+        
         if self._raça == "Humano" or self._raça == "Anão" or self._raça == "Elfo" or self._raça =="Gnomo"or self._raça =="Halfling" or self._raça == "Gigante" or self._raça =="Meio-Elfo" or self._raça == "Golias":
             olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
             cabelo = listacabelo[random.randrange(0,len(listacabelo))]
