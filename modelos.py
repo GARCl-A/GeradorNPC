@@ -63,7 +63,7 @@ class NPC():
         if self._raça == None:
             self.gera_raça()
         if self._genero == None:
-            self.gera_genero
+            self.gera_genero()
         
         if self._raça == 'Anão' or self._raça == 'Draconato' or self._raça == 'Halfling' or self._raça == 'Gnomo' or self._raça =='Meio-Orc' or self._raça == 'Tiefling' or self._raça.find('Orc') != -1:
                 if self._raça.find('Orc') != -1:
@@ -103,17 +103,36 @@ class NPC():
         
     def gera_caracteristicas_fisicas(self):
         caracteristicas = ''
+        if self._raça == None:
+            self.gera_raça()
+        else :
+            raça =self._raça
+        if self._genero == None:
+            self.gera_genero()
+        else:
+            genero =self._genero
         
         if self._raça == "Humano" or self._raça == "Anão" or self._raça == "Elfo" or self._raça =="Gnomo"or self._raça =="Halfling" or self._raça == "Gigante" or self._raça =="Meio-Elfo" or self._raça == "Golias":
-            olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
-            cabelo = listacabelo[random.randrange(0,len(listacabelo))]
-            barba = listabarba[random.randrange(0,len(listabarba))]
-            corpelos = listacorpelos[random.randrange(0,len(listacorpelos))]
-            altura = listaaltura[random.randrange(0,len(listaaltura))]
-            corpo = listaporte[random.randrange(0,len(listaporte))]
-            cor = listacornormais[random.randrange(0,len(listacornormais))]
+            if genero =="Feminino":
+             olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
+             cabelo = listacabelo[random.randrange(0,len(listacabelo))]
+             barba = listabarba[random.randrange(0,len(listabarba))]
+             corpelos = listacorpelos[random.randrange(0,len(listacorpelos))]
+             altura = listaaltura[random.randrange(0,len(listaaltura))]
+             corpo = listaporte[random.randrange(0,len(listaporte))]
+             cor = listacornormais[random.randrange(0,len(listacornormais))]
+             caracteristicas = olhos+", " +cabelo+", " +" pelo " +corpelos+"\n     "+", " +altura+", " +corpo+", " +cor
+            else:
+             olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
+             cabelo = listacabelo[random.randrange(0,len(listacabelo))]
+             barba = listabarba[random.randrange(0,len(listabarba))]
+             corpelos = listacorpelos[random.randrange(0,len(listacorpelos))]
+             altura = listaaltura[random.randrange(0,len(listaaltura))]
+             corpo = listaporte[random.randrange(0,len(listaporte))]
+             cor = listacornormais[random.randrange(0,len(listacornormais))]
+             caracteristicas = olhos+", " +cabelo+", " +barba+"\n     "+" pelos "+",   " +corpelos+", " +altura+", " +corpo+", " +cor
 
-            caracteristicas = olhos+", " +cabelo+", " +barba+"\n     "+cor dos pelos+",   " +corpelos+", " +altura+", " +corpo+", " +cor
+            
         if self._raça == "Kobold" or self._raça == "Lizardfolk" or self._raça == "Draconato" or self._raça == "Tiefling" :
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]           
             altura= listaaltura[random.randrange(0,len(listaaltura))]
@@ -125,26 +144,47 @@ class NPC():
             caracteristicas = olhos+", " +chifre+", " +rabo+"\n         " +altura+", " +corpo+", " +cor
         
         if self._raça == "Orc" or self._raça == "Goblin" or self._raça == "Gnoll" or self._raça =="Ikidaris"or self._raça =="Meio-Orc" or self._raça == "Forjados" or self._raça =="Genasi" :
-            olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
-            cabelo = listacabelo[random.randrange(0,len(listacabelo))]
-            barba = listabarba[random.randrange(0,len(listabarba))]
-            corpelos = listacorpelos[random.randrange(0,len(listacorpelos))]
-            altura = listaaltura[random.randrange(0,len(listaaltura))]
-            corpo = listaporte[random.randrange(0,len(listaporte))]
-            cor = listacordemoniolagarto[random.randrange(0,len(listacordemoniolagarto))]
+            if genero =="Feminino":
+             olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
+             cabelo = listacabelo[random.randrange(0,len(listacabelo))]
+             corpelos = listacorpelos[random.randrange(0,len(listacorpelos))]
+             altura = listaaltura[random.randrange(0,len(listaaltura))]
+             corpo = listaporte[random.randrange(0,len(listaporte))]
+             cor = listacordemoniolagarto[random.randrange(0,len(listacordemoniolagarto))]
+             caracteristicas= olhos+", " +cabelo+", " + "pelo" +corpelos+"\n        "+", " +altura+", " +corpo+", " +cor
+            else:
+             olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
+             cabelo = listacabelo[random.randrange(0,len(listacabelo))]
+             barba = listabarba[random.randrange(0,len(listabarba))]
+             corpelos = listacorpelos[random.randrange(0,len(listacorpelos))]
+             altura = listaaltura[random.randrange(0,len(listaaltura))]
+             corpo = listaporte[random.randrange(0,len(listaporte))]
+             cor = listacordemoniolagarto[random.randrange(0,len(listacordemoniolagarto))]
+             caracteristicas= olhos+", " +cabelo+", " +barba+"\n        "+" pelo" +corpelos+", " +altura+", " +corpo+", " +cor
 
-            caracteristicas= olhos+", " +cabelo+", " +barba+"\n        "+cor dos pelos+", " +corpelos+", " +altura+", " +corpo+", " +cor
+            
         if self._raça == "Sprite" or self._raça == "Aasimar"  : 
-            olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
-            cabelo= listacabelo[random.randrange(0,len(listacabelo))]
-            barba= listabarba[random.randrange(0,len(listabarba))]
-            corpelos= listacorpelos[random.randrange(0,len(listacorpelos))]
-            altura= listaaltura[random.randrange(0,len(listaaltura))]
-            corpo= listaporte[random.randrange(0,len(listaporte))]
-            cor= listacornormais[random.randrange(0,len(listacornormais))]
-            asa= listaasas[random.randrange(0,len(listaasas))]
+            if genero =="Feminino":
+             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
+             cabelo= listacabelo[random.randrange(0,len(listacabelo))]
+             corpelos= listacorpelos[random.randrange(0,len(listacorpelos))]
+             altura= listaaltura[random.randrange(0,len(listaaltura))]
+             corpo= listaporte[random.randrange(0,len(listaporte))]
+             cor= listacornormais[random.randrange(0,len(listacornormais))]
+             asa= listaasas[random.randrange(0,len(listaasas))]
+             caracteristicas= olhos+", " +cabelo+", " +"pelo" +corpelos+"\n        "+", " +altura+", " +corpo+", " +cor+", " +asa
+            else:
+             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
+             cabelo= listacabelo[random.randrange(0,len(listacabelo))]
+             barba= listabarba[random.randrange(0,len(listabarba))]
+             corpelos= listacorpelos[random.randrange(0,len(listacorpelos))]
+             altura= listaaltura[random.randrange(0,len(listaaltura))]
+             corpo= listaporte[random.randrange(0,len(listaporte))]
+             cor= listacornormais[random.randrange(0,len(listacornormais))]
+             asa= listaasas[random.randrange(0,len(listaasas))]
+             caracteristicas= olhos+", " +cabelo+", " +barba+"\n        "+"pelo" +corpelos+", " +altura+", " +corpo+", " +cor+", " +asa
 
-            caracteristicas= olhos+", " +cabelo+", " +barba+"\n        "+cor dos pelos+", " +corpelos+", " +altura+", " +corpo+", " +cor+", " +asa
+            
         if   self._raça == "Leshy" :
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
             altura= listaaltura[random.randrange(0,len(listaaltura))]
