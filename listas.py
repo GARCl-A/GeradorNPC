@@ -89,7 +89,7 @@ listaantonimos = [('covarde','corajoso(a)'),('altruísta','covarde'),('inteligen
                 ('prudente','irresponsável'),('calmo(a)', 'agressivo(a)'),('calmo(a)','violento(a)'),('irritadiço(a)','calmo(a)'),('imaturo(a)', 'maduro(a)'),('meigo(a)','grosso(a)'),
                 ('leal','desleal'),('organizado(a)','desorganizado(a)'),('zeloso(a)','negligente'),('altruísta','oportunista'),('respeitoso(a)','desrespeitoso(a)'),('tolo',
                   'sábio(a)'),('engraçado(a)','sem graça'),('empático(a)','antipático(a)'),('generoso(a)','egoísta'),('proativo','procrastinador(a)'),('paciente','impaciente'),
-                  ('compreensivo','inflexível')]
+                  ('compreensivo','inflexível'),('empático(a)','apático(a)')]
                   
 listaOlhos =['olhos castanhos','olhos azuis','olhos vermelhos','olhos de vidro','olhos cor purpura','olhos castanhos']                               
 listacabelo = ['cabelo longo liso','cabelo curto liso ','cabelo longo encaracolado','cabelo curto encaracolado','cabelo longo ondulado','careca','cabelo curto ondulado']                                                
