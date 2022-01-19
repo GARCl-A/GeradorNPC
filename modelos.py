@@ -109,6 +109,7 @@ class NPC():
             raça =self._raça
         if self._genero == None:
             self.gera_genero()
+            genero =self._genero
         else:
             genero =self._genero
         
