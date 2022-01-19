@@ -16,6 +16,8 @@ class NPC():
         self._riqueza = None
         self._genero = None
         self._classe_jog = True
+        self._caracteristicas_fisicas_str = None
+        self._caracteristicas_pessoais_str = None
 
     def set_nome(self,nome):
         self._nome = nome
@@ -211,8 +213,11 @@ Características Físicas: {self._caracteristicas_fisicas_str}
 Características Pessoais: {self._caracteristicas_pessoais_str}
 Riqueza: {self._riqueza}
 Ocupação: {self._ocupaçao}
--
 '''
+    def pdf(self):
+        return [f'Nome: {self._nome}',f'Gênero: {self._genero}',f'Raça: {self._raça}',f'Classe: {self._classe}',
+        f'Alinhamento: {self._alinhamento}',f'Características Físicas: {self._caracteristicas_fisicas}',
+        f'Características Pessoais: {self._caracteristicas_pessoais}',f'Riqueza: {self._riqueza}',f'Ocupação: {self._ocupaçao}']
 
 class Vilao(NPC):
     def __init__(self):
@@ -255,5 +260,10 @@ Riqueza: {self._riqueza}
 Motivação: {self._motivacao}
 Influência: {self._influencia}
 Poderes: {self._poderes}
--
 '''
+
+    def pdf(self):
+        return [f'Nome: {self._nome}',f'Gênero: {self._genero}',f'Raça: {self._raça}',f'Classe: {self._classe}',
+        f'Alinhamento: {self._alinhamento}',f'Características Físicas: {self._caracteristicas_fisicas}',
+        f'Características Pessoais: {self._caracteristicas_pessoais}',f'Riqueza: {self._riqueza}',f'Motivação: {self._motivacao}',
+        f'Influência: {self._influencia}',f'Poderes: {self._poderes}']
