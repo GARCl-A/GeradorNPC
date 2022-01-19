@@ -339,7 +339,7 @@ class Aplicacao:
         janelaNpc = Toplevel(master)
         janelaNpc.title('NPC')
 
-        imagem1 = ImageTk.PhotoImage(PIL.Image.open(path + "imagens\\humano1.jpg"))
+        imagem1 = ImageTk.PhotoImage(PIL.Image.open(path + "imagens\\humano2.png"))
         Label(janelaNpc, image=imagem1, text = 'teste').pack()
 
         Label(janelaNpc, text = npc._nome, font=("Times New Roman", "22", "bold")).pack(pady = (20,40))
