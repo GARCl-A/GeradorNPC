@@ -1,5 +1,7 @@
 import os
+path = os.sys.path[0] + '\\'
 from tkinter import ttk
+from PIL import ImageTk, Image 
 from tkinter import *
 from listas import *
 from modelos import Neutro,Vilao
@@ -116,11 +118,8 @@ class Aplicacao:
         self.AtualizaConjunto()
 
 
-        self.Gerar = Button(self.container5, text = "Gerar", font=("Times New Roman", "13", "bold"), width=50, command = self.Gerar)
-        self.Gerar.grid(column = 0, row = 0)
-
-        self.Salvar = Button(self.container5, text = "Salvar", font=("Times New Roman", "13", "bold"), width=10, command = self.Salvar)
-        self.Salvar.grid(column = 1, row = 0, padx = 10)
+        self.BGerar = Button(self.container5, text = "Gerar", font=("Times New Roman", "13", "bold"), width=50, command = self.Gerar)
+        self.BGerar.grid(column = 0, row = 0)
 
     def AtualizaNome(self):
         if(self.checkNome.get() == False):
@@ -263,11 +262,13 @@ class Aplicacao:
             self.LOcupação = Label(self.container4, text = 'Ocupação:', font=("Times New Roman", "12", "bold"))
             self.LOcupação.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
     
-    def Gerar(self):
+    def Gerar(self,master=None):
         global npc
 
         if self.conjunto.get() == 1: 
             npc = Vilao()
+            vilao = True
+            neutro = False
 
             if self.checkMotivação.get() == False:
                 npc.gera_motivacao()
@@ -283,6 +284,8 @@ class Aplicacao:
 
         else: 
             npc = Neutro()
+            vilao = False
+            neutro = True
 
             if self.checkOcupação.get() == False:
                 npc.gera_ocupacao()
@@ -329,11 +332,77 @@ class Aplicacao:
         else: npc.set_riqueza(self.varRiqueza.get())
 
         print(npc)
-        pass
+        
+        #Nova interface
+
+        janelaNpc = Toplevel(master)
+        janelaNpc.title('NPC')
+
+        imagem1 = ImageTk.PhotoImage(Image.open(path + "imagens\\humano1.jpg"))
+        Label(janelaNpc, image=imagem1, text = 'teste').pack()
+
+        Label(janelaNpc, text = npc._nome, font=("Times New Roman", "22", "bold")).pack(pady = (20,40))
+
+        janelaC0 = Frame(janelaNpc)
+        janelaC0.pack(anchor = 'w', padx = 20)
+        janelaC1 = Frame(janelaNpc)
+        janelaC1.pack(anchor = 'w', padx = 20)
+        janelaC2 = Frame(janelaNpc)
+        janelaC2.pack(anchor = 'w', padx = 20)
+        janelaC3 = Frame(janelaNpc)
+        janelaC3.pack(anchor = 'w', padx = 20)
+        janelaC4 = Frame(janelaNpc)
+        janelaC4.pack(anchor = 'w', padx = 20)
+        janelaC5 = Frame(janelaNpc)
+        janelaC5.pack(anchor = 'w', padx = 20)
+        janelaC6 = Frame(janelaNpc)
+        janelaC5.pack(anchor = 'w', padx = 20)
+        janelaC7 = Frame(janelaNpc)
+        janelaC7.pack(anchor = 'w', padx = 20, pady = (0,40))
+        if vilao:
+            janelaC8 = Frame(janelaNpc)
+            janelaC8.pack(anchor = 'w', padx = 20)
+            janelaC9 = Frame(janelaNpc)
+            janelaC9.pack(anchor = 'w', padx = 20)
+
+        Label(janelaC0, text = 'Gênero: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 1, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC0, text = npc._genero, font=("Times New Roman", "12")).grid(column = 1, row = 1, padx = (2,10), pady = 1, sticky = 'w')
+
+        Label(janelaC1, text = 'Raça: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 2, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC1, text = npc._raça, font=("Times New Roman", "12")).grid(column = 1, row = 2, padx = (2,10), pady = 1, sticky = 'w')
+
+        Label(janelaC2, text = 'Classe: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 3, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC2, text = npc._classe, font=("Times New Roman", "12")).grid(column = 1, row = 3, padx = (2,10), pady = 1, sticky = 'w')
+
+        Label(janelaC3, text = 'Alinhamento: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 4, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC3, text = npc._alinhamento, font=("Times New Roman", "12")).grid(column = 1, row = 4, padx = (2,10), pady = 1, sticky = 'w')
+
+        Label(janelaC4, text = 'Características Físicas: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 5, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC4, text = npc._caracteristicas_fisicas, font=("Times New Roman", "12")).grid(column = 1, row = 5, padx = (2,10), pady = 1, sticky = 'w')
+
+        Label(janelaC5, text = 'Características Pessoais: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 6, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC5, text = npc._caracteristicas_pessoais, font=("Times New Roman", "12")).grid(column = 1, row = 6, padx = (2,10), pady = 1, sticky = 'w')
+
+        Label(janelaC6, text = 'Riqueza: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 7, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC6, text = npc._riqueza, font=("Times New Roman", "12")).grid(column = 1, row = 7, padx = (2,10), pady = 1, sticky = 'w')
+        
+        if vilao:
+            Label(janelaC7, text = 'Motivação: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 8, padx = (10,2), pady = 1, sticky = 'w')
+            Label(janelaC7, text = npc._motivacao, font=("Times New Roman", "12")).grid(column = 1, row = 8, padx = (2,10), pady = 1, sticky = 'w')
+
+            Label(janelaC8, text = 'Influência: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 9, padx = (10,2), pady = 1, sticky = 'w')
+            Label(janelaC8, text = npc._influencia, font=("Times New Roman", "12")).grid(column = 1, row = 9, padx = (2,10), pady = 1, sticky = 'w')
+
+            Label(janelaC9, text = 'Poderes: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 10, padx = (10,2), pady = 1, sticky = 'w')
+            Label(janelaC9, text = npc._poderes, font=("Times New Roman", "12")).grid(column = 1, row = 10, padx = (2,10), pady = 1, sticky = 'w')
+        elif neutro:
+            Label(janelaC7, text = 'Ocupação: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 8, padx = (10,2), pady = 1, sticky = 'w')
+            Label(janelaC7, text = npc._ocupaçao, font=("Times New Roman", "12")).grid(column = 1, row = 8, padx = (2,10), pady = 1, sticky = 'w')
+
+        Button(janelaNpc, text = "Salvar", font=("Times New Roman", "13", "bold"), width=10, command = self.Salvar).pack(anchor = 'se', padx = 20, pady = 10)
 
     def Salvar(self):
         global npc
-        path = os.sys.path[0] + '\\'
         arquivo = open(path + "NPC's.txt","a", encoding="utf-8")
         arquivo.writelines(str(npc))
     
