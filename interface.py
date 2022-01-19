@@ -412,8 +412,6 @@ class Aplicacao:
         arquivo = open(path + "NPC's.txt","a", encoding="utf-8")
         arquivo.writelines(str(npc))
     
-            
-
 root = Tk()
 Aplicacao(root)
 root.mainloop()

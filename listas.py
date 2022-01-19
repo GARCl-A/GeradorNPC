@@ -103,7 +103,6 @@ listacornormais=['negra','branca','parda','amarela']
 listachifres=['chifres grandes','chifres curtos','crifres finos e longos','chifres finos e curtos','chifres curtos e longos']
 listacorexoticas=['verde','roxa','marrom','vermelha','azul','cinza','branca','preta']
 
-
 #Agrupamento de raças para facilitar/simplicar a leitura do código
 grupo1 = ["Humano","Anão","Elfo","Gnomo","Halfling","Gigante","Meio-Elfo","Golias","Aasimar","Centauro"]
 grupo2 = ["Kobols","Lizardfolk","Draconato"]

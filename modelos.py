@@ -257,15 +257,3 @@ Influência: {self._influencia}
 Poderes: {self._poderes}
 -
 '''
-
-teste = Vilao()
-teste.gera_caracteristicas_fisicas()
-teste.gera_nome()
-teste.gera_classe()
-teste.gera_alinhamento()
-teste.gera_caracteristicas_pessoais()
-teste.gera_motivacao()
-teste.gera_riqueza()
-teste.gera_influencia()
-teste.gera_poderes()
-print(teste)
