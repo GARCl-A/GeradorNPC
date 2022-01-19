@@ -4,8 +4,8 @@ import os
 
 pasta = os.path.dirname(__file__)
 
-def cria_pdf():
-    cnv = canvas.Canvas(pasta+"\\NPC'S.pdf",pagesize=A4)
+def cria_pdf(nome = "\\NPC'S.pdf" ):
+    cnv = canvas.Canvas(pasta+nome,pagesize=A4)
     file = open("NPC'S.txt",mode = 'r', encoding='utf-8')
     lista = []
     for line in file:
