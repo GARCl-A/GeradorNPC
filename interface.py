@@ -6,6 +6,7 @@ import PIL.Image
 from tkinter import *
 from listas import *
 from modelos import Neutro,Vilao
+from gera_pdf import cria_pdf
 
 class Aplicacao:
     def __init__(self,master=None):
@@ -420,6 +421,7 @@ class JanelaNPC:
         Button(janelaNpc, text = "Salvar", font=("Times New Roman", "13", "bold"), width=10, command = self.Salvar).grid(sticky = 'se',column = 1, row = 3, padx = 20, pady = 10)
         Button(janelaNpc, text = "Gerar PDF", font=("Times New Roman", "13", "bold"), width=10, command = self.GerarPDF).grid(sticky = 'sw',column = 0, row = 3, padx = 20, pady = 10)
         self.salvando = Label(janelaNpc, text = '', font=("Times New Roman", "12"))
+        self.gerando = Label(janelaNpc, text = '', font=("Times New Roman", "12"))
 
     def Salvar(self):
         self.salvando['text'] = 'Salvando...'
@@ -431,7 +433,12 @@ class JanelaNPC:
         self.salvando['text'] = 'Salvo!'
         
     def GerarPDF(self):
-        pass
+        self.gerando['text'] = 'Gerando...'
+        self.gerando.grid(sticky = 'sw',column = 0, row = 4, padx = 20, pady = 10)
+        cria_pdf(self._npc,self._npc._nome)
+        root.after(1000,self.gerado)
+    def gerado(self):
+        self.gerando['text'] = 'Gerado!'
 
 
 
