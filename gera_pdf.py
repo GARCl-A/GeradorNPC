@@ -17,15 +17,8 @@ def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
     t.setCharSpace(0.5)
     t.setTextOrigin(50, 800)
     wraped_text = "\n".join(wrap(str(npc), 80)) # 80 is line width
-    print(wraped_text)
     t.textLines(str(npc))
     cnv.drawText(t)
     cnv.showPage()
 
     cnv.save()
-
-npc = Vilao()
-npc.gera_nome()
-npc.gera_alinhamento()
-npc.gera_caracteristicas_fisicas()
-cria_pdf(npc)

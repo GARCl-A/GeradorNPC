@@ -6,7 +6,7 @@ import PIL.Image
 from tkinter import *
 from listas import *
 from modelos import Neutro,Vilao
-from gera_pdf import cria_pdf
+from gera_pdf import cria_pdf, nome_pdf
 
 class Aplicacao:
     def __init__(self,master=None):
@@ -55,62 +55,70 @@ class Aplicacao:
         self.listaGenero = ttk.Combobox(self.container2,textvariable = self.varGenero,values=['Aleatório','Masculino','Feminino'], width = 21, justify = 'center', font= self.fonte, state = 'readonly')
         self.listaGenero.grid(column=1, row =1)
 
+        self.checkIdade = IntVar()
+        self.Idade = Checkbutton(self.container2,font = self.fonte,variable=self.checkIdade, onvalue=True, offvalue=False, command = self.AtualizaIdade)
+        self.Idade.grid(column=2, row=2, padx=10, sticky = 'w')
+        self.valorIdade = Label(self.container2, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+        self.valorIdade.grid(column=1, row=2)
+        self.LIdade = Label(self.container2, text = 'Idade:', font=("Times New Roman", "12", "bold"))
+        self.LIdade.grid(column=0, row=2, padx=(15, 10), sticky = 'e')
+
 
         self.Raça = Label(self.container2, text = 'Raças:', font=("Times New Roman", "12", "bold"))
-        self.Raça.grid(column=0, row =2, padx=(15, 10), sticky = 'e')
+        self.Raça.grid(column=0, row =3, padx=(15, 10), sticky = 'e')
         self.varRaça = StringVar()
         self.varRaça.set('Aleatório')
         self.listaRaça = ttk.Combobox(self.container2,textvariable = self.varRaça,values=['Aleatório'] + lista_raças, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
-        self.listaRaça.grid(column=1, row =2)
+        self.listaRaça.grid(column=1, row =3)
 
 
         self.Classe = Label(self.container2, text = 'Classes:', font=("Times New Roman", "12", "bold"))
-        self.Classe.grid(column=0, row =3,padx=(15, 10), sticky = 'e')
+        self.Classe.grid(column=0, row =4,padx=(15, 10), sticky = 'e')
         self.varClasse = StringVar()
         self.varClasse.set('Aleatório')
         self.listaClasse = ttk.Combobox(self.container2,textvariable = self.varClasse,values=['Aleatório'] + classes_npc, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
-        self.listaClasse.grid(column=1, row =3)
+        self.listaClasse.grid(column=1, row =4)
         self.valorCheckClasse = IntVar()
         self.checkClasse = Checkbutton(self.container2,text = 'Habilitar Classes de jogador',font = self.fonte,variable=self.valorCheckClasse, onvalue=True, offvalue=False, command = self.AtualizaClasse)
-        self.checkClasse.grid(column=2, row =3, padx=10, sticky = 'w')
+        self.checkClasse.grid(column=2, row =4, padx=10, sticky = 'w')
 
 
         self.Alinhamento = Label(self.container2, text = 'Alinhamento:', font=("Times New Roman", "12", "bold"))
-        self.Alinhamento.grid(column=0, row =4,padx=(15, 10), sticky = 'e')
+        self.Alinhamento.grid(column=0, row =5,padx=(15, 10), sticky = 'e')
         self.varAlinhamento1 = StringVar()
         self.varAlinhamento1.set('Aleatório')
         self.listaAlinhamento1 = ttk.Combobox(self.container2,textvariable = self.varAlinhamento1,values=['Aleatório'] + lista_alinhamento_CO, width = 9, justify = 'center', font= self.fonte, state = 'readonly')
-        self.listaAlinhamento1.grid(column=1, row =4, sticky = 'w')
+        self.listaAlinhamento1.grid(column=1, row =5, sticky = 'w')
         self.varAlinhamento2 = StringVar()
         self.varAlinhamento2.set('Aleatório')
         self.listaAlinhamento2 = ttk.Combobox(self.container2,textvariable = self.varAlinhamento2,values=['Aleatório'] + lista_alinhamento_BM, width = 9, justify = 'center', font= self.fonte, state = 'readonly')
-        self.listaAlinhamento2.grid(column=1, row =4, sticky = 'e')
+        self.listaAlinhamento2.grid(column=1, row =5, sticky = 'e')
 
 
         self.checkCaracteristicasF = IntVar()
         self.CaracteristicasF = Checkbutton(self.container2,font = self.fonte,variable=self.checkCaracteristicasF, onvalue=True, offvalue=False, command = self.AtualizaCF)
-        self.CaracteristicasF.grid(column=2, row=5, padx=10, sticky = 'w')
+        self.CaracteristicasF.grid(column=2, row=6, padx=10, sticky = 'w')
         self.valorCaracteristicasF = Label(self.container2, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
-        self.valorCaracteristicasF.grid(column=1, row=5)
+        self.valorCaracteristicasF.grid(column=1, row=6)
         self.LCaracteristicasF = Label(self.container2, text = 'Características Físicas:', font=("Times New Roman", "12", "bold"))
-        self.LCaracteristicasF.grid(column=0, row=5, padx=(15, 10), sticky = 'e')
+        self.LCaracteristicasF.grid(column=0, row=6, padx=(15, 10), sticky = 'e')
 
 
         self.checkCaracteristicasP = IntVar()
         self.CaracteristicasP = Checkbutton(self.container2,font = self.fonte,variable=self.checkCaracteristicasP, onvalue=True, offvalue=False, command = self.AtualizaCP)
-        self.CaracteristicasP.grid(column=2, row=6, padx=10, sticky = 'w')
+        self.CaracteristicasP.grid(column=2, row=7, padx=10, sticky = 'w')
         self.valorCaracteristicasP = Label(self.container2, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
-        self.valorCaracteristicasP.grid(column=1, row=6)
+        self.valorCaracteristicasP.grid(column=1, row=7)
         self.LCaracteristicasP = Label(self.container2, text = 'Características Pessoais:', font=("Times New Roman", "12", "bold"))
-        self.LCaracteristicasP.grid(column=0, row=6, padx=(15, 10), sticky = 'e')
+        self.LCaracteristicasP.grid(column=0, row=7, padx=(15, 10), sticky = 'e')
 
 
         self.Riqueza = Label(self.container2, text = 'Riqueza:', font=("Times New Roman", "12", "bold"))
-        self.Riqueza.grid(column=0, row =7,padx=(15, 10), sticky = 'e')
+        self.Riqueza.grid(column=0, row =8,padx=(15, 10), sticky = 'e')
         self.varRiqueza = StringVar()
         self.varRiqueza.set('Aleatório')
         self.listaRiqueza = ttk.Combobox(self.container2,textvariable = self.varRiqueza,values=['Aleatório'] + riquezas, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
-        self.listaRiqueza.grid(column=1, row =7)
+        self.listaRiqueza.grid(column=1, row =8)
 
 
         self.conjunto = IntVar()
@@ -134,6 +142,18 @@ class Aplicacao:
             self.valorNome = Entry(self.container2, width = 23, font = self.fonte, justify = 'center')
             self.valorNome.grid(column=1, row=0)
             self.valorNome.delete(0,END)
+
+    def AtualizaIdade(self):
+        if(self.checkIdade.get() == False):
+            self.valorIdade.destroy()
+            self.valorIdade = Label(self.container2, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorIdade.grid(column=1, row=2)
+
+        elif(self.checkIdade.get() == True):
+            self.valorIdade.destroy()
+            self.valorIdade = Entry(self.container2, width = 23, font = self.fonte, justify = 'center')
+            self.valorIdade.grid(column=1, row=2)
+            self.valorIdade.delete(0,END)
 
     def AtualizaCF(self):
         if(self.checkCaracteristicasF.get() == False):
@@ -306,6 +326,10 @@ class Aplicacao:
             npc.gera_nome()
         else: npc.set_nome(self.valorNome.get())
 
+        if self.checkIdade.get() == False:
+            npc.gera_idade()
+        else: npc.set_idade(self.valorIdade.get())
+
         if self.checkCaracteristicasF.get() == False:
             npc.gera_caracteristicas_fisicas()
         else: npc.set_caracteristicas_fisicas(self.valorCaracteristicasF.get())
@@ -333,7 +357,6 @@ class Aplicacao:
             npc.gera_riqueza()
         else: npc.set_riqueza(self.varRiqueza.get())
 
-        print(npc)
         janela = JanelaNPC(npc,vilao,neutro,master)
     
 class JanelaNPC:
@@ -387,61 +410,52 @@ class JanelaNPC:
         Label(janelaC0, text = 'Gênero: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 1, padx = (10,2), pady = 1, sticky = 'w')
         Label(janelaC0, text = self._npc._genero, font=("Times New Roman", "12")).grid(column = 1, row = 1, padx = (2,10), pady = 1, sticky = 'w')
 
-        Label(janelaC1, text = 'Raça: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 2, padx = (10,2), pady = 1, sticky = 'w')
-        Label(janelaC1, text = self._npc._raça, font=("Times New Roman", "12")).grid(column = 1, row = 2, padx = (2,10), pady = 1, sticky = 'w')
+        Label(janelaC0, text = 'Idade: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 2, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC0, text = self._npc._idade, font=("Times New Roman", "12")).grid(column = 1, row = 2, padx = (2,10), pady = 1, sticky = 'w')
 
-        Label(janelaC2, text = 'Classe: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 3, padx = (10,2), pady = 1, sticky = 'w')
-        Label(janelaC2, text = self._npc._classe, font=("Times New Roman", "12")).grid(column = 1, row = 3, padx = (2,10), pady = 1, sticky = 'w')
+        Label(janelaC1, text = 'Raça: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 3, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC1, text = self._npc._raça, font=("Times New Roman", "12")).grid(column = 1, row = 3, padx = (2,10), pady = 1, sticky = 'w')
 
-        Label(janelaC3, text = 'Alinhamento: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 4, padx = (10,2), pady = 1, sticky = 'w')
-        Label(janelaC3, text = self._npc._alinhamento, font=("Times New Roman", "12")).grid(column = 1, row = 4, padx = (2,10), pady = 1, sticky = 'w')
+        Label(janelaC2, text = 'Classe: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 4, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC2, text = self._npc._classe, font=("Times New Roman", "12")).grid(column = 1, row = 4, padx = (2,10), pady = 1, sticky = 'w')
 
-        Label(janelaC4, text = 'Características Físicas: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 5, padx = (10,2), pady = 1, sticky = 'w')
-        Label(janelaC4, text = self._npc._caracteristicas_fisicas, font=("Times New Roman", "12")).grid(column = 1, row = 5, padx = (2,10), pady = 1, sticky = 'w')
+        Label(janelaC3, text = 'Alinhamento: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 5, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC3, text = self._npc._alinhamento, font=("Times New Roman", "12")).grid(column = 1, row = 5, padx = (2,10), pady = 1, sticky = 'w')
 
-        Label(janelaC5, text = 'Características Pessoais: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 6, padx = (10,2), pady = 1, sticky = 'w')
-        Label(janelaC5, text = self._npc._caracteristicas_pessoais, font=("Times New Roman", "12")).grid(column = 1, row = 6, padx = (2,10), pady = 1, sticky = 'w')
+        Label(janelaC4, text = 'Características Físicas: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 6, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC4, text = self._npc._caracteristicas_fisicas, font=("Times New Roman", "12")).grid(column = 1, row = 6, padx = (2,10), pady = 1, sticky = 'w')
 
-        Label(janelaC6, text = 'Riqueza: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 7, padx = (10,2), pady = 1, sticky = 'w')
-        Label(janelaC6, text = self._npc._riqueza, font=("Times New Roman", "12")).grid(column = 1, row = 7, padx = (2,10), pady = 1, sticky = 'w')
+        Label(janelaC5, text = 'Características Pessoais: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 7, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC5, text = self._npc._caracteristicas_pessoais, font=("Times New Roman", "12")).grid(column = 1, row = 7, padx = (2,10), pady = 1, sticky = 'w')
+
+        Label(janelaC6, text = 'Riqueza: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 8, padx = (10,2), pady = 1, sticky = 'w')
+        Label(janelaC6, text = self._npc._riqueza, font=("Times New Roman", "12")).grid(column = 1, row = 8, padx = (2,10), pady = 1, sticky = 'w')
         
         if self._vilao:
-            Label(janelaC7, text = 'Motivação: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 8, padx = (10,2), pady = 1, sticky = 'w')
-            Label(janelaC7, text = self._npc._motivacao, font=("Times New Roman", "12")).grid(column = 1, row = 8, padx = (2,10), pady = 1, sticky = 'w')
+            Label(janelaC7, text = 'Motivação: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 9, padx = (10,2), pady = 1, sticky = 'w')
+            Label(janelaC7, text = self._npc._motivacao, font=("Times New Roman", "12")).grid(column = 1, row = 9, padx = (2,10), pady = 1, sticky = 'w')
 
-            Label(janelaC8, text = 'Influência: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 9, padx = (10,2), pady = 1, sticky = 'w')
-            Label(janelaC8, text = self._npc._influencia, font=("Times New Roman", "12")).grid(column = 1, row = 9, padx = (2,10), pady = 1, sticky = 'w')
+            Label(janelaC8, text = 'Influência: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 10, padx = (10,2), pady = 1, sticky = 'w')
+            Label(janelaC8, text = self._npc._influencia, font=("Times New Roman", "12")).grid(column = 1, row = 10, padx = (2,10), pady = 1, sticky = 'w')
 
-            Label(janelaC9, text = 'Poderes: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 10, padx = (10,2), pady = 1, sticky = 'w')
-            Label(janelaC9, text = self._npc._poderes, font=("Times New Roman", "12")).grid(column = 1, row = 10, padx = (2,10), pady = 1, sticky = 'w')
+            Label(janelaC9, text = 'Poderes: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 11, padx = (10,2), pady = 1, sticky = 'w')
+            Label(janelaC9, text = self._npc._poderes, font=("Times New Roman", "12")).grid(column = 1, row = 11, padx = (2,10), pady = 1, sticky = 'w')
         elif self._neutro:
-            Label(janelaC7, text = 'Ocupação: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 8, padx = (10,2), pady = 1, sticky = 'w')
-            Label(janelaC7, text = self._npc._ocupaçao, font=("Times New Roman", "12")).grid(column = 1, row = 8, padx = (2,10), pady = 1, sticky = 'w')
+            Label(janelaC7, text = 'Ocupação: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 9, padx = (10,2), pady = 1, sticky = 'w')
+            Label(janelaC7, text = self._npc._ocupaçao, font=("Times New Roman", "12")).grid(column = 1, row = 9, padx = (2,10), pady = 1, sticky = 'w')
 
         Button(janelaNpc, text = "Salvar", font=("Times New Roman", "13", "bold"), width=10, command = self.Salvar).grid(sticky = 'se',column = 1, row = 3, padx = 20, pady = 10)
-        Button(janelaNpc, text = "Gerar PDF", font=("Times New Roman", "13", "bold"), width=10, command = self.GerarPDF).grid(sticky = 'sw',column = 0, row = 3, padx = 20, pady = 10)
         self.salvando = Label(janelaNpc, text = '', font=("Times New Roman", "12"))
-        self.gerando = Label(janelaNpc, text = '', font=("Times New Roman", "12"))
 
     def Salvar(self):
         self.salvando['text'] = 'Salvando...'
         self.salvando.grid(sticky = 'se',column = 1, row = 4, padx = 20, pady = 10)
-        arquivo = open(path + "NPC's.txt","a", encoding="utf-8")
-        arquivo.writelines(str(self._npc))
+        arquivo = nome_pdf(self._npc._nome)
+        cria_pdf(self._npc,arquivo)
         root.after(1000,self.salvo)
     def salvo(self):
         self.salvando['text'] = 'Salvo!'
         
-    def GerarPDF(self):
-        self.gerando['text'] = 'Gerando...'
-        self.gerando.grid(sticky = 'sw',column = 0, row = 4, padx = 20, pady = 10)
-        cria_pdf(self._npc,self._npc._nome)
-        root.after(1000,self.gerado)
-    def gerado(self):
-        self.gerando['text'] = 'Gerado!'
-
-
-
 root = Tk()
 Aplicacao(root)
 root.mainloop()

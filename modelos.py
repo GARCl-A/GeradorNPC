@@ -281,7 +281,3 @@ Motivação: {self._motivacao}
 Influência: {self._influencia}
 Poderes: {self._poderes}
 '''
-
-npc = Vilao()
-npc.gera_idade()
-print(npc)
