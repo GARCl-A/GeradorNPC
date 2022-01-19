@@ -44,7 +44,7 @@ nomes = {
 
 lista_raças = ["Kobold", "Orc", "Leshy", "Lizardfolk", "Sprite", "Humano", "Anão", "Elfo", "Gnomo", "Goblin", "Halfling", 
 "Gnoll", "Gigante", "Ikidaris", "Tiefling", "Aasimar", "Kenku", "Aarakocra", "Draconato", "Meio-Elfo", "Meio-Orc",
-"Golias", "Centauros", "Forjados", "Genasi"]
+"Golias", "Centauro", "Forjados", "Genasi"]
 
 lista_alinhamento_CO = ["Caótico", "Neutro", "Leal"]
 lista_alinhamento_BM = ["Bom", "Neutro", "Mal"]
