@@ -159,36 +159,36 @@ class Aplicacao:
         if(self.checkCaracteristicasF.get() == False):
             self.valorCaracteristicasF.destroy()
             self.valorCaracteristicasF = Label(self.container2, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
-            self.valorCaracteristicasF.grid(column=1, row=5)
+            self.valorCaracteristicasF.grid(column=1, row=6)
 
         elif(self.checkCaracteristicasF.get() == True):
             self.valorCaracteristicasF.destroy()
             self.valorCaracteristicasF = Entry(self.container2, width = 23, font = self.fonte, justify = 'center')
-            self.valorCaracteristicasF.grid(column=1, row=5)
+            self.valorCaracteristicasF.grid(column=1, row=6)
             self.valorCaracteristicasF.delete(0,END)
 
     def AtualizaCP(self):
         if(self.checkCaracteristicasP.get() == False):
             self.valorCaracteristicasP.destroy()
             self.valorCaracteristicasP = Label(self.container2, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
-            self.valorCaracteristicasP.grid(column=1, row=6)
+            self.valorCaracteristicasP.grid(column=1, row=7)
 
         elif(self.checkCaracteristicasP.get() == True):
             self.valorCaracteristicasP.destroy()
             self.valorCaracteristicasP = Entry(self.container2, width = 23, font = self.fonte, justify = 'center')
-            self.valorCaracteristicasP.grid(column=1, row=6)
+            self.valorCaracteristicasP.grid(column=1, row=7)
             self.valorCaracteristicasP.delete(0,END)
 
     def AtualizaClasse(self):
         if(self.valorCheckClasse.get() == False):
             self.listaClasse.destroy()
             self.listaClasse = ttk.Combobox(self.container2,textvariable = self.varClasse,values=['Aleatório'] + classes_npc, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
-            self.listaClasse.grid(column=1, row =3)
+            self.listaClasse.grid(column=1, row =4)
 
         elif(self.valorCheckClasse.get() == True):
             self.listaClasse.destroy()
             self.listaClasse = ttk.Combobox(self.container2,textvariable = self.varClasse,values=['Aleatório'] + classes_npc + classes_jog, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
-            self.listaClasse.grid(column=1, row =3)
+            self.listaClasse.grid(column=1, row =4)
 
     def AtualizaM(self):
         if(self.checkMotivação.get() == False):
@@ -357,7 +357,7 @@ class Aplicacao:
             npc.gera_riqueza()
         else: npc.set_riqueza(self.varRiqueza.get())
 
-        janela = JanelaNPC(npc,vilao,neutro,master)
+        JanelaNPC(npc,vilao,neutro,master)
     
 class JanelaNPC:
     def __init__(self,personagem,vilao,neutro,master=None):
