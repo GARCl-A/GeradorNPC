@@ -16,10 +16,16 @@ class NPC():
         self._riqueza = None
         self._genero = None
         self._classe_jog = True
+        self._caracteristicas_fisicas_str = None
+        self._caracteristicas_pessoais_str = None
+        self._idade = None
 
     def set_nome(self,nome):
         self._nome = nome
     
+    def set_idade(self,idade):
+        self._idade = idade
+
     def set_raça(self,raça):
         self._raça = raça
 
@@ -58,6 +64,22 @@ class NPC():
                 nome += vogais[numero]
                 index += 1
         return nome.title()
+
+    def gera_idade(self):
+        base = random.randrange(0,21) + random.randrange(0,21) + random.randrange(0,21)
+        modificador = random.randrange(0,10)
+        if modificador < 2:
+            base = base - random.randrange(0,20)
+            if base < 16:
+                base = 16
+
+        elif modificador > 8:
+            base = base + random.randrange(0,21)
+
+        if self._raça == None:
+            self.gera_raça()
+
+        self._idade = int(base*coeficientes[self._raça])
 
     def gera_nome(self):
         if self._raça == None:
@@ -110,6 +132,8 @@ class NPC():
             self.gera_raça()
         if self._genero == None:
             self.gera_genero()
+        if self._idade == None:
+            self.gera_idade()
 
         lista_caracteristicas_fisicas = []
         olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
@@ -124,7 +148,7 @@ class NPC():
             lista_caracteristicas_fisicas.append(cabelo)
             corpelos = listacorpelos[random.randrange(0,len(listacorpelos))]
             lista_caracteristicas_fisicas.append(f'pelo/cabelo {corpelos}')
-            if self._genero == "Masculino":
+            if self._genero == "Masculino" and self._idade > 16*coeficientes[self._raça]:
                 barba = listabarba[random.randrange(0,len(listabarba))]
                 lista_caracteristicas_fisicas.append(barba)
 
@@ -204,6 +228,7 @@ class Neutro(NPC):
     def __str__(self):
         return f'''Nome: {self._nome}
 Gênero: {self._genero}
+Idade: {self._idade}
 Raça: {self._raça}
 Classe: {self._classe}
 Alinhamento: {self._alinhamento}
@@ -211,7 +236,6 @@ Características Físicas: {self._caracteristicas_fisicas_str}
 Características Pessoais: {self._caracteristicas_pessoais_str}
 Riqueza: {self._riqueza}
 Ocupação: {self._ocupaçao}
--
 '''
 
 class Vilao(NPC):
@@ -246,6 +270,7 @@ class Vilao(NPC):
     def __str__(self):
         return f'''Nome: {self._nome}
 Gênero: {self._genero}
+Idade: {self._idade}
 Raça: {self._raça}
 Classe: {self._classe}
 Alinhamento: {self._alinhamento}
@@ -255,5 +280,4 @@ Riqueza: {self._riqueza}
 Motivação: {self._motivacao}
 Influência: {self._influencia}
 Poderes: {self._poderes}
--
 '''
