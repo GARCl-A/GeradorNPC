@@ -99,9 +99,9 @@ listaaltura=['alto','baixo','media estatura','alto','muito baixo']
 listaporte=['bodybuilder','sarado','magrelo','esqueletico','gordo','gordinho']
 listarabo=[' rabo longo e fino','rabo curto e fino', 'rabo de tamanho medio e fino','rabo longo e grosso','rabo longo','rabo curto','rabo de tamanho médio']
 listaasas=['asas peuqenas','asas normais','asas gigantes','asas grandes']
-listacornormais=['negro(a)','branco(a)','pardo(a)','albino(a)']
+listacornormais=['negra','branca','parda','amarela']
 listachifres=['chifres grandes','chifres curtos','crifres finos e longos','chifres finos e curtos','chifres curtos e longos']
-listacorexoticas=['verde','roxo(a)','marrom','vermelho(a)','azul','cinza','branco(a)','preto(a)']
+listacorexoticas=['verde','roxa','marrom','vermelha','azul','cinza','branca','preta']
 
 
 #Agrupamento de raças para facilitar/simplicar a leitura do código

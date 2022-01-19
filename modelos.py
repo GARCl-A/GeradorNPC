@@ -130,10 +130,10 @@ class NPC():
 
         if self._raça in grupo1 + grupo4:
             cor = listacornormais[random.randrange(0,len(listacornormais))]
-            lista_caracteristicas_fisicas.append(cor)
+            lista_caracteristicas_fisicas.append(f'pele {cor}')
         elif self._raça in grupo2 + grupo3 + grupo5 + grupo6 + grupo7:
             cor = listacorexoticas[random.randrange(0,len(listacorexoticas))]
-            lista_caracteristicas_fisicas.append(cor)
+            lista_caracteristicas_fisicas.append(f'pele {cor}')
 
         if self._raça in grupo4 + grupo7:
             asa = listaasas[random.randrange(0,len(listaasas))]
@@ -146,7 +146,7 @@ class NPC():
             lista_caracteristicas_fisicas.append(rabo)
 
         self._caracteristicas_fisicas = ", ".join(lista_caracteristicas_fisicas)
-        self._caracteristicas_fisicas_str = f'{olhos}, {porte}, {altura}\n      {", ".join(lista_caracteristicas_fisicas[3:len(lista_caracteristicas_fisicas)])}'
+        self._caracteristicas_fisicas_str = f'{olhos}, {porte}, {altura}\n          {", ".join(lista_caracteristicas_fisicas[3:len(lista_caracteristicas_fisicas)])}'
 
     def gera_caracteristicas_pessoais(self):
         while len(self._qualidades) <3:
@@ -164,7 +164,8 @@ class NPC():
                 if not antonimo:
                     self._defeitos.append(listadefeitos[numero])
 
-        self._caracteristicas_pessoais = self.trata_listas(self._qualidades) + '\n          ' +self.trata_listas(self._defeitos)
+        self._caracteristicas_pessoais_str = self.trata_listas(self._qualidades) + '\n          ' +self.trata_listas(self._defeitos)
+        self._caracteristicas_pessoais = ", ".join(self._qualidades + self._defeitos )
 
     def gera_classe(self):
         if self._classe_jog:
@@ -206,8 +207,8 @@ Gênero: {self._genero}
 Raça: {self._raça}
 Classe: {self._classe}
 Alinhamento: {self._alinhamento}
-Características Físicas: {self._caracteristicas_fisicas}
-Características Pessoais: {self._caracteristicas_pessoais}
+Características Físicas: {self._caracteristicas_fisicas_str}
+Características Pessoais: {self._caracteristicas_pessoais_str}
 Riqueza: {self._riqueza}
 Ocupação: {self._ocupaçao}
 -
@@ -249,7 +250,7 @@ Raça: {self._raça}
 Classe: {self._classe}
 Alinhamento: {self._alinhamento}
 Características Físicas: {self._caracteristicas_fisicas_str}
-Características Pessoais: {self._caracteristicas_pessoais}
+Características Pessoais: {self._caracteristicas_pessoais_str}
 Riqueza: {self._riqueza}
 Motivação: {self._motivacao}
 Influência: {self._influencia}

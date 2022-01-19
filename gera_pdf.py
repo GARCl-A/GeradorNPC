@@ -4,6 +4,9 @@ import os
 
 pasta = os.path.dirname(__file__)
 
+def nome_pdf(nome):
+    return f'\\{nome}.pdf'
+
 def cria_pdf(nome = "\\NPC'S.pdf" ):
     cnv = canvas.Canvas(pasta+nome,pagesize=A4)
     file = open("NPC'S.txt",mode = 'r', encoding='utf-8')
@@ -27,6 +30,3 @@ def cria_pdf(nome = "\\NPC'S.pdf" ):
             qtd = qtd +1
 
     cnv.save()
-    print('Pdf salvo')
-
-cria_pdf()
