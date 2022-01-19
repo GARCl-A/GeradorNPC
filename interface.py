@@ -339,12 +339,13 @@ class Aplicacao:
         janelaNpc = Toplevel(master)
         janelaNpc.title('NPC')
 
-        canvas= Canvas(janelaNpc, width= 600, height= 400)
-        canvas.pack()
         img = PIL.Image.open(path + "imagens\\humano1.jpg")
         rimg = img.resize((300,205), PIL.Image.ANTIALIAS)
         fimg = ImageTk.PhotoImage(rimg)
-        canvas.create_image(10,10, anchor=NW, image=fimg)
+
+        imagem = Label(janelaNpc, text = "adicionando", image = fimg)
+        imagem.image = fimg
+        imagem.pack()
 
         Label(janelaNpc, text = npc._nome, font=("Times New Roman", "22", "bold")).pack(pady = (20,40))
 
