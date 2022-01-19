@@ -435,7 +435,6 @@ class JanelaNPC:
 
 
 
-
 root = Tk()
 Aplicacao(root)
 root.mainloop()
