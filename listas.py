@@ -111,3 +111,7 @@ grupo4 = ['Sprite']
 grupo5 = ['Tiefling']
 grupo6 = ['Leshy','Forjados','Genasi']
 grupo7 = ['Kenku','Aarakocra']
+
+coeficientes = {"Kobold":0.57, "Orc":0.57, "Leshy":2.85, "Lizardfolk":0.57, "Sprite":4, "Humano": 1, "Anão":3.57, "Elfo":5, 
+"Gnomo":2.85, "Goblin":0.57, "Halfling":1.42, "Gnoll":0.6, "Gigante":4.28, "Ikidaris":0.6, "Tiefling":1, "Aasimar":1, "Kenku":1, 
+"Aarakocra":1, "Draconato":3.57, "Meio-Elfo":1.77, "Meio-Orc":0.85,"Golias":1, "Centauros":2, "Forjados":1.78, "Genasi":4.28}
