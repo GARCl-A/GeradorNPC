@@ -1,7 +1,8 @@
 import os
 path = os.sys.path[0] + '\\'
 from tkinter import ttk
-from PIL import ImageTk, Image 
+from PIL import ImageTk
+import PIL.Image
 from tkinter import *
 from listas import *
 from modelos import Neutro,Vilao
@@ -338,7 +339,7 @@ class Aplicacao:
         janelaNpc = Toplevel(master)
         janelaNpc.title('NPC')
 
-        imagem1 = ImageTk.PhotoImage(Image.open(path + "imagens\\humano1.jpg"))
+        imagem1 = ImageTk.PhotoImage(PIL.Image.open(path + "imagens\\humano1.jpg"))
         Label(janelaNpc, image=imagem1, text = 'teste').pack()
 
         Label(janelaNpc, text = npc._nome, font=("Times New Roman", "22", "bold")).pack(pady = (20,40))
