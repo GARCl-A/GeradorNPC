@@ -201,7 +201,7 @@ class NPC():
             cor= listacornormais[random.randrange(0,len(listacornormais))]
             chifre= listachifres[random.randrange(0,len(listachifres))]
 
-            caracteristicas=olhos+", "+cor dos pelos+"," +corpelos+", " +altura+"\n           " +corpo+", " +cor+", " +chifre
+            caracteristicas=olhos+", "+'cor dos pelos: '+"," +corpelos+", " +altura+"\n           " +corpo+", " +cor+", " +chifre
         if self._raça == "Kenku" or self._raça == "Aarakocra"  :    
             olhos= listaOlhos[random.randrange(0,len(listaOlhos))]
             altura= listaaltura[random.randrange(0,len(listaaltura))]
