@@ -27,4 +27,7 @@ Gerador de NPC, feito para a avaliação 1 de linguagens de programação UFRJ 2
   >Annadel Cinco;<br />
   >u/Encariah;<br />
   >u/Iromonik;<br />
+  >u/Zhjake;<br />
+  >Hellstern;<br />
+  >Ted Thilander;<br />
 
