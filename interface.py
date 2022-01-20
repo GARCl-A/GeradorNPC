@@ -370,21 +370,23 @@ class JanelaNPC:
         self.CriaJanela(master)
 
     def CriaJanela(self,master):
-        janelaNpc = Toplevel(master)
-        janelaNpc.title('NPC')
+        self._janelaNpc = Toplevel(master)
+        self._janelaNpc.title('NPC')
 
-        Label(janelaNpc, text = self._npc._nome, font=("Times New Roman", "22", "bold")).grid(pady = (20,40))
+        Label(self._janelaNpc, text = self._npc._nome, font=("Times New Roman", "22", "bold")).grid(pady = (20,40))
 
         img = PIL.Image.open(self._npc._imagem)
         rimg = img.resize((250,327), PIL.Image.ANTIALIAS)
         fimg = ImageTk.PhotoImage(rimg)
 
-        self.imagem = Label(janelaNpc, text = "adicionando", image = fimg)
+        self.imagem = Label(self._janelaNpc, text = "adicionando", image = fimg)
         self.imagem.image = fimg
         self.imagem.bind('<Button-1>', self.mudaImagem)
-        self.imagem.grid(sticky = "ne",pady=30,padx=20, column = 1, row =1)
+        self.imagem.bind("<Enter>",self.Hover)
+        self.imagem.bind("<Leave>",self.RemoveHover)
+        self.imagem.grid(sticky = "ne",pady=(30,0),padx=20, column = 1, row =1)
 
-        containerjanela = Frame(janelaNpc)
+        containerjanela = Frame(self._janelaNpc)
         containerjanela.grid(sticky = "w",column = 0, row =1)
         janelaC0 = Frame(containerjanela)
         janelaC0.grid(sticky = 'w', padx= 20, column = 0, row =1)
@@ -446,8 +448,10 @@ class JanelaNPC:
             Label(janelaC7, text = 'Ocupação: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 9, padx = (10,2), pady = 1, sticky = 'w')
             Label(janelaC7, text = self._npc._ocupacao, font=("Times New Roman", "12")).grid(column = 1, row = 9, padx = (2,10), pady = 1, sticky = 'w')
 
-        Button(janelaNpc, text = "Salvar", font=("Times New Roman", "13", "bold"), width=10, command = self.Salvar).grid(sticky = 'se',column = 1, row = 3, padx = 20, pady = 10)
-        self.salvando = Label(janelaNpc, text = '', font=("Times New Roman", "12"))
+        self.hover = Label(self._janelaNpc, text = '', font=("Times New Roman", "10"))
+        self.hover.grid(column = 1, row = 2, padx = (2,10), pady = (0,30))
+        Button(self._janelaNpc, text = "Salvar", font=("Times New Roman", "13", "bold"), width=10, command = self.Salvar).grid(sticky = 'se',column = 1, row = 3, padx = 20, pady = 10)
+        self.salvando = Label(self._janelaNpc, text = '', font=("Times New Roman", "12"))
 
     def mudaImagem(self,event):
         self._npc.troca_imagem()
@@ -456,8 +460,11 @@ class JanelaNPC:
         fimg = ImageTk.PhotoImage(rimg)
         self.imagem['image'] = fimg
         self.imagem.image = fimg
-        self.imagem.grid(sticky = "ne",pady=30,padx=20, column = 1, row =1)
-        pass
+        self.imagem.grid(sticky = "ne",pady=(30,0),padx=20, column = 1, row =1)
+    def Hover(self,event):
+        self.hover['text'] = 'Clique para mudar a imagem!'
+    def RemoveHover(self,event):
+        self.hover['text'] = ''  
 
     def Salvar(self):
         self.salvando['text'] = 'Salvando...'
