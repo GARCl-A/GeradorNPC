@@ -18,5 +18,13 @@ Gerador de NPC, feito para a avaliação 1 de linguagens de programação UFRJ 2
   >I do art (maybe);<br />
   >adrian smith;<br />
   >Krzysztof Moszczynski;<br />
-
+  >u/Kaivris;<br />
+  >Alexandre Chaudret;<br />
+  >Benita Winckler;<br />
+  >Eric Belisle;<br />
+  >ianllanas;<br />
+  >Sunset Aria;<br />
+  >Annadel Cinco;<br />
+  >u/Encariah;<br />
+  >u/Iromonik;<br />
 
