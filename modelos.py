@@ -1,5 +1,6 @@
 import random
 from listas import *
+import os, os.path
 
 class NPC():
     def __init__(self):
@@ -19,6 +20,7 @@ class NPC():
         self._caracteristicas_fisicas_str = None
         self._caracteristicas_pessoais_str = None
         self._idade = None
+        self._imagem = None
 
     def set_nome(self,nome):
         self._nome = nome
@@ -64,6 +66,14 @@ class NPC():
                 nome += vogais[numero]
                 index += 1
         return nome.title()
+
+    def gera_pasta(self):
+        dir = os.path.dirname(__file__)
+        pasta = f'{dir}\imagens\{self._raça}\{self._raça+self._genero}'
+        tamanho = len([name for name in os.listdir(pasta) if os.path.isfile(os.path.join(pasta, name))])
+        numero = random.randrange(0,tamanho)
+        caminho = pasta+f'\{numero}.jpg'
+        self._imagem = caminho
 
     def gera_idade(self):
         base = random.randrange(0,21) + random.randrange(0,21) + random.randrange(0,21)

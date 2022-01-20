@@ -357,6 +357,8 @@ class Aplicacao:
             npc.gera_riqueza()
         else: npc.set_riqueza(self.varRiqueza.get())
 
+        npc.gera_pasta()
+
         JanelaNPC(npc,vilao,neutro,master)
     
 class JanelaNPC:
@@ -374,7 +376,7 @@ class JanelaNPC:
 
         Label(janelaNpc, text = self._npc._nome, font=("Times New Roman", "22", "bold")).grid(pady = (20,40))
 
-        img = PIL.Image.open(path + "\imagens\Aasimar\AasimarHomem\AasimarHomem.webp")
+        img = PIL.Image.open(self._npc._imagem)
         rimg = img.resize((250,327), PIL.Image.ANTIALIAS)
         fimg = ImageTk.PhotoImage(rimg)
 
