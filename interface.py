@@ -379,9 +379,10 @@ class JanelaNPC:
         rimg = img.resize((250,327), PIL.Image.ANTIALIAS)
         fimg = ImageTk.PhotoImage(rimg)
 
-        imagem = Label(janelaNpc, text = "adicionando", image = fimg)
-        imagem.image = fimg
-        imagem.grid(sticky = "ne",pady=30,padx=20, column = 1, row =1)
+        self.imagem = Label(janelaNpc, text = "adicionando", image = fimg)
+        self.imagem.image = fimg
+        self.imagem.bind('<Button-1>', self.mudaImagem)
+        self.imagem.grid(sticky = "ne",pady=30,padx=20, column = 1, row =1)
 
         containerjanela = Frame(janelaNpc)
         containerjanela.grid(sticky = "w",column = 0, row =1)
@@ -447,6 +448,16 @@ class JanelaNPC:
 
         Button(janelaNpc, text = "Salvar", font=("Times New Roman", "13", "bold"), width=10, command = self.Salvar).grid(sticky = 'se',column = 1, row = 3, padx = 20, pady = 10)
         self.salvando = Label(janelaNpc, text = '', font=("Times New Roman", "12"))
+
+    def mudaImagem(self,event):
+        self._npc.troca_imagem()
+        img = PIL.Image.open(self._npc._imagem)
+        rimg = img.resize((250,327), PIL.Image.ANTIALIAS)
+        fimg = ImageTk.PhotoImage(rimg)
+        self.imagem['image'] = fimg
+        self.imagem.image = fimg
+        self.imagem.grid(sticky = "ne",pady=30,padx=20, column = 1, row =1)
+        pass
 
     def Salvar(self):
         self.salvando['text'] = 'Salvando...'

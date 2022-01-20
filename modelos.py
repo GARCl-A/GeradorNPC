@@ -52,9 +52,10 @@ class NPC():
         dir = os.path.dirname(__file__)
         pasta = f'{dir}\imagens\{self._raca}\{self._raca+self._genero}'
         tamanho = len([name for name in os.listdir(pasta) if os.path.isfile(os.path.join(pasta, name))])
-        if self._imagem_numero > tamanho:
+        if self._imagem_numero > tamanho-1:
             self._imagem_numero = 0
         caminho = pasta+f'\{self._imagem_numero}.jpg'
+        self._imagem = caminho
 
     def gera_idade(self):
         base = random.randrange(0,21) + random.randrange(0,21) + random.randrange(0,21)
