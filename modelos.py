@@ -43,9 +43,18 @@ class NPC():
         dir = os.path.dirname(__file__)
         pasta = f'{dir}\imagens\{self._raca}\{self._raca+self._genero}'
         tamanho = len([name for name in os.listdir(pasta) if os.path.isfile(os.path.join(pasta, name))])
-        numero = random.randrange(0,tamanho)
-        caminho = pasta+f'\{numero}.jpg'
+        self._imagem_numero = random.randrange(0,tamanho)
+        caminho = pasta+f'\{self._imagem_numero}.jpg'
         self._imagem = caminho
+
+    def troca_imagem(self):
+        self._imagem_numero += 1
+        dir = os.path.dirname(__file__)
+        pasta = f'{dir}\imagens\{self._raca}\{self._raca+self._genero}'
+        tamanho = len([name for name in os.listdir(pasta) if os.path.isfile(os.path.join(pasta, name))])
+        if self._imagem_numero > tamanho:
+            self._imagem_numero = 0
+        caminho = pasta+f'\{self._imagem_numero}.jpg'
 
     def gera_idade(self):
         base = random.randrange(0,21) + random.randrange(0,21) + random.randrange(0,21)
