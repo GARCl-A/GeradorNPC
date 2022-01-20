@@ -10,7 +10,7 @@ Gerador de NPC, feito para a avaliação 1 de linguagens de programação UFRJ 2
   >PIL; <br />
   >random; <br />
 
-### As imagens utilizadas para representação dos personagens são dos artistas/empresas **(WIP)**:<br />
+### (WIP) As imagens utilizadas para representação dos personagens são dos artistas/empresas :<br />
   >hybrid-dragoness; <br />
   >paizo; <br />
   >wizards of the coast;<br />
