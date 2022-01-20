@@ -374,7 +374,7 @@ class JanelaNPC:
 
         Label(janelaNpc, text = self._npc._nome, font=("Times New Roman", "22", "bold")).grid(pady = (20,40))
 
-        img = PIL.Image.open(path + "imagens\\humano1.jpg")
+        img = PIL.Image.open(path + "\imagens\Aasimar\AasimarHomem\AasimarHomem.webp")
         rimg = img.resize((250,327), PIL.Image.ANTIALIAS)
         fimg = ImageTk.PhotoImage(rimg)
 
