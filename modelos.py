@@ -136,37 +136,37 @@ class NPC():
             self.gera_idade()
 
         lista_caracteristicas_fisicas = []
-        olhos = listaOlhos[random.randrange(0,len(listaOlhos))]
+        olhos = listaOlhos[random.randrange(0,len(listaOlhos))].capitalize()
         lista_caracteristicas_fisicas.append(olhos)
-        porte = listaporte[random.randrange(0,len(listaporte))]
+        porte = listaporte[random.randrange(0,len(listaporte))].capitalize()
         lista_caracteristicas_fisicas.append(porte)
-        altura = listaaltura[random.randrange(0,len(listaaltura))]
+        altura = listaaltura[random.randrange(0,len(listaaltura))].capitalize()
         lista_caracteristicas_fisicas.append(altura)
 
         if self._raça in grupo1 + grupo3 + grupo4 + grupo5:
-            cabelo = listacabelo[random.randrange(0,len(listacabelo))]
+            cabelo = listacabelo[random.randrange(0,len(listacabelo))].capitalize()
             lista_caracteristicas_fisicas.append(cabelo)
-            corpelos = listacorpelos[random.randrange(0,len(listacorpelos))]
-            lista_caracteristicas_fisicas.append(f'pelo/cabelo {corpelos}')
+            corpelos = listacorpelos[random.randrange(0,len(listacorpelos))].capitalize()
+            lista_caracteristicas_fisicas.append(f'Pelo/cabelo {corpelos}')
             if self._genero == "Masculino" and self._idade > 16*coeficientes[self._raça]:
-                barba = listabarba[random.randrange(0,len(listabarba))]
+                barba = listabarba[random.randrange(0,len(listabarba))].capitalize()
                 lista_caracteristicas_fisicas.append(barba)
 
         if self._raça in grupo1 + grupo4:
-            cor = listacornormais[random.randrange(0,len(listacornormais))]
-            lista_caracteristicas_fisicas.append(f'pele {cor}')
+            cor = listacornormais[random.randrange(0,len(listacornormais))].capitalize()
+            lista_caracteristicas_fisicas.append(f'Pele {cor}')
         elif self._raça in grupo2 + grupo3 + grupo5 + grupo6 + grupo7:
             cor = listacorexoticas[random.randrange(0,len(listacorexoticas))]
-            lista_caracteristicas_fisicas.append(f'pele {cor}')
+            lista_caracteristicas_fisicas.append(f'Pele {cor}')
 
         if self._raça in grupo4 + grupo7:
-            asa = listaasas[random.randrange(0,len(listaasas))]
+            asa = listaasas[random.randrange(0,len(listaasas))].capitalize()
             lista_caracteristicas_fisicas.append(asa)
 
         if self._raça in grupo2 + grupo5:
-            chifre = listachifres[random.randrange(0,len(listachifres))]
+            chifre = listachifres[random.randrange(0,len(listachifres))].capitalize()
             lista_caracteristicas_fisicas.append(chifre)
-            rabo = listarabo[random.randrange(0,len(listarabo))]
+            rabo = listarabo[random.randrange(0,len(listarabo))].capitalize()
             lista_caracteristicas_fisicas.append(rabo)
 
         self._caracteristicas_fisicas = ", ".join(lista_caracteristicas_fisicas)
@@ -176,7 +176,7 @@ class NPC():
         while len(self._qualidades) <3:
             numero = random.randrange(0,len(listaqualidade))
             if listaqualidade[numero] not in self._qualidades:
-                self._qualidades.append(listaqualidade[numero])
+                self._qualidades.append(listaqualidade[numero].capitalize())
 
         while len(self._defeitos) < 3:
             numero = random.randrange(0,len(listadefeitos))
@@ -186,7 +186,7 @@ class NPC():
                     if (listadefeitos[numero],qualidade) in listaantonimos or (qualidade,listadefeitos[numero]) in listaantonimos :
                         antonimo = True
                 if not antonimo:
-                    self._defeitos.append(listadefeitos[numero])
+                    self._defeitos.append(listadefeitos[numero].capitalize())
 
         self._caracteristicas_pessoais_str = self.trata_listas(self._qualidades) + '\n          ' +self.trata_listas(self._defeitos)
         self._caracteristicas_pessoais = ", ".join(self._qualidades + self._defeitos )

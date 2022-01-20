@@ -91,13 +91,13 @@ listaantonimos = [('covarde','corajoso(a)'),('altruísta','covarde'),('inteligen
                   'sábio(a)'),('engraçado(a)','sem graça'),('empático(a)','antipático(a)'),('generoso(a)','egoísta'),('proativo','procrastinador(a)'),('paciente','impaciente'),
                   ('compreensivo','inflexível'),('empático(a)','apático(a)')]
                   
-listaOlhos =['olhos castanhos','olhos azuis','olhos vermelhos','olhos de vidro','olhos cor purpura','olhos castanhos']                               
+listaOlhos =['olhos castanhos','olhos azuis','olhos vermelhos','olhos de vidro','olhos púrpura','olhos castanhos']                               
 listacabelo = ['cabelo longo liso','cabelo curto liso ','cabelo longo encaracolado','cabelo curto encaracolado','cabelo longo ondulado','careca','cabelo curto ondulado']                                                
-listabarba=['sem barba',' com cavanhaque','longa barba','com barba']
+listabarba=['sem barba','com cavanhaque','longa barba','com barba']
 listacorpelos=['castanho','branco','loiro','ruivo']
 listaaltura=['alto','baixo','media estatura','alto','muito baixo']
-listaporte=['bodybuilder','sarado','magrelo','esqueletico','gordo','gordinho']
-listarabo=[' rabo longo e fino','rabo curto e fino', 'rabo de tamanho medio e fino','rabo longo e grosso','rabo longo','rabo curto','rabo de tamanho médio']
+listaporte=['musculoso','atlético','magro','subnutrido','gordo','acima do peso']
+listarabo=['rabo longo e fino','rabo curto e fino', 'rabo médio e fino','rabo longo e grosso','rabo longo','rabo curto','rabo médio']
 listaasas=['asas peuqenas','asas normais','asas gigantes','asas grandes']
 listacornormais=['negra','branca','parda','amarela']
 listachifres=['chifres grandes','chifres curtos','crifres finos e longos','chifres finos e curtos','chifres curtos e longos']
