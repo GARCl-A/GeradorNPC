@@ -32,15 +32,16 @@ def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
     can.drawString(123, 524, npc._genero)
     can.setFont("Helvetica", 6.5)
     can.drawString(107, 106, npc._caracteristicas_fisicas)
-    can.setFont("Helvetica", 8)
-    can.drawString(105, 75, npc._caracteristicas_pessoais)
+    can.setFont("Helvetica", 9)
+    can.drawString(106, 74, npc._caracteristicas_pessoais)
     can.drawImage(npc._imagem, 384,501, width=135.135,height=176.756)
 
     if tipo == 'vilao':
+        can.setFont("Helvetica", 10)
         lista_influencia = npc._influencia.split("|")
-        can.drawString(165, 454, npc._motivacao)
-        can.drawString(248, 425, lista_influencia[0])
-        can.drawString(347, 425, lista_influencia[1])
+        can.drawString(166, 454, npc._motivacao)
+        can.drawString(248, 426, lista_influencia[0])
+        can.drawString(348, 426, lista_influencia[1])
         can.drawString(142, 408, npc._poderes)
     elif tipo == 'neutro':
         can.setFont("Helvetica", 12)
