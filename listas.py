@@ -45,14 +45,17 @@ nomes = {
 lista_racas = ["Kobold", "Orc", "Leshy", "Lizardfolk", "Sprite", "Humano", "Anão", "Elfo", "Gnomo", "Goblin", "Halfling", 
 "Gnoll", "Gigante", "Ikidaris", "Tiefling", "Aasimar", "Kenku", "Aarakocra", "Draconato", "Meio-Elfo", "Meio-Orc",
 "Golias", "Centauro", "Forjados", "Genasi"]
+lista_racas.sort()
 
 lista_alinhamento_CO = ["Caótico", "Neutro", "Leal"]
 lista_alinhamento_BM = ["Bom", "Neutro", "Mal"]
 
 classes_jog = ["Artíficie", "Bárbaro", "Bardo", "Clérigo", "Druida", "Feiticeiro","Guerreiro","Paladino","Bruxo", 
 "Ladino", "Mago", "Monge", "Patrulheiro"]
+classes_jog.sort()
 
 classes_npc = ["Plebeu", "Nobre", "Especialista", "Combatente", "Acólito"]
+classes_npc.sort()
 
 riquezas = ["Miséria", "Pobre", "Média baixa", "Média", "Média alta", "Rico", "Muito Rico"]
 
