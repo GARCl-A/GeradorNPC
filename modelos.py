@@ -185,13 +185,13 @@ class NPC():
     def gera_caracteristicas_pessoais(self):
         while len(self._qualidades) <3:
             numero = random.randrange(0,len(listaqualidade))
-            if listaqualidade[numero] not in self._qualidades:
+            if listaqualidade[numero].capitalize() not in self._qualidades:
                 self._qualidades.append(listaqualidade[numero].capitalize())
 
         while len(self._defeitos) < 3:
             numero = random.randrange(0,len(listadefeitos))
             antonimo = False
-            if listadefeitos[numero] not in self._defeitos:
+            if listadefeitos[numero].capitalize() not in self._defeitos:
                 for qualidade in listaqualidade:
                     if (listadefeitos[numero],qualidade) in listaantonimos or (qualidade,listadefeitos[numero]) in listaantonimos :
                         antonimo = True
