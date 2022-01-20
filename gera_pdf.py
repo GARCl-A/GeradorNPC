@@ -18,7 +18,6 @@ def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
         path = f'{pasta}\pdf\Base_neutro.pdf'
         tipo = 'neutro'
 
-   
     packet = io.BytesIO()
 
     can = canvas.Canvas(packet, pagesize=letter)
@@ -61,7 +60,3 @@ def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
     outputStream = open(nome, "wb")
     output.write(outputStream)
     outputStream.close()
-
-
-
-

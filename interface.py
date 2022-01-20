@@ -294,15 +294,15 @@ class Aplicacao:
 
             if self.checkMotivacao.get() == False:
                 npc.gera_motivacao()
-            else: npc.set_motivacao(self.valorNome.get())
+            else: npc.set('motivacao',self.valorMotivacao.get())
 
             if self.checkInfluencia.get() == False:
                 npc.gera_influencia()
-            else: npc.set_influencia(self.valorNome.get())
+            else: npc.set('influencia',self.valorInfluencia.get())
 
             if self.checkPoder.get() == False:
                 npc.gera_poderes()
-            else: npc.set_poderes(self.valorNome.get())
+            else: npc.set('poderes',self.valorPoder.get())
 
         else: 
             npc = Neutro()
@@ -311,51 +311,50 @@ class Aplicacao:
 
             if self.checkOcupacao.get() == False:
                 npc.gera_ocupacao()
-            else: npc.set_ocupacao(self.valorNome.get())
-
+            else: npc.set('ocupacao',self.valorNome.get())
 
         if self.varGenero.get() == 'Aleatório':
             npc.gera_genero()
-        else: npc.set_genero(self.varGenero.get())
+        else: npc.set('genero',self.varGenero.get())
 
         if self.varRaca.get() == 'Aleatório':
             npc.gera_raca()
-        else: npc.set_raca(self.varRaca.get())
+        else: npc.set('raca',self.varRaca.get())
 
         if self.checkNome.get() == False:
             npc.gera_nome()
-        else: npc.set_nome(self.valorNome.get())
+        else: npc.set('nome',self.valorNome.get())
 
         if self.checkIdade.get() == False:
             npc.gera_idade()
-        else: npc.set_idade(self.valorIdade.get())
+        else: npc.set('idade',self.valorIdade.get())
 
         if self.checkCaracteristicasF.get() == False:
             npc.gera_caracteristicas_fisicas()
-        else: npc.set_caracteristicas_fisicas(self.valorCaracteristicasF.get())
+        else: npc.set('caracteristicas_fisicas',self.valorCaracteristicasF.get())
 
         if self.checkCaracteristicasP.get() == False:
             npc.gera_caracteristicas_pessoais()
-        else: npc.set_caracteristicas_pessoais(self.valorCaracteristicasP.get())
+        else: npc.set('caracteristicas_pessoais',self.valorCaracteristicasP.get())
 
         npc._classe_jog = self.valorCheckClasse.get()
         if self.varClasse.get() == 'Aleatório':
             npc.gera_classe()
-        else: npc.set_classe(self.varClasse.get())
+        else: npc.set('classe',self.varClasse.get())
 
         if self.varAlinhamento1.get() == 'Aleatório':
             npc.gera_alinhamento_CO()
-        else: npc.set_alinhamento_CO(self.varAlinhamento1.get())
+        else: npc.set('alinhamento_CO',self.varAlinhamento1.get())
 
         if self.varAlinhamento2.get() == 'Aleatório':
             npc.gera_alinhamento_BM()
-        else: npc.set_alinhamento_BM(self.varAlinhamento2.get())
+        else: npc.set('alinhamento_BM',self.varAlinhamento2.get())
 
         npc.gera_alinhamento()
 
         if self.varRiqueza.get() == 'Aleatório':
             npc.gera_riqueza()
-        else: npc.set_riqueza(self.varRiqueza.get())
+        else: npc.set('riqueza',self.varRiqueza.get())
 
         npc.gera_pasta()
 

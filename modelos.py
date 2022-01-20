@@ -17,40 +17,12 @@ class NPC():
         self._riqueza = None
         self._genero = None
         self._classe_jog = True
-        self._caracteristicas_fisicas_str = None
-        self._caracteristicas_pessoais_str = None
         self._idade = None
         self._imagem = None
 
-    def set_nome(self,nome):
-        self._nome = nome
-    
-    def set_idade(self,idade):
-        self._idade = idade
-
-    def set_raca(self,raca):
-        self._raca = raca
-
-    def set_alinhamento_CO(self,alinhamento_CO):
-        self._alinhamento_CO = alinhamento_CO
-
-    def set_alinhamento_BM(self,alinhamento_BM):
-        self._alinhamento_BM = alinhamento_BM
-
-    def set_caracteristicas_fisicas(self,caracteristicas_fisicas):
-        self._caracteristicas_fisicas = caracteristicas_fisicas
-
-    def set_caracteristicas_pessoais(self,caracteristicas_pessoais):
-        self._caracteristicas_pessoais = caracteristicas_pessoais
-
-    def set_classe(self,classe):
-        self._classe = classe
-
-    def set_riqueza(self,riqueza):
-        self._riqueza = riqueza
-
-    def set_genero(self,genero):
-        self._genero = genero
+    def set(self,atributo, valor):
+        atributo = '_' + atributo
+        setattr(self,atributo,valor)
 
     def gera_nome_aleatorio(self):
         letras = random.randrange(1,4) + random.randrange(1,4) + random.randrange(1,4)
@@ -180,7 +152,6 @@ class NPC():
             lista_caracteristicas_fisicas.append(rabo)
 
         self._caracteristicas_fisicas = ", ".join(lista_caracteristicas_fisicas)
-        self._caracteristicas_fisicas_str = f'{olhos}, {porte}, {altura}\n          {", ".join(lista_caracteristicas_fisicas[3:len(lista_caracteristicas_fisicas)])}'
 
     def gera_caracteristicas_pessoais(self):
         while len(self._qualidades) <3:
@@ -198,7 +169,6 @@ class NPC():
                 if not antonimo:
                     self._defeitos.append(listadefeitos[numero].capitalize())
 
-        self._caracteristicas_pessoais_str = self.trata_listas(self._qualidades) + '\n          ' +self.trata_listas(self._defeitos)
         self._caracteristicas_pessoais = ", ".join(self._qualidades + self._defeitos )
 
     def gera_classe(self):
@@ -228,25 +198,9 @@ class Neutro(NPC):
         super().__init__()
         self._ocupacao = None
 
-    def set_ocupacao(self,ocupacao):
-        self._ocupacao = ocupacao
-
     def gera_ocupacao(self):
         numero = random.randrange(0,len(ocupacoes))
         self._ocupacao = ocupacoes[numero]
-
-    def __str__(self):
-        return f'''Nome: {self._nome}
-Gênero: {self._genero}
-Idade: {self._idade}
-Raça: {self._raca}
-Classe: {self._classe}
-Alinhamento: {self._alinhamento}
-Características Físicas: {self._caracteristicas_fisicas_str}
-Características Pessoais: {self._caracteristicas_pessoais_str}
-Riqueza: {self._riqueza}
-Ocupação: {self._ocupacao}
-'''
 
 class Vilao(NPC):
     def __init__(self):
@@ -254,15 +208,6 @@ class Vilao(NPC):
         self._motivacao = None
         self._influencia = None
         self._poderes = None
-    
-    def set_motivacao(self,motivacao):
-        self._motivacao = motivacao
-
-    def set_influencia(self,influencia):
-        self._influencia = influencia
-
-    def set_poderes(self,poderes):
-        self._poderes = poderes
 
     def gera_motivacao(self):
         numero = random.randrange(0,len(motivacoes))
@@ -276,18 +221,3 @@ class Vilao(NPC):
     def gera_poderes(self):
         numero = random.randrange(0,len(poderes))
         self._poderes = poderes[numero]
-
-    def __str__(self):
-        return f'''Nome: {self._nome}
-Gênero: {self._genero}
-Idade: {self._idade}
-Raça: {self._raca}
-Classe: {self._classe}
-Alinhamento: {self._alinhamento}
-Características Físicas: {self._caracteristicas_fisicas_str}
-Características Pessoais: {self._caracteristicas_pessoais_str}
-Riqueza: {self._riqueza}
-Motivação: {self._motivacao}
-Influência: {self._influencia}
-Poderes: {self._poderes}
-'''
