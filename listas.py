@@ -42,7 +42,7 @@ nomes = {
     }
 }
 
-lista_raças = ["Kobold", "Orc", "Leshy", "Lizardfolk", "Sprite", "Humano", "Anão", "Elfo", "Gnomo", "Goblin", "Halfling", 
+lista_racas = ["Kobold", "Orc", "Leshy", "Lizardfolk", "Sprite", "Humano", "Anão", "Elfo", "Gnomo", "Goblin", "Halfling", 
 "Gnoll", "Gigante", "Ikidaris", "Tiefling", "Aasimar", "Kenku", "Aarakocra", "Draconato", "Meio-Elfo", "Meio-Orc",
 "Golias", "Centauro", "Forjados", "Genasi"]
 
@@ -54,9 +54,9 @@ classes_jog = ["Artíficie", "Bárbaro", "Bardo", "Clérigo", "Druida", "Feitice
 
 classes_npc = ["Plebeu", "Nobre", "Especialista", "Combatente", "Acólito"]
 
-riquezas = ["Abaixo da pobreza", "Pobre", "Média baixa", "Média", "Média alta", "Rico", "Muito Rico"]
+riquezas = ["Miséria", "Pobre", "Média baixa", "Média", "Média alta", "Rico", "Muito Rico"]
 
-ocupaçoes = ["Camponês", "Lenhador", "Ferreiro", "Pastor", "Carniceiro", "Cirieiro", "Pergaminheiro", "Ourives", "Vidreiro", 
+ocupacoes = ["Camponês", "Lenhador", "Ferreiro", "Pastor", "Carniceiro", "Cirieiro", "Pergaminheiro", "Ourives", "Vidreiro", 
 "Canteiro", "Vendedor", "Boticário", "Alfaiate", "Bancário", "Soldado", "Taverneiro", "Músico", "Escrivão"]
 
 motivacoes = ['Vingança', 'Ambição', 'Revolução', 'Amor', 'Loucura', 'Mal puro', 'Servidão', 'Manipulação', 'Natureza Maligna']

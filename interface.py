@@ -64,12 +64,12 @@ class Aplicacao:
         self.LIdade.grid(column=0, row=2, padx=(15, 10), sticky = 'e')
 
 
-        self.Raça = Label(self.container2, text = 'Raças:', font=("Times New Roman", "12", "bold"))
-        self.Raça.grid(column=0, row =3, padx=(15, 10), sticky = 'e')
-        self.varRaça = StringVar()
-        self.varRaça.set('Aleatório')
-        self.listaRaça = ttk.Combobox(self.container2,textvariable = self.varRaça,values=['Aleatório'] + lista_raças, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
-        self.listaRaça.grid(column=1, row =3)
+        self.Raca = Label(self.container2, text = 'Raças:', font=("Times New Roman", "12", "bold"))
+        self.Raca.grid(column=0, row =3, padx=(15, 10), sticky = 'e')
+        self.varRaca = StringVar()
+        self.varRaca.set('Aleatório')
+        self.listaRaca = ttk.Combobox(self.container2,textvariable = self.varRaca,values=['Aleatório'] + lista_racas, width = 21, justify = 'center', font= self.fonte, state = 'readonly')
+        self.listaRaca.grid(column=1, row =3)
 
 
         self.Classe = Label(self.container2, text = 'Classes:', font=("Times New Roman", "12", "bold"))
@@ -191,16 +191,16 @@ class Aplicacao:
             self.listaClasse.grid(column=1, row =4)
 
     def AtualizaM(self):
-        if(self.checkMotivação.get() == False):
-            self.valorMotivação.destroy()
-            self.valorMotivação = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
-            self.valorMotivação.grid(column=1, row=0)
+        if(self.checkMotivacao.get() == False):
+            self.valorMotivacao.destroy()
+            self.valorMotivacao = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorMotivacao.grid(column=1, row=0)
 
-        elif(self.checkMotivação.get() == True):
-            self.valorMotivação.destroy()
-            self.valorMotivação = Entry(self.container4, width = 23, font = self.fonte, justify = 'center')
-            self.valorMotivação.grid(column=1, row=0)
-            self.valorMotivação.delete(0,END)
+        elif(self.checkMotivacao.get() == True):
+            self.valorMotivacao.destroy()
+            self.valorMotivacao = Entry(self.container4, width = 23, font = self.fonte, justify = 'center')
+            self.valorMotivacao.grid(column=1, row=0)
+            self.valorMotivacao.delete(0,END)
 
     def AtualizaIn(self):
         if(self.checkInfluencia.get() == False):
@@ -227,27 +227,27 @@ class Aplicacao:
             self.valorPoder.delete(0,END)
 
     def AtualizaOc(self):
-        if(self.checkOcupação.get() == False):
-            self.valorOcupação.destroy()
-            self.valorOcupação = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
-            self.valorOcupação.grid(column=1, row=0)
+        if(self.checkOcupacao.get() == False):
+            self.valorOcupacao.destroy()
+            self.valorOcupacao = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorOcupacao.grid(column=1, row=0)
 
-        elif(self.checkOcupação.get() == True):
-            self.valorOcupação.destroy()
-            self.valorOcupação = Entry(self.container4, width = 23, font = self.fonte, justify = 'center')
-            self.valorOcupação.grid(column=1, row=0)
-            self.valorOcupação.delete(0,END)
+        elif(self.checkOcupacao.get() == True):
+            self.valorOcupacao.destroy()
+            self.valorOcupacao = Entry(self.container4, width = 23, font = self.fonte, justify = 'center')
+            self.valorOcupacao.grid(column=1, row=0)
+            self.valorOcupacao.delete(0,END)
 
     def AtualizaConjunto(self):
         if self.conjunto.get() == 1:
 
-            self.checkMotivação = IntVar()
-            self.Motivação = Checkbutton(self.container4,font = self.fonte,variable=self.checkMotivação, onvalue=True, offvalue=False, command = self.AtualizaM)
-            self.Motivação.grid(column=2, row=0, padx=10, sticky = 'w')
-            self.valorMotivação = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
-            self.valorMotivação.grid(column=1, row=0)
-            self.LMotivação = Label(self.container4, text = 'Motivação:', font=("Times New Roman", "12", "bold"))
-            self.LMotivação.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
+            self.checkMotivacao = IntVar()
+            self.Motivacao = Checkbutton(self.container4,font = self.fonte,variable=self.checkMotivacao, onvalue=True, offvalue=False, command = self.AtualizaM)
+            self.Motivacao.grid(column=2, row=0, padx=10, sticky = 'w')
+            self.valorMotivacao = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorMotivacao.grid(column=1, row=0)
+            self.LMotivacao = Label(self.container4, text = 'Motivação:', font=("Times New Roman", "12", "bold"))
+            self.LMotivacao.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
 
             self.checkInfluencia = IntVar()
             self.Influencia = Checkbutton(self.container4,font = self.fonte,variable=self.checkInfluencia, onvalue=True, offvalue=False, command = self.AtualizaIn)
@@ -266,9 +266,9 @@ class Aplicacao:
             self.LPoder.grid(column=0, row=2, padx=(15, 10), sticky = 'e')
 
         if self.conjunto.get() == 2:
-            self.Motivação.destroy()
-            self.LMotivação.destroy()
-            self.valorMotivação.destroy()
+            self.Motivacao.destroy()
+            self.LMotivacao.destroy()
+            self.valorMotivacao.destroy()
             self.Influencia.destroy()
             self.LInfluencia.destroy()
             self.valorInfluencia.destroy()
@@ -276,13 +276,13 @@ class Aplicacao:
             self.LPoder.destroy()
             self.valorPoder.destroy()
 
-            self.checkOcupação = IntVar()
-            self.Ocupação = Checkbutton(self.container4,font = self.fonte,variable=self.checkOcupação, onvalue=True, offvalue=False, command = self.AtualizaOc)
-            self.Ocupação.grid(column=2, row=0, padx=10, sticky = 'w')
-            self.valorOcupação = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
-            self.valorOcupação.grid(column=1, row=0)
-            self.LOcupação = Label(self.container4, text = 'Ocupação:', font=("Times New Roman", "12", "bold"))
-            self.LOcupação.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
+            self.checkOcupacao = IntVar()
+            self.Ocupacao = Checkbutton(self.container4,font = self.fonte,variable=self.checkOcupacao, onvalue=True, offvalue=False, command = self.AtualizaOc)
+            self.Ocupacao.grid(column=2, row=0, padx=10, sticky = 'w')
+            self.valorOcupacao = Label(self.container4, text = 'Aleatório', font=self.fonte, bg = 'white', width = 20)
+            self.valorOcupacao.grid(column=1, row=0)
+            self.LOcupacao = Label(self.container4, text = 'Ocupação:', font=("Times New Roman", "12", "bold"))
+            self.LOcupacao.grid(column=0, row=0, padx=(15, 10), sticky = 'e')
     
     def Gerar(self,master=None):
         global npc
@@ -292,7 +292,7 @@ class Aplicacao:
             vilao = True
             neutro = False
 
-            if self.checkMotivação.get() == False:
+            if self.checkMotivacao.get() == False:
                 npc.gera_motivacao()
             else: npc.set_motivacao(self.valorNome.get())
 
@@ -309,7 +309,7 @@ class Aplicacao:
             vilao = False
             neutro = True
 
-            if self.checkOcupação.get() == False:
+            if self.checkOcupacao.get() == False:
                 npc.gera_ocupacao()
             else: npc.set_ocupacao(self.valorNome.get())
 
@@ -318,9 +318,9 @@ class Aplicacao:
             npc.gera_genero()
         else: npc.set_genero(self.varGenero.get())
 
-        if self.varRaça.get() == 'Aleatório':
-            npc.gera_raça()
-        else: npc.set_raça(self.varRaça.get())
+        if self.varRaca.get() == 'Aleatório':
+            npc.gera_raca()
+        else: npc.set_raca(self.varRaca.get())
 
         if self.checkNome.get() == False:
             npc.gera_nome()
@@ -416,7 +416,7 @@ class JanelaNPC:
         Label(janelaC0, text = self._npc._idade, font=("Times New Roman", "12")).grid(column = 1, row = 2, padx = (2,10), pady = 1, sticky = 'w')
 
         Label(janelaC1, text = 'Raça: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 3, padx = (10,2), pady = 1, sticky = 'w')
-        Label(janelaC1, text = self._npc._raça, font=("Times New Roman", "12")).grid(column = 1, row = 3, padx = (2,10), pady = 1, sticky = 'w')
+        Label(janelaC1, text = self._npc._raca, font=("Times New Roman", "12")).grid(column = 1, row = 3, padx = (2,10), pady = 1, sticky = 'w')
 
         Label(janelaC2, text = 'Classe: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 4, padx = (10,2), pady = 1, sticky = 'w')
         Label(janelaC2, text = self._npc._classe, font=("Times New Roman", "12")).grid(column = 1, row = 4, padx = (2,10), pady = 1, sticky = 'w')
@@ -444,7 +444,7 @@ class JanelaNPC:
             Label(janelaC9, text = self._npc._poderes, font=("Times New Roman", "12")).grid(column = 1, row = 11, padx = (2,10), pady = 1, sticky = 'w')
         elif self._neutro:
             Label(janelaC7, text = 'Ocupação: ', font=("Times New Roman", "12", "bold")).grid(column = 0, row = 9, padx = (10,2), pady = 1, sticky = 'w')
-            Label(janelaC7, text = self._npc._ocupaçao, font=("Times New Roman", "12")).grid(column = 1, row = 9, padx = (2,10), pady = 1, sticky = 'w')
+            Label(janelaC7, text = self._npc._ocupacao, font=("Times New Roman", "12")).grid(column = 1, row = 9, padx = (2,10), pady = 1, sticky = 'w')
 
         Button(janelaNpc, text = "Salvar", font=("Times New Roman", "13", "bold"), width=10, command = self.Salvar).grid(sticky = 'se',column = 1, row = 3, padx = 20, pady = 10)
         self.salvando = Label(janelaNpc, text = '', font=("Times New Roman", "12"))

@@ -12,7 +12,7 @@ def nome_pdf(nome):
 def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
     tipo = ''
     if type(npc) == Vilao:
-        path = f'{pasta}\pdf\Base_vilão.pdf'
+        path = f'{pasta}\pdf\Base_vilao.pdf'
         tipo = 'vilao'
     if type(npc) == Neutro:
         path = f'{pasta}\pdf\Base_neutro.pdf'
@@ -24,7 +24,7 @@ def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
     can = canvas.Canvas(packet, pagesize=letter)
     can.drawString(130, 648, npc._nome)
     can.drawString(320, 646, str(npc._idade)) 
-    can.drawString(133, 625, npc._raça)
+    can.drawString(133, 625, npc._raca)
     can.drawString(137, 602, npc._classe)
     can.drawString(168, 579, npc._alinhamento_CO)
     can.drawString(218, 579, npc._alinhamento_BM)
@@ -45,7 +45,7 @@ def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
         can.drawString(142, 408, npc._poderes)
     elif tipo == 'neutro':
         can.setFont("Helvetica", 12)
-        can.drawString(171, 435, npc._ocupaçao)
+        can.drawString(171, 435, npc._ocupacao)
 
     can.save()
 
