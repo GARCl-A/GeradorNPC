@@ -1,7 +1,16 @@
 # GeradorNPC
-Gerador de NPC, feito para a avaliação 1 de linguagens de programação UFRJ 2021.2<br />
+Gerador de NPC, feito para a avaliação 1 de linguagens de programação UFRJ 2021.2
 
-As imagens utilizadas para representação dos personagens são dos artistas/empresas **(WIP)**:<br />
+### Bibliotecas Utilizadas: <br />
+  >reportlab; <br />
+  >pypdf2; <br />
+  >os; <br />
+  >io; <br />
+  >tkinter; <br />
+  >PIL; <br />
+  >random; <br />
+
+### As imagens utilizadas para representação dos personagens são dos artistas/empresas **(WIP)**:<br />
   >hybrid-dragoness; <br />
   >paizo; <br />
   >wizards of the coast;<br />
