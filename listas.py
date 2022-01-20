@@ -100,7 +100,7 @@ listaporte=['musculoso','atlético','magro','subnutrido','gordo','acima do peso'
 listarabo=['rabo longo e fino','rabo curto e fino', 'rabo médio e fino','rabo longo e grosso','rabo longo','rabo curto','rabo médio']
 listaasas=['asas peuqenas','asas normais','asas gigantes','asas grandes']
 listacornormais=['negra','branca','parda','amarela']
-listachifres=['chifres grandes','chifres curtos','crifres finos e longos','chifres finos e curtos','chifres curtos e longos']
+listachifres=['chifres grandes','chifres curtos','chifres finos e longos','chifres finos e curtos','chifres curtos e longos']
 listacorexoticas=['verde','roxa','marrom','vermelha','azul','cinza','branca','preta']
 
 #Agrupamento de raças para facilitar/simplicar a leitura do código
