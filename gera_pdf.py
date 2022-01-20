@@ -12,7 +12,6 @@ def nome_pdf(nome):
     return f'{pasta}\{nome}.pdf'
 
 def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
-    cnv.drawText(t)
     tipo = ''
     if type(npc) == Vilao:
         path = f'{pasta}\pdf\Base_vilão.pdf'
