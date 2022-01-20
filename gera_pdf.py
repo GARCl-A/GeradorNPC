@@ -3,7 +3,6 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 import os, io
 from modelos import Vilao, Neutro
 from reportlab.lib.pagesizes import letter
-import PIL.Image
 
 pasta = os.path.dirname(__file__)
 
@@ -35,7 +34,7 @@ def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
     can.drawString(107, 106, npc._caracteristicas_fisicas)
     can.setFont("Helvetica", 8)
     can.drawString(105, 75, npc._caracteristicas_pessoais)
-    image = PIL.Image(npc._imagem)
+    can.drawImage(npc._imagem, 384,501, width=135.135,height=176.756)
 
     if tipo == 'vilao':
         lista_influencia = npc._influencia.split("|")
