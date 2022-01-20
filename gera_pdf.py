@@ -43,6 +43,7 @@ def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
         can.drawString(347, 425, lista_influencia[1])
         can.drawString(142, 408, npc._poderes)
     elif tipo == 'neutro':
+        can.setFont("Helvetica", 12)
         can.drawString(171, 435, npc._ocupaçao)
 
     can.save()
