@@ -401,7 +401,7 @@ class JanelaNPC:
         janelaC5 = Frame(containerjanela)
         janelaC5.grid(sticky = 'w', padx= 20, column = 0, row =6)
         janelaC6 = Frame(containerjanela)
-        janelaC5.grid(sticky = 'w', padx= 20, column = 0, row =7)
+        janelaC6.grid(sticky = 'w', padx= 20, column = 0, row =7)
         janelaC7 = Frame(containerjanela)
         janelaC7.grid(sticky = 'w', padx = 20, pady = (0,40), column = 0, row =8)
         if self._vilao:
