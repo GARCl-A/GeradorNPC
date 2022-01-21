@@ -59,12 +59,13 @@ classes_npc.sort()
 
 riquezas = ["Miséria", "Pobre", "Média baixa", "Média", "Média alta", "Rico", "Muito Rico"]
 
-ocupacoes = ["Camponês", "Lenhador", "Ferreiro", "Pastor", "Carniceiro", "Cirieiro", "Pergaminheiro", "Ourives", "Vidreiro", 
-"Canteiro", "Vendedor", "Boticário", "Alfaiate", "Bancário", "Soldado", "Taverneiro", "Músico", "Escrivão"]
+ocupacoes = ["Camponês(a)", "Lenhador(a)", "Ferreiro(a)", "Pastor(a)", "Carniceir(a)", "Cirieiro(a)", 
+"Pergaminheiro(a)", "Ourives(a)", "Vidreiro(a)","Canteiro(a)", "Vendedor(a)", "Boticário(a)",
+"Alfaiate(a)", "Bancário(a)", "Soldado(a)", "Taverneiro(a)", "Músico(a)", "Escrivão(a)"]
 
-motivacoes = ['Vingança', 'Ambição', 'Revolução', 'Amor', 'Loucura', 'Mal puro', 'Servidão', 'Manipulação', 'Natureza Maligna']
+motivacoes = ['Vingança', 'Ambição', 'Revolução', 'Amor', 'Loucura', 'Mal puro', 'Servidão', 'Manipulação', 'Natureza maligna']
 
-tipo_influencia = ['Politicamente', 'Militarmente', 'Violentamente', 'Magicamente', 'Economicamente']
+tipo_influencia = ['Politica', 'Militar', 'Violência', 'Mágica', 'Econômica']
 tamanho_influencia = ['Local', 'Regional', 'Global']
 
 consoantes = 'b,c,d,f,g,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z'.split(",")
@@ -74,32 +75,49 @@ poderes = ['Escolhido por alguma entidade', 'Médium', 'Líder sobrenatural', 'V
 'Controla criatura super poderosa', 'Viaja entre planos', 'Covil indestrutível', 'Exército leal', 'Manipulador de nobres',
 'Influencia forças da natureza', 'Prevê o futuro']
 
-listaqualidade =['corajoso(a)','inteligente','perseverante','confiável','criativo(a)','tolerante','sincero(a)','romântico(a)','focado(a)', 'extrovertido(a)','disciplinado(a)',
-                  'honesto(a)', 'honrado(a)','humilde','agradecido(a)','otimista','determinado(a)','prudente','resiliente','calmo(a)', 'maduro(a)','observador(a)',
-                  'respeitoso(a)','altruísta','zeloso(a)','organizado(a)','responsável','eloquente','leal','ambicioso(a)','meigo(a)','prático(a)','carismático(a)',
-                  'sábio(a)','engraçado(a)','empático(a)','generoso(a)','proativo','paciente','orgulhoso','compreensivo']
+listaqualidade =['corajoso(a)','inteligente','perseverante','confiável','criativo(a)','tolerante','sincero(a)',
+                'romântico(a)','focado(a)', 'extrovertido(a)','disciplinado(a)','honesto(a)', 'honrado(a)',
+                'humilde','agradecido(a)','otimista','determinado(a)','prudente','resiliente','calmo(a)', 'maduro(a)',
+                'observador(a)','respeitoso(a)','altruísta','zeloso(a)','organizado(a)','responsável','eloquente',
+                'leal','ambicioso(a)','meigo(a)','prático(a)','carismático(a)','sábio(a)','engraçado(a)','empático(a)',
+                'generoso(a)','proativo(a)','paciente','orgulhoso(a)','compreensivo(a)']
 
-listadefeitos = ['teimoso(a)', 'agressivo(a)','violento(a)','procrastinador(a)','desequilibrado(a)','interesseiro(a)','arrogante','preconceituoso(a)','bisbilhoteiro(a)',
-                 'cruel', 'exigente','egoísta','mentiroso(a)','autoritário(a)','malvado(a)','chato(a)','avarento(a)','negligente','irresponsável','atrevido(a)','irritadiço(a)',
-                 'inflexível','apático(a)','antipático(a)','possessivo(a)','intolerante','desorganizado(a)','dissimulado(a)','distraído(a)','falso(a)','desmotivado(a)',
-                 'rancoroso(a)','vingativo(a)','grosso(a)','hipócrita','desleal','desonesto(a)','preguiçoso(a)','ganancioso(a)','superficial','sem graça','manipulador(a)',
-                 'imaturo(a)','indeciso(a)','ciumento(a)','oportunista','covarde','burro(a)','tímido(a)','pessimista','desrespeitoso(a)','tolo','impaciente']
+listadefeitos = ['teimoso(a)', 'agressivo(a)','violento(a)','procrastinador(a)','desequilibrado(a)','interesseiro(a)',
+                'arrogante','preconceituoso(a)','bisbilhoteiro(a)','cruel', 'exigente','egoísta','mentiroso(a)',
+                'autoritário(a)','malvado(a)','chato(a)','avarento(a)','negligente','irresponsável','atrevido(a)',
+                'irritadiço(a)','inflexível','apático(a)','antipático(a)','possessivo(a)','intolerante','desorganizado(a)',
+                'dissimulado(a)','distraído(a)','falso(a)','desmotivado(a)','rancoroso(a)','vingativo(a)','grosso(a)',
+                'hipócrita','desleal','desonesto(a)','preguiçoso(a)','ganancioso(a)','superficial','sem graça',
+                'manipulador(a)','imaturo(a)','indeciso(a)','ciumento(a)','oportunista','covarde',
+                'burro(a)','tímido(a)','pessimista','desrespeitoso(a)','tolo','impaciente']
 
-listaantonimos = [('covarde','corajoso(a)'),('altruísta','covarde'),('inteligente','burro(a)'),('perseverante','preguiçoso(a)'),('confiável','irresponsável'),
-                ('responsável','irresponssável'),('negligente','responsável'),('honesto(a)','desonesto(a)'),('tolerante','intolerante'),('exigente','tolerante'),('inflexível','tolerante'),
-                ('sincero(a)','mentiroso(a)'),('falso(a)','sincero(a)'),('focado(a)','distraído(a)'),('tímido(a)','extrovertido(a)'),('disciplinado(a)','procrastinador(a)'),
-                ('honrado(a)','covarde'),('hipócrita', 'honrado(a)'),('humilde','arrogante'),('pessimista','otimista'),('desmotivado(a)','determinado(a)'),('procrastinador(a)','determinado(a)'),
-                ('prudente','irresponsável'),('calmo(a)', 'agressivo(a)'),('calmo(a)','violento(a)'),('irritadiço(a)','calmo(a)'),('imaturo(a)', 'maduro(a)'),('meigo(a)','grosso(a)'),
-                ('leal','desleal'),('organizado(a)','desorganizado(a)'),('zeloso(a)','negligente'),('altruísta','oportunista'),('respeitoso(a)','desrespeitoso(a)'),('tolo',
-                  'sábio(a)'),('engraçado(a)','sem graça'),('empático(a)','antipático(a)'),('generoso(a)','egoísta'),('proativo','procrastinador(a)'),('paciente','impaciente'),
-                  ('compreensivo','inflexível'),('empático(a)','apático(a)')]
+#(qualidade,defeito)
+listaantonimos = [('corajoso(a)','covarde'),('altruísta','covarde'),('inteligente','burro(a)'),
+                ('perseverante','preguiçoso(a)'),('confiável','irresponsável'),('responsável','irresponsável'),
+                ('responsável','negligente'),('honesto(a)','desonesto(a)'),('tolerante','intolerante'),
+                ('tolerante','exigente'),('tolerante','inflexível'),('sincero(a)','mentiroso(a)'),('sincero(a)','falso(a)'),
+                ('focado(a)','distraído(a)'),('extrovertido(a)','tímido(a)'),('disciplinado(a)','procrastinador(a)'),
+                ('honrado(a)','covarde'),('honrado(a)','hipócrita'),('humilde','arrogante'),('pessimista','otimista'),
+                ('determinado(a)','desmotivado(a)'),('determinado(a)','procrastinador(a)'),('prudente','irresponsável'),
+                ('calmo(a)', 'agressivo(a)'),('calmo(a)','violento(a)'),('calmo(a)','irritadiço(a)'),
+                ('meigo(a)','grosso(a)'),('leal','desleal'),('organizado(a)','desorganizado(a)'),('zeloso(a)','negligente'),
+                ('altruísta','oportunista'),('respeitoso(a)','desrespeitoso(a)'),('sábio(a)','tolo'),
+                ('engraçado(a)','sem graça'),('empático(a)','antipático(a)'),('generoso(a)','egoísta'),
+                ('proativo','procrastinador(a)'),('paciente','impaciente'),('compreensivo(a)','inflexível'),
+                ('empático(a)','apático(a)'),('maduro(a)','imaturo(a)'),('compreensivo(a)','teimoso(a)'),('humilde','avarento(a)'),
+                ('sábio(a)','desequilibrado(a)')]
+
+#Na posição da esquerda qualidade/defeito > motivação
+#Na posição da direita alinhamentoCO/alinhamentoBM
+listaproibidos = [('malvado(a)','Bom'),('Natureza maligna','Bom'),('leal','Caótico'),('cruel','Bom'),('Mal puro','Bom'),
+                  ('Mal puro','Neutro')]
                   
 listaOlhos =['olhos castanhos','olhos azuis','olhos vermelhos','olhos de vidro','olhos púrpura','olhos castanhos']                               
 listacabelo = ['cabelo longo liso','cabelo curto liso ','cabelo longo encaracolado','cabelo curto encaracolado','cabelo longo ondulado','careca','cabelo curto ondulado']                                                
 listabarba=['sem barba','com cavanhaque','longa barba','com barba']
 listacorpelos=['castanho','branco','loiro','ruivo']
-listaaltura=['alto','baixo','media estatura','alto','muito baixo']
-listaporte=['musculoso','atlético','magro','subnutrido','gordo','acima do peso']
+listaaltura=['alto(a)','baixo(a)','estatura média','muito alto(a)','muito baixo(a)']
+listaporte=['musculoso(a)','atlético(a)','magro(a)','subnutrido(a)','gordo(a)','acima do peso']
 listarabo=['rabo longo e fino','rabo curto e fino', 'rabo médio e fino','rabo longo e grosso','rabo longo','rabo curto','rabo médio']
 listaasas=['asas pequenas','asas normais','asas gigantes','asas grandes']
 listacornormais=['negra','branca','parda','amarela']

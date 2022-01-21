@@ -116,7 +116,8 @@ class NPC():
             self.gera_alinhamento_BM()
         if self._alinhamento_CO == None:
             self.gera_alinhamento_CO()
-        self._alinhamento = self._alinhamento_CO + ' | ' + self._alinhamento_BM
+        if self._alinhamento == None:
+            self._alinhamento = self._alinhamento_CO + ' | ' + self._alinhamento_BM
         
     def gera_caracteristicas_fisicas(self):
         caracteristicas = ''
@@ -164,17 +165,20 @@ class NPC():
         self._caracteristicas_fisicas = ", ".join(lista_caracteristicas_fisicas)
 
     def gera_caracteristicas_pessoais(self):
+        if self._alinhamento == None:
+            self.gera_alinhamento()
+
         while len(self._qualidades) <3:
             numero = random.randrange(0,len(listaqualidade))
-            if listaqualidade[numero].capitalize() not in self._qualidades:
+            if (listaqualidade[numero].capitalize() not in self._qualidades) and ((listaqualidade[numero],self._alinhamento_BM) not in listaproibidos) and ((listaqualidade[numero],self._alinhamento_CO) not in listaproibidos):
                 self._qualidades.append(listaqualidade[numero].capitalize())
 
         while len(self._defeitos) < 3:
             numero = random.randrange(0,len(listadefeitos))
             antonimo = False
-            if listadefeitos[numero].capitalize() not in self._defeitos:
+            if (listadefeitos[numero].capitalize() not in self._defeitos) and ((listadefeitos[numero],self._alinhamento_BM) not in listaproibidos) and ((listadefeitos[numero],self._alinhamento_CO) not in listaproibidos):
                 for qualidade in listaqualidade:
-                    if (listadefeitos[numero],qualidade) in listaantonimos or (qualidade,listadefeitos[numero]) in listaantonimos :
+                    if (qualidade,listadefeitos[numero]) in listaantonimos :
                         antonimo = True
                 if not antonimo:
                     self._defeitos.append(listadefeitos[numero].capitalize())
@@ -220,8 +224,11 @@ class Vilao(NPC):
         self._poderes = None
 
     def gera_motivacao(self):
-        numero = random.randrange(0,len(motivacoes))
-        self._motivacao = motivacoes[numero]
+         while self._motivacao == None:
+            numero = random.randrange(0,len(motivacoes))
+            motivacao = motivacoes[numero]
+            if ((motivacao,self._alinhamento_CO) not in listaproibidos) and ((motivacao,self._alinhamento_BM) not in listaproibidos) :
+                self._motivacao = motivacao
 
     def gera_influencia(self):
         numero1 = random.randrange(0,len(tipo_influencia))

@@ -292,6 +292,16 @@ class Aplicacao:
             vilao = True
             neutro = False
 
+            if self.varAlinhamento1.get() == 'Aleatório':
+                npc.gera_alinhamento_CO()
+            else: npc.set('alinhamento_CO',self.varAlinhamento1.get())
+
+            if self.varAlinhamento2.get() == 'Aleatório':
+                npc.gera_alinhamento_BM()
+            else: npc.set('alinhamento_BM',self.varAlinhamento2.get())
+
+            npc.gera_alinhamento()
+
             if self.checkMotivacao.get() == False:
                 npc.gera_motivacao()
             else: npc.set('motivacao',self.valorMotivacao.get())
@@ -309,6 +319,15 @@ class Aplicacao:
             vilao = False
             neutro = True
 
+            if self.varAlinhamento1.get() == 'Aleatório':
+                npc.gera_alinhamento_CO()
+            else: npc.set('alinhamento_CO',self.varAlinhamento1.get())
+
+            if self.varAlinhamento2.get() == 'Aleatório':
+                npc.gera_alinhamento_BM()
+            else: npc.set('alinhamento_BM',self.varAlinhamento2.get())
+
+            npc.gera_alinhamento()
             if self.checkOcupacao.get() == False:
                 npc.gera_ocupacao()
             else: npc.set('ocupacao',self.valorNome.get())
@@ -341,16 +360,6 @@ class Aplicacao:
         if self.varClasse.get() == 'Aleatório':
             npc.gera_classe()
         else: npc.set('classe',self.varClasse.get())
-
-        if self.varAlinhamento1.get() == 'Aleatório':
-            npc.gera_alinhamento_CO()
-        else: npc.set('alinhamento_CO',self.varAlinhamento1.get())
-
-        if self.varAlinhamento2.get() == 'Aleatório':
-            npc.gera_alinhamento_BM()
-        else: npc.set('alinhamento_BM',self.varAlinhamento2.get())
-
-        npc.gera_alinhamento()
 
         if self.varRiqueza.get() == 'Aleatório':
             npc.gera_riqueza()
