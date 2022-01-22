@@ -7,7 +7,7 @@ from reportlab.lib.pagesizes import letter
 pasta = os.path.dirname(__file__)
 
 def nome_pdf(nome):
-    return f'{pasta}\{nome}.pdf'
+    return f'{pasta}\PDFs\{nome}.pdf'
 
 def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
     tipo = ''
