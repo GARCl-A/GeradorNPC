@@ -29,9 +29,13 @@ def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
     can.drawString(218, 579, npc._alinhamento_BM)
     can.drawString(145, 553, npc._riqueza)
     can.drawString(123, 524, npc._genero)
-    can.setFont("Helvetica", 6.5)
-    can.drawString(107, 106, npc._caracteristicas_fisicas)
     can.setFont("Helvetica", 9)
+    if len(npc._caracteristicas_fisicas) < 97:
+        can.drawString(107, 118, npc._caracteristicas_fisicas)
+    else:
+        
+        can.drawString(107, 118, ','.join(npc._caracteristicas_fisicas.split(',')[0:5]))
+        can.drawString(107, 104, ','.join(npc._caracteristicas_fisicas.split(',')[5:]))
     can.drawString(106, 74, npc._caracteristicas_pessoais)
     can.drawImage(npc._imagem, 384,501, width=135.135,height=176.756)
 
