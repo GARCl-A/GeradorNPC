@@ -103,9 +103,9 @@ listaantonimos = [('corajoso(a)','covarde'),('altruísta','covarde'),('inteligen
                 ('meigo(a)','grosso(a)'),('leal','desleal'),('organizado(a)','desorganizado(a)'),('zeloso(a)','negligente'),
                 ('altruísta','oportunista'),('respeitoso(a)','desrespeitoso(a)'),('sábio(a)','tolo'),
                 ('engraçado(a)','sem graça'),('empático(a)','antipático(a)'),('generoso(a)','egoísta'),
-                ('proativo','procrastinador(a)'),('paciente','impaciente'),('compreensivo(a)','inflexível'),
+                ('proativo(a)','procrastinador(a)'),('paciente','impaciente'),('compreensivo(a)','inflexível'),
                 ('empático(a)','apático(a)'),('maduro(a)','imaturo(a)'),('compreensivo(a)','teimoso(a)'),('humilde','avarento(a)'),
-                ('sábio(a)','desequilibrado(a)')]
+                ('sábio(a)','desequilibrado(a)'),('proativo(a)','indeciso(a)')]
 
 #Na posição da esquerda qualidade/defeito > motivação
 #Na posição da direita alinhamentoCO/alinhamentoBM
