@@ -30,13 +30,12 @@ def cria_pdf(npc,nome = "\\NPC'S.pdf" ):
     can.drawString(145, 553, npc._riqueza)
     can.drawString(123, 524, npc._genero)
     can.setFont("Helvetica", 9)
-    if len(npc._caracteristicas_fisicas) < 97:
+    if len(npc._caracteristicas_fisicas) < 99:
         can.drawString(107, 118, npc._caracteristicas_fisicas)
     else:
-        
-        can.drawString(107, 118, ','.join(npc._caracteristicas_fisicas.split(',')[0:5]))
-        can.drawString(107, 104, ','.join(npc._caracteristicas_fisicas.split(',')[5:]))
-    can.drawString(106, 74, npc._caracteristicas_pessoais)
+        can.drawString(107, 118, npc._caracteristicas_fisicas[0:npc._caracteristicas_fisicas[0:99].rindex(' ')])
+        can.drawString(107, 104, npc._caracteristicas_fisicas[npc._caracteristicas_fisicas[0:99].rindex(' '):])
+    can.drawString(106, 75, npc._caracteristicas_pessoais)
     can.drawImage(npc._imagem, 384,501, width=135.135,height=176.756)
 
     if tipo == 'vilao':
