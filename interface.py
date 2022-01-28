@@ -330,7 +330,7 @@ class Aplicacao:
             npc.gera_alinhamento()
             if self.checkOcupacao.get() == False:
                 npc.gera_ocupacao()
-            else: npc.set('ocupacao',self.valorNome.get())
+            else: npc.set('ocupacao',self.valorOcupacao.get())
 
         if self.varGenero.get() == 'Aleatório':
             npc.gera_genero()
