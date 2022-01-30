@@ -38,4 +38,6 @@ Gerador de NPC, feito para a avaliação 1 de linguagens de programação UFRJ 2
   >u/Zhjake;<br />
   >Hellstern;<br />
   >Ted Thilander;<br />
+  >malverro;<br />
+
 
