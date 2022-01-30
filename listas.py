@@ -97,7 +97,7 @@ listaantonimos = [('corajoso(a)','covarde'),('altruísta','covarde'),('inteligen
                 ('responsável','negligente'),('honesto(a)','desonesto(a)'),('tolerante','intolerante'),
                 ('tolerante','exigente'),('tolerante','inflexível'),('sincero(a)','mentiroso(a)'),('sincero(a)','falso(a)'),
                 ('focado(a)','distraído(a)'),('extrovertido(a)','tímido(a)'),('disciplinado(a)','procrastinador(a)'),
-                ('honrado(a)','covarde'),('honrado(a)','hipócrita'),('humilde','arrogante'),('pessimista','otimista'),
+                ('honrado(a)','covarde'),('honrado(a)','hipócrita'),('humilde','arrogante'),('otimista','pessimista'),
                 ('determinado(a)','desmotivado(a)'),('determinado(a)','procrastinador(a)'),('prudente','irresponsável'),
                 ('calmo(a)', 'agressivo(a)'),('calmo(a)','violento(a)'),('calmo(a)','irritadiço(a)'),
                 ('meigo(a)','grosso(a)'),('leal','desleal'),('organizado(a)','desorganizado(a)'),('zeloso(a)','negligente'),
