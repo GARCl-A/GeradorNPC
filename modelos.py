@@ -21,6 +21,8 @@ class NPC():
         self._imagem = None
 
     def set(self,atributo, valor):
+        if atributo == 'idade':
+            valor = int(valor)
         atributo = '_' + atributo
         setattr(self,atributo,valor)
 
