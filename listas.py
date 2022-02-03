@@ -44,14 +44,14 @@ nomes = {
 
 lista_racas = ["Kobold", "Orc", "Leshy", "Lizardfolk", "Sprite", "Humano", "Anão", "Elfo", "Gnomo", "Goblin", "Halfling", 
 "Gnoll", "Gigante", "Ikidaris", "Tiefling", "Aasimar", "Kenku", "Aarakocra", "Draconato", "Meio-Elfo", "Meio-Orc",
-"Golias", "Centauro", "Forjados", "Genasi"]
+"Golias", "Centauro", "Forjados", "Genasi","Kitsune"]
 lista_racas.sort()
 
 lista_alinhamento_CO = ["Caótico", "Neutro", "Leal"]
 lista_alinhamento_BM = ["Bom", "Neutro", "Mal"]
 
 classes_jog = ["Artíficie", "Bárbaro", "Bardo", "Clérigo", "Druida", "Feiticeiro","Guerreiro","Paladino","Bruxo", 
-"Ladino", "Mago", "Monge", "Patrulheiro"]
+"Ladino", "Mago", "Monge", "Patrulheiro","Alquimista"]
 classes_jog.sort()
 
 classes_npc = ["Plebeu", "Nobre", "Especialista", "Combatente", "Acólito"]
@@ -61,11 +61,11 @@ riquezas = ["Miséria", "Pobre", "Média baixa", "Média", "Média alta", "Rico"
 
 ocupacoes = ["Camponês(a)", "Lenhador(a)", "Ferreiro(a)", "Pastor(a)", "Carniceir(a)", "Cirieiro(a)", 
 "Pergaminheiro(a)", "Ourives(a)", "Vidreiro(a)","Canteiro(a)", "Vendedor(a)", "Boticário(a)",
-"Alfaiate(a)", "Bancário(a)", "Soldado(a)", "Taverneiro(a)", "Músico(a)", "Escrivão(a)"]
+"Alfaiate(a)", "Bancário(a)", "Soldado(a)", "Taverneiro(a)", "Músico(a)", "Escrivão(a)","Sacerdote"]
 
-motivacoes = ['Vingança', 'Ambição', 'Revolução', 'Amor', 'Loucura', 'Mal puro', 'Servidão', 'Manipulação', 'Natureza maligna']
+motivacoes = ['Vingança', 'Ambição', 'Revolução', 'Amor', 'Loucura', 'Mal puro', 'Servidão', 'Manipulação', 'Natureza maligna','Religião']
 
-tipo_influencia = ['Politica', 'Militar', 'Violência', 'Mágica', 'Econômica']
+tipo_influencia = ['Politica', 'Militar', 'Violência', 'Mágica', 'Econômica','Religiosa']
 tamanho_influencia = ['Local', 'Regional', 'Global']
 
 consoantes = 'b,c,d,f,g,j,k,l,m,n,p,q,r,s,t,v,w,x,y,z'.split(",")
@@ -89,7 +89,7 @@ listadefeitos = ['teimoso(a)', 'agressivo(a)','violento(a)','procrastinador(a)',
                 'dissimulado(a)','distraído(a)','falso(a)','desmotivado(a)','rancoroso(a)','vingativo(a)','grosso(a)',
                 'hipócrita','desleal','desonesto(a)','preguiçoso(a)','ganancioso(a)','superficial','sem graça',
                 'manipulador(a)','imaturo(a)','indeciso(a)','ciumento(a)','oportunista','covarde',
-                'burro(a)','tímido(a)','pessimista','desrespeitoso(a)','tolo','impaciente']
+                'burro(a)','tímido(a)','pessimista','desrespeitoso(a)','tolo','impaciente','fanático(a)']
 
 #(qualidade,defeito)
 listaantonimos = [('corajoso(a)','covarde'),('altruísta','covarde'),('inteligente','burro(a)'),
@@ -125,7 +125,7 @@ listachifres=['chifres grandes','chifres curtos','chifres finos e longos','chifr
 listacorexoticas=['verde','roxa','marrom','vermelha','azul','cinza','branca','preta']
 
 #Agrupamento de raças para facilitar/simplicar a leitura do código
-grupo1 = ["Humano","Anão","Elfo","Gnomo","Halfling","Gigante","Meio-Elfo","Golias","Aasimar","Centauro"]
+grupo1 = ["Humano","Anão","Elfo","Gnomo","Halfling","Gigante","Meio-Elfo","Golias","Aasimar","Centauro",'Kitsune']
 grupo2 = ["Kobols","Lizardfolk","Draconato"]
 grupo3 = ["Orc","Goblin","Gnoll","Ikidaris","Meio-Orc"]
 grupo4 = ['Sprite'] 
@@ -135,4 +135,4 @@ grupo7 = ['Kenku','Aarakocra']
 
 coeficientes = {"Kobold":0.57, "Orc":0.57, "Leshy":2.85, "Lizardfolk":0.57, "Sprite":4, "Humano": 1, "Anão":3.57, "Elfo":5, 
 "Gnomo":2.85, "Goblin":0.57, "Halfling":1.42, "Gnoll":0.6, "Gigante":4.28, "Ikidaris":0.6, "Tiefling":1, "Aasimar":1, "Kenku":1, 
-"Aarakocra":1, "Draconato":3.57, "Meio-Elfo":1.77, "Meio-Orc":0.85,"Golias":1, "Centauro":2, "Forjados":1.78, "Genasi":4.28}
+"Aarakocra":1, "Draconato":3.57, "Meio-Elfo":1.77, "Meio-Orc":0.85,"Golias":1, "Centauro":2, "Forjados":1.78, "Genasi":4.28,"Kitsune":0.91}
