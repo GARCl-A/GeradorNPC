@@ -39,5 +39,8 @@ Gerador de NPC, feito para a avaliação 1 de linguagens de programação UFRJ 2
   >Hellstern;<br />
   >Ted Thilander;<br />
   >malverro;<br />
+  >Emyrelda Marilis;<br />
+  >Egor Kapustin;<br />
+  >Frost Llamzon;<br />
 
 
